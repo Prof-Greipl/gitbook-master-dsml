@@ -8,7 +8,7 @@ description: >-
 
 ## Matplotlib
 
-Mathplotlib ([https://matplotlib.org/](https://matplotlib.org)) ist eine Sammlung von Funktionen (Bibliothek)zum Visualisieren von Daten. Es gibt hierzu mächtigere Bibliotheken, aber für den Start ist das ok. Dokumentation und ergänzende Inhalte finden sie auf [https://matplotlib.org/tutorials/introductory/pyplot.html#sphx](https://matplotlib.org/tutorials/introductory/pyplot.html#sphx) 
+Mathplotlib ([https://matplotlib.org/](https://matplotlib.org)) ist eine Sammlung von Funktionen (Bibliothek)zum Visualisieren von Daten. Es gibt hierzu mächtigere Bibliotheken, aber für den Start ist das ok. Dokumentation und ergänzende Inhalte finden sie auf [https://matplotlib.org/tutorials/introductory/pyplot.html#sphx](https://matplotlib.org/tutorials/introductory/pyplot.html#sphx)
 
 ## Liniendiagramme
 
@@ -42,23 +42,21 @@ Können Sie die x-Achse noch mit "Years" beschriften?
 ### Übung
 
 1. Können Sie die x-Achse in obiger Kurve noch mit "Years" beschriften?
-2. Versuchen obige Kurve mit anderer Farbe, Linienart und Punktmarkierungen zu zeichnen! (Hinweis: [https://matplotlib.org/gallery/lines_bars_and_markers/line_styles_reference.html](https://matplotlib.org/gallery/lines_bars_and_markers/line_styles_reference.html), [https://matplotlib.org/3.1.0/gallery/color/named_colors.html](https://matplotlib.org/3.1.0/gallery/color/named_colors.html), [https://matplotlib.org/api/markers_api.html](https://matplotlib.org/api/markers_api.html))  
+2. Versuchen obige Kurve mit anderer Farbe, Linienart und Punktmarkierungen zu zeichnen! (Hinweis: [https://matplotlib.org/gallery/lines\_bars\_and\_markers/line\_styles\_reference.html](https://matplotlib.org/gallery/lines\_bars\_and\_markers/line\_styles\_reference.html), [https://matplotlib.org/3.1.0/gallery/color/named\_colors.html](https://matplotlib.org/3.1.0/gallery/color/named\_colors.html), [https://matplotlib.org/api/markers\_api.html](https://matplotlib.org/api/markers\_api.html))
 
 ### Achsen
 
-Mit dem nachfolgendem Befehl legen Sie durch die ersten Einträge der Liste den Bereich der x-Achse und mit den nachfolgenden Zahlen der Bereich der y-Achse fest.  Fügen Sie den Befehl vor `plt.show()` ein!
+Mit dem nachfolgendem Befehl legen Sie durch die ersten Einträge der Liste den Bereich der x-Achse und mit den nachfolgenden Zahlen der Bereich der y-Achse fest. Fügen Sie den Befehl vor `plt.show()` ein!
 
 ```python
 plt.axis([1900, 2020, 0, 20000])
 ```
 
-Obige Ausgabe zeigt, dass die Achsen nicht gleich skaliert sind. Sie erreichen dies mit dem Befehl. Beachten Sie, dass der Skalierungsbefehl immer _vor _der Definition der Achsen kommen muss.
+Obige Ausgabe zeigt, dass die Achsen nicht gleich skaliert sind. Sie erreichen dies mit dem Befehl. Beachten Sie, dass der Skalierungsbefehl immer \_vor \_der Definition der Achsen kommen muss.
 
 ```python
 plt.axis('scaled')
 ```
-
-
 
 ## Balkendiagramme
 
@@ -77,13 +75,13 @@ plt.show()
 
 Sie sollten folgendes Ergebnis sehen:
 
-![](<../.gitbook/assets/image (2).png>)
+![](<../.gitbook/assets/image (2) (1).png>)
 
-Können Sie in Zeilen 3 und  7 die Listen durch einen range ersetzen? 
+Können Sie in Zeilen 3 und 7 die Listen durch einen range ersetzen?
 
 ## Scatterplots
 
-Paarweise Daten (Punktwolken) lassen sich durch Scatterplots darstellen. 
+Paarweise Daten (Punktwolken) lassen sich durch Scatterplots darstellen.
 
 ```python
 test1_punkte = [99, 90, 85, 97, 80]
@@ -98,11 +96,9 @@ Obiges Programm sollte ergeben:
 
 Was stört sie an der Ausgabe?
 
-
-
 ### Übung
 
-In der Übung zu ranges haben sie eine Liste mit 50 gleichverteilen Zufallszahlen erstellt. 
+In der Übung zu ranges haben sie eine Liste mit 50 gleichverteilen Zufallszahlen erstellt.
 
 1. Erzeugen Sie zwei dieser Listen und zeigen sie das Ergebnis in einem Scatterplot an. ([Lösung](../vertiefungen/loesungen-und-vertiefungen.md#scatterplot-von-paaren-aus-zufallszahlen))
 2. Welches Ausgabe erwarten Sie, wenn Sie jeweils 2000 Zahlen erzeugen
@@ -131,7 +127,7 @@ auf dem Intervall \[min,max]. Wir wollen an `n` verschiedenen x-Werten plotten.
 
 ### Einzelschritte
 
-Wir  erzeugen zuerst die Menge eine Liste mit x-Werten mit der Funktion `x_werte`
+Wir erzeugen zuerst die Menge eine Liste mit x-Werten mit der Funktion `x_werte`
 
 ```python
 def x_werte (min, max, n):
@@ -143,7 +139,7 @@ def x_werte (min, max, n):
 print (x_werte(-1,1,11))
 ```
 
-Versuchen sie diese Funktion zu verstehen! Weil wir die Verteilung von Werten in einem Intervall  häufig brauchen, ist sie für uns in Paket `numpy `bereits vordefiniert - das macht unserer Arbeit leichter.
+Versuchen sie diese Funktion zu verstehen! Weil wir die Verteilung von Werten in einem Intervall häufig brauchen, ist sie für uns in Paket `numpy `bereits vordefiniert - das macht unserer Arbeit leichter.
 
 ```python
 import numpy as np
@@ -212,11 +208,4 @@ plt.show()
 
 Ausgabe:
 
-![](<../.gitbook/assets/image (4).png>)
-
-
-
-
-
-
-
+![](<../.gitbook/assets/image (4) (1).png>)
