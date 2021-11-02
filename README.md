@@ -4,7 +4,8 @@ description: >-
   Betriebswirtschaft findet im WS 21/22 an der HAW Landshut statt.
 ---
 
-# Überblick WS 21/22
+# Master 
+Überblick WS 21/22
 
 Die Inhalte dieses Gitbooks können sich im Semesterverlauf ändern. Spätestens vor jedem Termin finden Sie den aktuellen Stand on-line.
 
