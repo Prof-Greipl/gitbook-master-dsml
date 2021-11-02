@@ -1,0 +1,2 @@
+# Skalenniveaus (Data Scales)
+

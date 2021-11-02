@@ -4,18 +4,13 @@
 
 ## Part A: Data Science and Python <a href="analytics-und-datascience" id="analytics-und-datascience"></a>
 
-* [A.1 Basics in Python](analytics-und-datascience/untitled/README.md)
-  * [Variablen](analytics-und-datascience/untitled/variablen-datentypen-und-operationen.md)
-  * [Datentyp "Zahlen"](analytics-und-datascience/untitled/zahlen.md)
-  * [Datentyp "Strings"](analytics-und-datascience/untitled/zeichenketten-strings.md)
-  * [Datentyp "Boolean"](analytics-und-datascience/untitled/wahrheitswerte.md)
-  * [Operatoren](analytics-und-datascience/untitled/operatoren.md)
-  * [Datentyp "Arrays" (Listen)](analytics-und-datascience/untitled/listen.md)
-  * [Datentyp "Tupel" (im WS 21/22 nicht behandelt)](analytics-und-datascience/untitled/tupel.md)
-  * [Datentypen in der Übersicht](analytics-und-datascience/untitled/zusammenfassung.md)
-  * [Ablauf: if-then-else](analytics-und-datascience/untitled/if-then-else.md)
-  * [Ablauf: loops](analytics-und-datascience/untitled/ablauf-loops.md)
-  * [Ablauf: Funktionen](analytics-und-datascience/untitled/ablauf-funktionen.md)
+* [1 Einführung](analytics-und-datascience/1-einfuehrung.md)
+* [2 Daten und Relationen](analytics-und-datascience/2-daten-und-relationen/README.md)
+  * [Titanic Datensatz](analytics-und-datascience/2-daten-und-relationen/titanic-datensatz.md)
+  * [Skalenniveaus (Data Scales)](analytics-und-datascience/2-daten-und-relationen/skalenniveaus-data-scales.md)
+  * [Matrixdarstellung](analytics-und-datascience/2-daten-und-relationen/matrixdarstellung.md)
+* [3 Data Procesing](analytics-und-datascience/3-data-procesing/README.md)
+  * [Fehlerarten](analytics-und-datascience/3-data-procesing/fehlerarten.md)
 * [A.2 Datenvisualisierung (I)](analytics-und-datascience/2-visualisierung-simple.md)
 * [A.3 Numpy (I)](analytics-und-datascience/a.3-numpy-i/README.md)
   * [Numpy-Arrays](analytics-und-datascience/a.3-numpy-i/numpy-arrays.md)
@@ -34,7 +29,7 @@
   * [Feature Engineering](analytics-und-datascience/4-data-analysis/feature-engineering.md)
   * [Titanic-Übung](analytics-und-datascience/4-data-analysis/titanic-uebung.md)
 
-## Part B:  Machine Learning <a href="machine-learning" id="machine-learning"></a>
+## Part B: Machine Learning <a href="machine-learning" id="machine-learning"></a>
 
 * [6 Maschinelles Lernen](machine-learning/5-maschinelles-lernen/README.md)
   * [Feature-Matrix und Label-Vektor](machine-learning/5-maschinelles-lernen/feature-matrix-und-label-vektor.md)

@@ -103,8 +103,6 @@ avg_age = sum(df["Age"]) / len( df )
 print( avg_age )
 ```
 
-
-
 ## Teile aus Dataframes auswählen
 
 Wir bearbeiten die gleiche Tabelle, wie oben:
@@ -122,7 +120,7 @@ df = pd.DataFrame({
 
 ### Spalten auswählen
 
-Durch Angabe der Überschriften lassen sich  Dataframes auf ausgewählte Spalten (unten gelb) reduzieren und dadurch verkleinern:
+Durch Angabe der Überschriften lassen sich Dataframes auf ausgewählte Spalten (unten gelb) reduzieren und dadurch verkleinern:
 
 ![](<../../.gitbook/assets/image (12).png>)
 
@@ -141,11 +139,9 @@ df.iloc[0,1] = 40
 print( df )
 ```
 
-Ausgaben: 
+Ausgaben:
 
 ![](<../../.gitbook/assets/image (21).png>)
-
-
 
 ### Teile nach Zeilennummern und Spaltennummern auswählen
 
@@ -158,7 +154,7 @@ print( df_1)
 
 ### Filtern: Kriterien und Treffer
 
-Beim Filtern erzeugen wir eine künstliche Spalte mit "Treffern". Wenn die Tabelle in der jeweiligen Zeile den Werte `False `enthält, kommt sie nicht durch den Filter.  
+Beim Filtern erzeugen wir eine künstliche Spalte mit "Treffern". Wenn die Tabelle in der jeweiligen Zeile den Werte `False `enthält, kommt sie nicht durch den Filter.
 
 ```python
 ```
@@ -208,7 +204,6 @@ print ( df_xx )
 print("\n\n Und das?")
 df_xx = df[ (df["Age"] > 30) &  (df["Gender"] == "female") ]
 print ( df_xx )
-
 
 ```
 
@@ -269,7 +264,7 @@ df2 = pd.DataFrame(data=A, index=["r1", "r2"], columns=["c1","c2"])
 print( df2 )
 ```
 
-## Dataframes aus Excel-Files erzeugen 
+## Dataframes aus Excel-Files erzeugen
 
 > Für Titanic lesen Sie bitte die Daten aus der csv-Datei ein!
 
@@ -282,11 +277,11 @@ from google.colab import drive
 drive.mount('/content/drive')
 ```
 
-Erzeugen Sie in Google-Drive ein unter `Colab Notebooks `ein  Verzeichnis `data.`
+Erzeugen Sie in Google-Drive ein unter `Colab Notebooks `ein Verzeichnis `data.`
 
 ![](<../../.gitbook/assets/image (20).png>)
 
-Kopieren sie nun die Excel-Dateien auf Moodle in das Verzeichnis `data. `Lesen sie nun die Excel-Datei `titanic_train.xlsx` ein ein Dataframe ein. 
+Kopieren sie nun die Excel-Dateien auf Moodle in das Verzeichnis `data. `Lesen sie nun die Excel-Datei `titanic_train.xlsx` ein ein Dataframe ein.
 
 ```python
 import pandas as pd
@@ -305,4 +300,3 @@ import seaborn as sns
 drive.mount('/content/drive')
 df = pd.read_csv("/content/drive/My Drive/Colab Notebooks/data/titanic_train.csv")
 ```
-
