@@ -75,7 +75,7 @@ plt.show()
 
 Sie sollten folgendes Ergebnis sehen:
 
-![](<../.gitbook/assets/image (2) (1).png>)
+![](<../.gitbook/assets/image (2) (1) (1).png>)
 
 Können Sie in Zeilen 3 und 7 die Listen durch einen range ersetzen?
 
@@ -208,4 +208,4 @@ plt.show()
 
 Ausgabe:
 
-![](<../.gitbook/assets/image (4) (1).png>)
+![](<../.gitbook/assets/image (4) (1) (1).png>)

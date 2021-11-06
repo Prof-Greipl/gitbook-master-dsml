@@ -6,7 +6,7 @@
 
 * [C1 Einführung](analytics-und-datascience/c1-einfuehrung.md)
 * [C2 Daten und Relationen](analytics-und-datascience/c2-daten-und-relationen/README.md)
-  * [C2.1 Titanic Datensatz](analytics-und-datascience/c2-daten-und-relationen/c2.1-titanic-datensatz.md)
+  * [C2.1 Iris Datset](analytics-und-datascience/c2-daten-und-relationen/c2.1-iris-datset.md)
   * [C2.2 Skalenniveaus (Data Scales)](analytics-und-datascience/c2-daten-und-relationen/c2.2-skalenniveaus-data-scales.md)
   * [C2.3 Matrixdarstellung](analytics-und-datascience/c2-daten-und-relationen/c2.3-matrixdarstellung.md)
 * [C3 Data Procesing](analytics-und-datascience/c3-data-procesing/README.md)
@@ -15,6 +15,7 @@
   * [C3.3 Filterung](analytics-und-datascience/c3-data-procesing/c3.3-filterung.md)
   * [C3.4 Datentransformation](analytics-und-datascience/c3-data-procesing/c3.4-datentransformation.md)
   * [C3.5 Datenintegration](analytics-und-datascience/c3-data-procesing/c3.5-datenintegration.md)
+* [C99.1 Titanic Datensatz](analytics-und-datascience/c2.1-titanic-datensatz.md)
 * [Page 1](analytics-und-datascience/page-1.md)
 * [A.2 Datenvisualisierung (I)](analytics-und-datascience/2-visualisierung-simple.md)
 * [A.3 Numpy (I)](analytics-und-datascience/a.3-numpy-i/README.md)

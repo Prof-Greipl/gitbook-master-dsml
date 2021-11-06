@@ -1,6 +1,6 @@
 # Numerische Daten mit Numpy
 
-Wir haben in der der Einführung motiviert, dass Vektoren und Matrizen relevant für die Modellierung von Learning Problemen sind. In diesem Abschnitt modellieren wir diese Strukturen mit dem Paket NumPy.  Wikipedia bringt es auf den Punkt: "NumPy is a library for the Python programming language, adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays."
+Wir haben in der der Einführung motiviert, dass Vektoren und Matrizen relevant für die Modellierung von Learning Problemen sind. In diesem Abschnitt modellieren wir diese Strukturen mit dem Paket NumPy. Wikipedia bringt es auf den Punkt: "NumPy is a library for the Python programming language, adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays."
 
 Vektoren und Matrizen werden wir als NumPy-Arrays darstellen. Arrays entsprechen Listen, bestehen aber immer nur aus Zahlen!
 
@@ -8,7 +8,7 @@ Vektoren und Matrizen werden wir als NumPy-Arrays darstellen. Arrays entsprechen
 
 ### Addition und Skalarprodukt
 
-Folgende Befehle erläutern das Thema Vektoren, elementweise Addition, elementweise Multiplikation und Skalarprodukt für Vektoren. Wichtig für die Erzeugung eines Vektors ist Zeile 3. 
+Folgende Befehle erläutern das Thema Vektoren, elementweise Addition, elementweise Multiplikation und Skalarprodukt für Vektoren. Wichtig für die Erzeugung eines Vektors ist Zeile 3.
 
 ```python
 import numpy as np
@@ -30,7 +30,7 @@ print (f'x*y  = {z}' )      # Drucke z
 
 ### Elementweise Operationen
 
-Daneben gibt es noch sinnvolle Befehle, wie die Anwendung einer auf reellen Zahlen operierende Funktion $$f :\mathbb{R} \rightarrow \mathbb{R}$$ auf die einzelnen Elemente eines Vektors (Vertiefung).  Nachfolgendes Beispiel zeigt ausgewählte Operationen:
+Daneben gibt es noch sinnvolle Befehle, wie die Anwendung einer auf reellen Zahlen operierende Funktion $$f :\mathbb{R} \rightarrow \mathbb{R}$$ auf die einzelnen Elemente eines Vektors (Vertiefung). Nachfolgendes Beispiel zeigt ausgewählte Operationen:
 
 ```python
 import numpy as np
@@ -48,17 +48,7 @@ print (np.sin(x))
 Berechnen Sie durch Programmbefehle$$v^Tw,$$ $$v+w$$ und $$2 \cdot v$$ für
 
 $$
-v    =   \begin{bmatrix}
-1 \\
--3 \\
-2\\
-\end{bmatrix}
-\quad \text{and} \quad 
-w    =   \begin{bmatrix}
-1 \\
-0 \\
-13\\
-\end{bmatrix}
+v = \begin{bmatrix} 1 \\ -3 \\ 2\\ \end{bmatrix} \quad \text{and} \quad w = \begin{bmatrix} 1 \\ 0 \\ 13\\ \end{bmatrix}
 $$
 
 ([Lösung](https://the-technology-lab.gitbook.io/bw-610-dsml/analytics-und-datascience/loesungen-und-vertiefungen#uebung-zu-vektoren))
@@ -76,9 +66,9 @@ print( A[0,0] )
 print( A[0,1] )
 ```
 
-Obiges Programm ergibt die nachfolgende Ausgabe. Die Indizierung der Element funktioniert erwartungsgemäß, allerdings wird mit der Zählung bei Null begonnen! 
+Obiges Programm ergibt die nachfolgende Ausgabe. Die Indizierung der Element funktioniert erwartungsgemäß, allerdings wird mit der Zählung bei Null begonnen!
 
-![](<../../.gitbook/assets/image (5).png>)
+![](<../../.gitbook/assets/image (5) (1).png>)
 
 ### Shape (Dimension)
 
@@ -149,35 +139,14 @@ C = np.dot(A, np.transpose(B))   # Addition
 **Gegeben sind die nachfolgenden Vektoren und Matrizen:**
 
 $$
-A = \begin{bmatrix} 
-2 & -1 \\ 
-4 & 0 \\ 
-9 & 3
-\end{bmatrix}
-\quad\quad\quad
-C = \begin{bmatrix} 
-1 & 0 \\ 
-4 & -1 
-\end{bmatrix}
-\quad\quad\quad
-v    =   \begin{bmatrix}
-1 \\
-4 \\
-\end{bmatrix}
-\quad\quad\quad
-w    =   \begin{bmatrix}
--1 \\
-3 \\
-\end{bmatrix}
+A = \begin{bmatrix} 2 & -1 \\ 4 & 0 \\ 9 & 3 \end{bmatrix} \quad\quad\quad C = \begin{bmatrix} 1 & 0 \\ 4 & -1 \end{bmatrix} \quad\quad\quad v = \begin{bmatrix} 1 \\ 4 \\ \end{bmatrix} \quad\quad\quad w = \begin{bmatrix} -1 \\ 3 \\ \end{bmatrix}
 $$
-
-
 
 Berechnen Sie **durch Programmbefehle**:
 
-* $$Av$$ 
-* $$AC$$ 
-* $$wv^t$$ 
+* $$Av$$
+* $$AC$$
+* $$wv^t$$
 
 ([Lösung](https://the-technology-lab.gitbook.io/bw-610-dsml/analytics-und-datascience/loesungen-und-vertiefungen#uebung-zu-matrix))
 
@@ -233,7 +202,7 @@ print(w.shape)
 
 ### Anwendung: Histogramme
 
-Nehmen sie an, dass sie Tausende von Werten zwischen 0 und 1 haben.  Sie wollen nun wissen, wie viele Werte in den Intervallen \[0, 0.1\[, \[0.1, 0.2\[ bis zu  \[0.9, 1] liegen. Sie teilen also den Bereich \[0,1] in zehn Körbe (_bins_) auf und zählen, wie viele Werte in die jeweiligen Körbe fallen.
+Nehmen sie an, dass sie Tausende von Werten zwischen 0 und 1 haben. Sie wollen nun wissen, wie viele Werte in den Intervallen \[0, 0.1\[, \[0.1, 0.2\[ bis zu \[0.9, 1] liegen. Sie teilen also den Bereich \[0,1] in zehn Körbe (_bins_) auf und zählen, wie viele Werte in die jeweiligen Körbe fallen.
 
 #### Beispiel 1:
 
@@ -257,7 +226,7 @@ v = np.random.randn( 1000000 )
 z = plt.hist(v, bins=1000, range=(-4, 4))
 ```
 
- Sie sollten folgendes Ergebnis sehen:
+Sie sollten folgendes Ergebnis sehen:
 
 ![](<../../.gitbook/assets/image (7).png>)
 
@@ -276,11 +245,11 @@ Bilder lassen sich als Numpy-Arrays darstellen und bearbeiten. Unterstützte sha
 
 Die ersten beiden Werte (M, N) definieren die Anzahl der Zeilen und Spalten des Bildes.
 
-(Taken from [https://matplotlib.org/3.1.1/api/\_as_gen/matplotlib.pyplot.imshow.html](https://matplotlib.org/3.1.1/api/\_as_gen/matplotlib.pyplot.imshow.html)
+(Taken from [https://matplotlib.org/3.1.1/api/\_as\_gen/matplotlib.pyplot.imshow.html](https://matplotlib.org/3.1.1/api/\_as\_gen/matplotlib.pyplot.imshow.html)
 
 ### Grauwert-Bilder als nxm Matrix
 
-Folgende Befehle erzeugen ein künstliches und (gleichverteilt) zufälliges Grauwertbild: 
+Folgende Befehle erzeugen ein künstliches und (gleichverteilt) zufälliges Grauwertbild:
 
 ```python
 import matplotlib.pyplot as plt
@@ -336,7 +305,7 @@ plt.imshow( img  )
 
 ### Übungen
 
-#### Wie kommt dieses Bild zustande? 
+#### Wie kommt dieses Bild zustande?
 
 Erläutern Sie, wie das Bild erstellt wird, speziell die for-Schleife:
 
@@ -351,4 +320,3 @@ for col in range(0, 100):
 
 plt.imshow( img, cmap= plt.get_cmap('gray'), vmin=0, vmax=1,  )
 ```
-

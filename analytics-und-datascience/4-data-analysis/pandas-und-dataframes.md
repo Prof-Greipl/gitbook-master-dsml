@@ -67,7 +67,7 @@ df.describe()
 
 Eine Spalte eines Dataframes heist auch _Series._
 
-![](<../../.gitbook/assets/image (11).png>)
+![](<../../.gitbook/assets/image (11) (1).png>)
 
 ```python
 # Eine Spalte aus dem Dataframe herausnehmen
