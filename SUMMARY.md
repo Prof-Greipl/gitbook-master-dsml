@@ -27,8 +27,6 @@
   * [A4.3 Python: Dataframes](analytics-und-datascience/a.4-datensaetze/a4.3-python-dataframes/README.md)
     * [Diving into Dataframes](analytics-und-datascience/a.4-datensaetze/a4.3-python-dataframes/pandas-und-dataframes.md)
 
-## Part B:  Machine Learning <a href="machine-learning" id="machine-learning"></a>
-
 ## Vertiefungen und Übungen <a href="vertiefungen" id="vertiefungen"></a>
 
 * [Lösungen zu Übungen](vertiefungen/loesungen-und-vertiefungen.md)

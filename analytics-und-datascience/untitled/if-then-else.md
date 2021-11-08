@@ -1,8 +1,6 @@
-# Ablauf: if-then-else.
+# Ablauf: if-then-else
 
-
-
-### if-then
+### if-then..
 
 Die Programmzeile 4 wird nur ausgeführt, wenn die Bedingung erfüllt ist.
 
@@ -42,9 +40,4 @@ s = "HAW Landshut"
 
 Ihr Programm soll stets drei Zeilen ausgeben. Die Ausgabe für die obigen Werte von x` `und `s` sollte sein:
 
-&#x20;  ![](<../../.gitbook/assets/image (195).png>)
-
-&#x20;&#x20;
-
-
-
+![](<../../.gitbook/assets/image (195).png>)
