@@ -1,6 +1,6 @@
 # Ablauf: if-then-else
 
-### if-then..
+### if-then
 
 Die Programmzeile 4 wird nur ausgeführt, wenn die Bedingung erfüllt ist.
 
