@@ -1,7 +1,7 @@
 ---
 description: >-
   Der Kurs "Data Science und Maschinelles Lernen" für Studierende der
-  Betriebswirtschaft findet im WS 21/22 an der HAW Landshut statt..
+  Betriebswirtschaft findet im WS 21/22 an der HAW Landshut statt.
 ---
 
 # Überblick WS 21/22
