@@ -7,5 +7,5 @@
    3. ML ist der Oberbegriff für alle Verfahren innerhalb der KI
 3. Erläutern sie den _Turing Test_
 4. Welche Frage illustriert des sog. _Chinese Room Experiment_?
-5. Erläutern sie die Begriffe "starke KI" und "schwache KI"
 
+![1636359769852](assets_fragen/1636359769852.png)
