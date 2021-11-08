@@ -35,7 +35,7 @@ plt.show()
 
 Sie sollten folgende Ausgabe sehen:
 
-![](<../.gitbook/assets/image (1) (1).png>)
+![](<../.gitbook/assets/image (1) (1) (1).png>)
 
 Können Sie die x-Achse noch mit "Years" beschriften?
 
@@ -208,4 +208,4 @@ plt.show()
 
 Ausgabe:
 
-![](<../.gitbook/assets/image (4) (1) (1).png>)
+![](<../.gitbook/assets/image (4) (1) (1) (1).png>)

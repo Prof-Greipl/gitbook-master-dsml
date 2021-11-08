@@ -61,13 +61,13 @@ print( df.colums.values )
 df.describe()
 ```
 
-![](<../../.gitbook/assets/image (13).png>)
+![](<../../.gitbook/assets/image (13) (1).png>)
 
 ## Spalten (Series)
 
 Eine Spalte eines Dataframes heist auch _Series._
 
-![](<../../.gitbook/assets/image (11) (1).png>)
+![](<../../.gitbook/assets/image (11) (1) (1).png>)
 
 ```python
 # Eine Spalte aus dem Dataframe herausnehmen
@@ -122,7 +122,7 @@ df = pd.DataFrame({
 
 Durch Angabe der Überschriften lassen sich Dataframes auf ausgewählte Spalten (unten gelb) reduzieren und dadurch verkleinern:
 
-![](<../../.gitbook/assets/image (12).png>)
+![](<../../.gitbook/assets/image (12) (1).png>)
 
 ```python
 df1 = df[["Age","Gender"]]
@@ -141,7 +141,7 @@ print( df )
 
 Ausgaben:
 
-![](<../../.gitbook/assets/image (21).png>)
+![](<../../.gitbook/assets/image (21) (1).png>)
 
 ### Teile nach Zeilennummern und Spaltennummern auswählen
 

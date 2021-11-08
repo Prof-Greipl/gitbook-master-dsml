@@ -1,15 +1,16 @@
 # Table of contents
 
-* [Überblick WS 21/22](README.md)
+* [Business Analytics und Data Science](README.md)
 
 ## Part A: Data Science and Python <a href="analytics-und-datascience" id="analytics-und-datascience"></a>
 
 * [C1 Einführung](analytics-und-datascience/c1-einfuehrung.md)
 * [C2 Daten und Relationen](analytics-und-datascience/c2-daten-und-relationen/README.md)
-  * [C2.1 Iris Datset](analytics-und-datascience/c2-daten-und-relationen/c2.1-iris-datset.md)
+  * [C2.1 Iris-Datensatz](analytics-und-datascience/c2-daten-und-relationen/c2.1-iris-datensatz.md)
   * [C2.2 Skalenniveaus (Data Scales)](analytics-und-datascience/c2-daten-und-relationen/c2.2-skalenniveaus-data-scales.md)
-  * [C2.3 Matrixdarstellung](analytics-und-datascience/c2-daten-und-relationen/c2.3-matrixdarstellung.md)
-* [C3 Data Procesing](analytics-und-datascience/c3-data-procesing/README.md)
+  * [C2.3 Feature-Matrix](analytics-und-datascience/c2-daten-und-relationen/c2.3-matrixdarstellung.md)
+  * [C 2.4 Python: Dataframes](analytics-und-datascience/c2-daten-und-relationen/c-2.4-python-dataframes.md)
+* [C3 Datenvorbereitung](analytics-und-datascience/c3-data-procesing/README.md)
   * [C3.1 Fehlerarten](analytics-und-datascience/c3-data-procesing/c3.1-fehlerarten.md)
   * [C3.2 Umgang mit Fehlern](analytics-und-datascience/c3-data-procesing/c3.2-umgang-mit-fehlern.md)
   * [C3.3 Filterung](analytics-und-datascience/c3-data-procesing/c3.3-filterung.md)
