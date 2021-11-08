@@ -129,4 +129,4 @@ df_age.describe()
 
 Ergebnis:
 
-![](<../.gitbook/assets/image (25).png>)
+![](<../.gitbook/assets/image (37).png>)

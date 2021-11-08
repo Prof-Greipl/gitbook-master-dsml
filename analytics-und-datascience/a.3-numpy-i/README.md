@@ -1,19 +1,15 @@
 # A.3 Numpy (I)
 
-Numpy ist eine Sammlung von Funktionen für effiziente Erzeugung, Berechnung und Bearbeitung von Zahlen.  
+Numpy ist eine Sammlung von Funktionen für effiziente Erzeugung, Berechnung und Bearbeitung von Zahlen. &#x20;
 
-Links
+Links für diesen Abschnitt
 
-|                                                                                                          |                                                                                                               |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| [https://www.w3schools.com/python/numpy/default.asp](https://www.w3schools.com/python/numpy/default.asp) | Eine umfangreiche, langsame Einführung. Wir brauchen davon aber nur, was in in diesem Gitbook behandelt wird. |
-|                                                                                                          |                                                                                                               |
-|                                                                                                          |                                                                                                               |
+| Link                                                                                                                                     | Beschreibung                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| [https://www.w3schools.com/python/numpy/default.asp](https://www.w3schools.com/python/numpy/default.asp)                                 | Eine umfangreiche, langsame Einführung. Wir brauchen davon aber nur, was in in diesem Script behandelt wird.  |
+| [https://www.w3schools.com/python/numpy/numpy\_creating\_arrays.asp](https://www.w3schools.com/python/numpy/numpy\_creating\_arrays.asp) | arange                                                                                                        |
+|                                                                                                                                          |                                                                                                               |
 
 **Wichtig:** Beginnen Sie jeden Programmblock, in dem sie folgenden Funktionen bruachen mit der Zeile
 
 `import numpy as np`
-
-## Arrays - "handgemacht"
-
-``

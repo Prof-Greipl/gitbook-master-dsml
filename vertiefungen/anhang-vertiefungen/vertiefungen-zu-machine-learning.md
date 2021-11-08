@@ -1,6 +1,6 @@
 # Vertiefungen zu Machine Learning
 
-## Thema: Analytische Berechnung des Optimums 
+## Thema: Analytische Berechnung des Optimums&#x20;
 
 ### Herleitung
 
@@ -10,7 +10,7 @@ $$
 L(w,b)  = \sum_{i=0}^{n-1} (x_iw +b -y _i)^2
 $$
 
-ist 
+ist&#x20;
 
 $$
 \begin{align}
@@ -35,11 +35,11 @@ Setzt man $$\frac{\partial L}{\partial w} =0$$ , $$\frac{\partial L}{\partial b}
 
 ### Beispiel
 
-Betrachten wir die Werte im Dataframe 
+Betrachten wir die Werte im Dataframe&#x20;
 
-![](../../.gitbook/assets/image%20%28136%29%20%281%29.png)
+![](<../../.gitbook/assets/image (136).png>)
 
-so ergibt sich \(gerundet, mit Hilfe von Excel und nach Division durch den Faktor von $$w^*$$\):
+so ergibt sich (gerundet, mit Hilfe von Excel und nach Division durch den Faktor von $$w^*$$):
 
 $$
 \begin{align}
@@ -57,7 +57,7 @@ b^* &= 5,03603565001285
 \end{align}
 $$
 
-Schließlich ergibt sich mit dem entsprechenden Modell als minimaler Loss der Wert 
+Schließlich ergibt sich mit dem entsprechenden Modell als minimaler Loss der Wert&#x20;
 
 $$
 8,57336688506454
@@ -98,6 +98,4 @@ plt.grid()
 plt.plot(X, y, label="linear")
 plt.show()
 ```
-
-
 

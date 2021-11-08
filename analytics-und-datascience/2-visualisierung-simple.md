@@ -4,11 +4,11 @@ description: >-
   der Bibliothek matplotlib.
 ---
 
-# A.2 Datenvisualisierung (I)
+# A.2 Visualisierung mit matplotlib
 
 ## Matplotlib
 
-Mathplotlib ([https://matplotlib.org/](https://matplotlib.org)) ist eine Sammlung von Funktionen (Bibliothek)zum Visualisieren von Daten. Es gibt hierzu mächtigere Bibliotheken, aber für den Start ist das ok. Dokumentation und ergänzende Inhalte finden sie auf [https://matplotlib.org/tutorials/introductory/pyplot.html#sphx](https://matplotlib.org/tutorials/introductory/pyplot.html#sphx)
+Mathplotlib ([https://matplotlib.org/](https://matplotlib.org)) ist eine Sammlung von Funktionen (Bibliothek)zum Visualisieren von Daten. Es gibt hierzu mächtigere Bibliotheken, aber für den Start ist das ok. Dokumentation und ergänzende Inhalte finden sie auf [https://matplotlib.org/tutorials/introductory/pyplot.html#sphx](https://matplotlib.org/tutorials/introductory/pyplot.html#sphx)&#x20;
 
 ## Liniendiagramme
 
@@ -35,28 +35,30 @@ plt.show()
 
 Sie sollten folgende Ausgabe sehen:
 
-![](<../.gitbook/assets/image (1) (1) (1).png>)
+![](<../.gitbook/assets/image (1).png>)
 
 Können Sie die x-Achse noch mit "Years" beschriften?
 
 ### Übung
 
 1. Können Sie die x-Achse in obiger Kurve noch mit "Years" beschriften?
-2. Versuchen obige Kurve mit anderer Farbe, Linienart und Punktmarkierungen zu zeichnen! (Hinweis: [https://matplotlib.org/gallery/lines\_bars\_and\_markers/line\_styles\_reference.html](https://matplotlib.org/gallery/lines\_bars\_and\_markers/line\_styles\_reference.html), [https://matplotlib.org/3.1.0/gallery/color/named\_colors.html](https://matplotlib.org/3.1.0/gallery/color/named\_colors.html), [https://matplotlib.org/api/markers\_api.html](https://matplotlib.org/api/markers\_api.html))
+2. Versuchen obige Kurve mit anderer Farbe, Linienart und Punktmarkierungen zu zeichnen! (Hinweis: [https://matplotlib.org/gallery/lines\_bars\_and\_markers/line\_styles\_reference.html](https://matplotlib.org/gallery/lines\_bars\_and\_markers/line\_styles\_reference.html), [https://matplotlib.org/3.1.0/gallery/color/named\_colors.html](https://matplotlib.org/3.1.0/gallery/color/named\_colors.html), [https://matplotlib.org/api/markers\_api.html](https://matplotlib.org/api/markers\_api.html)) &#x20;
 
 ### Achsen
 
-Mit dem nachfolgendem Befehl legen Sie durch die ersten Einträge der Liste den Bereich der x-Achse und mit den nachfolgenden Zahlen der Bereich der y-Achse fest. Fügen Sie den Befehl vor `plt.show()` ein!
+Mit dem nachfolgendem Befehl legen Sie durch die ersten Einträge der Liste den Bereich der x-Achse und mit den nachfolgenden Zahlen der Bereich der y-Achse fest.  Fügen Sie den Befehl vor `plt.show()` ein!
 
 ```python
 plt.axis([1900, 2020, 0, 20000])
 ```
 
-Obige Ausgabe zeigt, dass die Achsen nicht gleich skaliert sind. Sie erreichen dies mit dem Befehl. Beachten Sie, dass der Skalierungsbefehl immer \_vor \_der Definition der Achsen kommen muss.
+Obige Ausgabe zeigt, dass die Achsen nicht gleich skaliert sind. Sie erreichen dies mit dem Befehl. Beachten Sie, dass der Skalierungsbefehl immer _vor _der Definition der Achsen kommen muss.
 
 ```python
 plt.axis('scaled')
 ```
+
+
 
 ## Balkendiagramme
 
@@ -75,13 +77,13 @@ plt.show()
 
 Sie sollten folgendes Ergebnis sehen:
 
-![](<../.gitbook/assets/image (2) (1) (1).png>)
+![](<../.gitbook/assets/image (2).png>)
 
-Können Sie in Zeilen 3 und 7 die Listen durch einen range ersetzen?
+Können Sie in Zeilen 3 und  7 die Listen durch einen range ersetzen?&#x20;
 
 ## Scatterplots
 
-Paarweise Daten (Punktwolken) lassen sich durch Scatterplots darstellen.
+Paarweise Daten (Punktwolken) lassen sich durch Scatterplots darstellen.&#x20;
 
 ```python
 test1_punkte = [99, 90, 85, 97, 80]
@@ -96,9 +98,11 @@ Obiges Programm sollte ergeben:
 
 Was stört sie an der Ausgabe?
 
+
+
 ### Übung
 
-In der Übung zu ranges haben sie eine Liste mit 50 gleichverteilen Zufallszahlen erstellt.
+In der Übung zu ranges haben sie eine Liste mit 50 gleichverteilen Zufallszahlen erstellt.&#x20;
 
 1. Erzeugen Sie zwei dieser Listen und zeigen sie das Ergebnis in einem Scatterplot an. ([Lösung](../vertiefungen/loesungen-und-vertiefungen.md#scatterplot-von-paaren-aus-zufallszahlen))
 2. Welches Ausgabe erwarten Sie, wenn Sie jeweils 2000 Zahlen erzeugen
@@ -120,14 +124,14 @@ print(f"patches = {patches}")
 Häufig wollen wir den Grafen einer Funktion f: R->R plotten. In diesem Fall geben die Paare für eine Auswahl von x aus dem Definitionsbereich die Paare (x,f(x)) eine Menge von Punkten, die wir durch eine Linie verbinden. Wir nehmen als Beispiel die Funktion
 
 $$
-f(x) = x^3 + 2x -1
+f(x) = x^3 - 2x -1
 $$
 
 auf dem Intervall \[min,max]. Wir wollen an `n` verschiedenen x-Werten plotten.
 
 ### Einzelschritte
 
-Wir erzeugen zuerst die Menge eine Liste mit x-Werten mit der Funktion `x_werte`
+Wir  erzeugen zuerst die Menge eine Liste mit x-Werten mit der Funktion `x_werte`
 
 ```python
 def x_werte (min, max, n):
@@ -139,12 +143,7 @@ def x_werte (min, max, n):
 print (x_werte(-1,1,11))
 ```
 
-Versuchen sie diese Funktion zu verstehen! Weil wir die Verteilung von Werten in einem Intervall häufig brauchen, ist sie für uns in Paket `numpy `bereits vordefiniert - das macht unserer Arbeit leichter.
-
-```python
-import numpy as np
-x_werte = np.linspace(-1,-1, 11)
-```
+Versuchen sie diese Funktion zu verstehen!
 
 Nun brauchen wir die Funktionswerte. Wieder programmieren wir selbst eine Funktion:
 
@@ -158,33 +157,20 @@ def f( liste ):
   return y
 ```
 
-Schließlich zeigen wir die Funktion an:
-
-```python
-min = -2
-max = 2
-N = 100
-
-x_werte = np.linspace(min,max,N)  # x-Werte als Liste
-y_werte = f( x_werte )            # Zugehörige Funktionswerte als Liste
-
-plt.plot( x_werte, y_werte, color='blue', linestyle='solid')
-
-plt.axis('scaled')                 # Achsen gleich skalieren
-plt.axis([min,max,-3,3])           # Achsenbereiche festlegen
-plt.grid(True)                     # Linien anzeigen
-plt.show()                         # Aufgebaute Grafik ausgegeben
-```
-
-Insgesamt ergibt das folgendes Programm:
+Schließlich zeigen wir die Funktion an. Insgesamt ergibt das folgendes Programm:
 
 ### Gesamtes Programm
 
 ```python
 from matplotlib import pyplot as plt
-import numpy as np
 
-def f( liste ):              # Funktion: Berechnet die Funktionswerte
+def x_werte (min, max, n):
+  liste = []
+  for i in range(n):
+     liste.extend( [min + i*(max-min)/n] )
+  return liste
+
+def f( liste ):
   n = len(liste)
   y = []
   for i in range(n):
@@ -194,18 +180,25 @@ def f( liste ):              # Funktion: Berechnet die Funktionswerte
 
 min = -2
 max = 2
-N = 100
+N = 1000
 
-x_werte = np.linspace(min,max,N)  # x-Werte als Liste
-y_werte = f( x_werte )            # Zugehörige Funktionswerte als Liste
-
-plt.plot( x_werte, y_werte, color='blue', linestyle='solid')
+x_values = x_werte(min,max,N)
+y_values = f(x_values)
+plt.plot( x_values, y_values, color='blue', linestyle='solid')
 plt.axis('scaled')                 # Achsen gleich skalieren
-plt.axis([min,max,-3,3])
+#plt.gca().set_aspect('equal', adjustable='box')
+plt.axis([-2,2,-3,3])
 plt.grid(True)
 plt.show()
 ```
 
 Ausgabe:
 
-![](<../.gitbook/assets/image (4) (1) (1) (1).png>)
+![](<../.gitbook/assets/image (4).png>)
+
+
+
+
+
+
+
