@@ -38,7 +38,7 @@ $$
 
 Nehmen Sie an, dass S die Menge aller Klausurergebnisse ist. $$S_1$$ist die Menge aller bestandenen Klausuren und$$S_0$$  die Menge aller nicht bestandenen Klausuren. Sie wollen unbedingt wissen, ob sie bestanden haben und kennen die Durchfallquote $$p$$ . Bei welchem Wert von p sind sie bereit _für Ihr Ergebnis_ den _höheren Betrag_ an ein fiktives Orakel zu bezahlen?
 
-a\)  $$p $$ gleich 50%
+a\)  $p$ gleich 50%
 
 b\)   $$p $$ gleich 5%
 
