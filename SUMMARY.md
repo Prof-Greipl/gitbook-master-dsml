@@ -2,7 +2,6 @@
 
 * [Überblick WS 21/22](README.md)
 
-## Part A: Data Science and Python 
 
 * [A.1 Basics in Python](A1_Basics_in_Phython/README.md)
   * [Variablen](A1_Basics_in_Phython/variablen-datentypen-und-operationen.md)
