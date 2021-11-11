@@ -4,7 +4,7 @@ Die Bildschirmabzüge dieses Kapitels sind der Webseite [https://www.w3schools.c
 
 ### Arithmetische Operatoren
 
-![_image (186)](operatoren.assets/_image (186).png)
+![bild1](operatoren.assets/bild1.png)
 
 ### Vergleichsoperatoren
 
