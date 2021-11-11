@@ -43,7 +43,7 @@ for i in z:
   print(i)
 ```
 
-**Die Funktion range kann mehr ales einen Parameter aufnehmen (maximal 3). Erklären Sie die Ausgabe folgender **
+**Die Funktion range kann mehr als einen Parameter aufnehmen (maximal 3). Erklären Sie die Ausgabe folgender Programme**
 
 ```python
 print("Range mit zwei Parametern:");
