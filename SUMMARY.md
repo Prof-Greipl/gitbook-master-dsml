@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Überblick WS 21/22x](README.md)
+* [Überblick WS 21/22](README.md)
 
 ## Part A: Data Science and Python <a href="analytics-und-datascience" id="analytics-und-datascience"></a>
 
