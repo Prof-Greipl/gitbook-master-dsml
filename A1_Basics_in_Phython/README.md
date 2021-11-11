@@ -4,3 +4,4 @@
 
 * Eigenes Notebook, Browser, Internetzugang
 * Zugang zu einem Colab-Notebook.
+
