@@ -48,9 +48,5 @@ print(s1-s2)
 
 Zusammengefasst: Operationen hängen auch von den Werten ab, die sie verarbeiten. Wir schauen uns deshalb im nächsten Abschnitt Datentypen zusammen mit den wichtigsten Operationen an.
 
-###
-
-
-
 
 
