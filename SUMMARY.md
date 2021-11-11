@@ -21,6 +21,7 @@
   * [A4.1 Case Study: Iris Datensatz](A4_Datensaetze/a4.1-case-study-iris-datensatz.md)
   * [A4.2 Skalenniveaus](A4_Datensaetze/a4.2-skalenniveaus.md)
   * [A4.3 Feature Matrix](A4_Datensaetze/a4.3-feature-matrix.md)
-  * [A4.3 Python: Dataframes](A4_Datensaetze/a4.3-python-dataframes/README.md)
+  * [A4.4 Python: Dataframes](A4_Datensaetze/a4.3-python-dataframes/README.md)
     * [Diving into Dataframes](A4_Datensaetze/a4.3-python-dataframes/pandas-und-dataframes.md)
-
+  * [A4.5 Sampling](A4_Datensaetze/a4.5-sampling.md)
+  
