@@ -24,4 +24,12 @@
   * [A4.4 Python: Dataframes](A4_Datensaetze/a4.3-python-dataframes/README.md)
     * [Diving into Dataframes](A4_Datensaetze/a4.3-python-dataframes/pandas-und-dataframes.md)
   * [A4.5 Sampling](A4_Datensaetze/a4.5-sampling.md)
+* [A.5 Preprocessing](A5_Preprocessing/README.md)
+  * [A5.1 Feherarten](A5_Preprocessing/a5.1-fehlerarten.md)
+  * [A5.2 Umgang mit Fehlern](A5_Preprocessing/a5.2-umgangn-mit-fehlern.md)
+  * [A5.3 Feherarten](A5_Preprocessing/a5.3-filterung.md)
+  * [A5.4 Feherarten](A5_Preprocessing/a5.4-datentransformation.md)
+  * [A5.5 Feherarten](A5_Preprocessing/a5.5-datenintegration.md)
+
+  
   
