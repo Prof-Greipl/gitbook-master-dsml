@@ -1,4 +1,4 @@
-# C3.1 Fehlerarten
+# Fehlerarten
 
 ## Grundsätzliche Fehlerarten
 
@@ -26,17 +26,21 @@ Systematische Fehler: werden hauptsächlich durch Unvollkommenheiten der Maßver
 
 Quelle: [AT-6.pdf (tu-dresden.de)](https://tu-dresden.de/bu/umwelt/hydro/iak/ressourcen/dateien/systemanalyse/studium/folder-2009-01-29-lehre/folder-2009-04-03-at/AT-6.pdf?lang=de)
 
-## Beispiel
+## Beispiele
 
 ### Inliers und Drift
 
 Beispiele:
 
-![](<../../.gitbook/assets/image (11).png>)
+![Original Data, Inliers and Drift (Quelle: Runkler)](1-fehlerarten.assets/image-20211114183020487.png)
 
-### Outliers
+### Outliers und Boxplots
 
-![](<../../.gitbook/assets/image (21).png>)
+Link: https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51 
+
+![Boxplot (Quelle: https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51)](1-fehlerarten.assets/image-20211114183958284.png)
+
+
 
 Vertiefung:
 
@@ -48,9 +52,7 @@ Hier handelt es sich um fehlenden Daten. Was tun?&#x20;
 
 ## Python: Fehler finden
 
-### Überblick verschaffen
-
-#### describe und info
+### Überblick verschaffen: `describe` und `info`
 
 Für unsere Feature-Matrix gibt es zwei Python Befehle, die wir zum Start grundsätzlich durchführen:
 
@@ -59,7 +61,7 @@ X.describe()
 X.info()
 ```
 
-#### Histogramme
+### Histogramme mit Seaborn
 
 ```
 import matplotlib.pyplot as plt
@@ -85,7 +87,7 @@ plt.show()
 
 Der Aufruf `df.info()` sagt uns, dass nicht zu jeder Spalte alle Daten gefüllt sind.&#x20;
 
-### Outliers
+### Outliers and Boxplots
 
 Wir verwenden zunächst Boxplots ([https://seaborn.pydata.org/generated/seaborn.boxplot.html](https://seaborn.pydata.org/generated/seaborn.boxplot.html))&#x20;
 
@@ -116,8 +118,7 @@ Folgendes Beispiel zeigt, dass bei mehrfach auftretenden Werten Vorsicht geboten
 import seaborn as sns
 T = pd.DataFrame({
    "data": [1, 1, 1, 5, 5, 5, 5, 5, 5, 5]
-   }
-  )
+   })
 sns.boxplot(x = T["data"])
 T.describe()
 ```

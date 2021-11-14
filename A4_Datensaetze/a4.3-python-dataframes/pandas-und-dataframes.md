@@ -8,7 +8,7 @@ description: >-
 
 ## Diving into Dataframes
 
-Ein Dataframe ist eine Tabellenstruktur von Daten.
+Ein Dataframe ist eine Tabellenstruktur von Daten. Bitte beachten Sie zu diesem Abschnitt auch die Videos 11a bis 11f meiner [DSML-Playlist](https://youtube.com/playlist?list=PLfGN40VwjduJPvtP9QUjC0rjM6-ePT9bg)
 
 ## Beispiel
 

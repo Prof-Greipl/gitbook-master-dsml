@@ -1,3 +1,3 @@
-# 3 Data Procesing
+# 3 Data Processing
 
-![1636359905253](assets_README/1636359905253.png)
+In den meisten Fällen werden Daten bearbeitet, bevor sie zur produktiven Analyse herangezogen werden. Ich spreche über produktive Analyse, weil die Daten zur Vorverarbeitung auch analysiert werden, allerdings mit anderem Fokus.
