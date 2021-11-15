@@ -14,6 +14,16 @@ Die folgende Youtube Playlist entstand im rein digitalen WS 20/21. Es wird wahrs
 
 ## Stand **nach **den jeweiligen Terminen
 
+### T6 - 15.11.2021
+
+- A.4 abgeschlossen
+- A.5 bis ...
+- Homework: Dataframes 
+
+### T5 - 08.11.2021
+
+- A.3 abgeschlossen
+
 ### T4 - 25.10.2021
 
 * A.2 abgeschlossen bis auf _Funktionsgrafen plotten_ (Übung!)
