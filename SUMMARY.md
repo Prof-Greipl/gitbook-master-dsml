@@ -38,7 +38,7 @@
 * [Lineare Algebra](A9_supplements/grundlagen_lineare_algebra/readme.md)
   * [1 Grundlagen](A9_supplements/grundlagen_lineare_algebra/1_skalare-vektoren-matrizen.md)
   * [2 Vertiefung mit Phython](A9_supplements/grundlagen_lineare_algebra/2_py-np-skalare-vektoren-matrizen.md)
-  * [3 Beispiele](A9_supplements/grundlagen_lineare_algebra/3_py-np-examples.md)
+  * [3 Beispiele](A9_supplements/grundlagen_lineare_algebra/3_py-np-examples.md) 
   
 
   
