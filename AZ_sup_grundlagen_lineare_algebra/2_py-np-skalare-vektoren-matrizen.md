@@ -200,37 +200,7 @@ print(w)
 print(w.shape)
 ```
 
-### Anwendung: Histogramme
-
-Nehmen sie an, dass sie Tausende von Werten zwischen 0 und 1 haben. Sie wollen nun wissen, wie viele Werte in den Intervallen \[0, 0.1\[, \[0.1, 0.2\[ bis zu \[0.9, 1] liegen. Sie teilen also den Bereich \[0,1] in zehn Körbe (_bins_) auf und zählen, wie viele Werte in die jeweiligen Körbe fallen.
-
-#### Beispiel 1:
-
-```python
-import numpy as np
-from matplotlib import pyplot as plt
-
-# Reshaping
-v = np.array([1,1,1,4,4,4,4,12])
-
-z = plt.hist(v, bins=4, range=(0, 12))
-print( z )
-```
-
-#### Beispiel 2:
-
-```python
-import numpy as np
-from matplotlib import pyplot as plt
-v = np.random.randn( 1000000 )
-z = plt.hist(v, bins=1000, range=(-4, 4))
-```
-
-Sie sollten folgendes Ergebnis sehen:
-
-![](<../../.gitbook/assets/image (7).png>)
-
-### Übungen
+### Übung
 
 Informieren Sie sich über die Befehle `np.zeros()`, `np.amax()` und `np.amin() `Testen Sie ihr Verständnis anhand einiger Befehle!
 

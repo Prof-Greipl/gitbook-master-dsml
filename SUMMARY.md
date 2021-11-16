@@ -38,7 +38,7 @@
 * [Lineare Algebra](AZ_sup_grundlagen_lineare_algebra/readme.md)
   * [1 Grundlagen](AZ_sup_grundlagen_lineare_algebra/1_skalare-vektoren-matrizen.md)
   * [2 Vertiefung mit Phython](AZ_sup_grundlagen_lineare_algebra/2_py-np-skalare-vektoren-matrizen.md)
-  * [3 Beispiele](AZ_sup_grundlagen_lineare_algebra/3_py-np-examples.md) 
+  * [3 Beispiele](AZ_sup_grundlagen_lineare_algebra/3_py-np-case-study-images.md) 
   
 
   
