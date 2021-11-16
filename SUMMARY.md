@@ -36,9 +36,7 @@
 ## Part B: Ergänzungen <a href="B" id="B"></a>
 
 * [Lineare Algebra](AZ_sup_grundlagen_lineare_algebra/readme.md)
-  * [1 Grundlagen](AZ_sup_grundlagen_lineare_algebra/1_skalare-vektoren-matrizen.md)
-  * [2 Vertiefung mit Phython](AZ_sup_grundlagen_lineare_algebra/2_skalare-vektoren-matrizen-mit-numpy.md)
-  * [3 Beispiele](AZ_sup_grundlagen_lineare_algebra/3_case-study-images.md) 
-  
-
+  * [1 Skalare, Vektoren, Matrizen](AZ_sup_grundlagen_lineare_algebra/1_skalare-vektoren-matrizen.md)
+  * [2 Vektoren und Matrizen mit Python](AZ_sup_grundlagen_lineare_algebra/2_skalare-vektoren-matrizen-mit-numpy.md)
+  * [3 Case Study: Images](AZ_sup_grundlagen_lineare_algebra/3_case-study-images.md) 
   
