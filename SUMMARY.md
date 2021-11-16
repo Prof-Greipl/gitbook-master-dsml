@@ -33,4 +33,7 @@
   * [4 Datentransformation](A5_Preprocessing/4-datentransformation.md)
   * [5 Datenintegration](A5_Preprocessing/5-datenintegration.md)
 
+## Part B: Ergänzungen <a href="B" id="B"></a>
+* [Lineare Algebra](A9_supplements/grundlagen_lineare_algebra.md)
+
   
