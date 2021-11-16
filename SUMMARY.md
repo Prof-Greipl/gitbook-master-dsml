@@ -1,8 +1,9 @@
 # Table of contents
 
-## Part A: Data Science and Python <a href="A" id="A"></a>
-
 * [Überblick WS 21/22](README.md)
+
+## Part A: Python Grundlagen<a href="A" id="A"></a>
+
 * [A.1 Basics in Python](A1_Basics_in_Phython/README.md)
   * [Variablen](A1_Basics_in_Phython/variablen-datentypen-und-operationen.md)
   * [Datentyp "Zahlen"](A1_Basics_in_Phython/zahlen.md)
@@ -19,6 +20,9 @@
 * [A.3 Numpy (I)](A3_numpy-1/README.md)
   * [Numpy-Arrays](A3_numpy-1/numpy-arrays.md)
   * [Funktionen mit Arrays](A3_numpy-1/funktionen-mit-arrays.md)
+
+## Part B: Data Analysis<a href="B" id="B"></a>
+
 * [A.4 Datensätze](A4_Datensaetze/README.md)
   * [1 Case Study: Iris Datensatz](A4_Datensaetze/a4.1-case-study-iris-datensatz.md)
   * [2 Skalenniveaus](A4_Datensaetze/a4.2-skalenniveaus.md)
@@ -31,9 +35,8 @@
   * [2 Umgang mit Fehlern](A5_Preprocessing/2-umgang-mit-fehlern.md)
   * [3 Filterung](A5_Preprocessing/3-filterung.md)
   * [4 Datentransformation](A5_Preprocessing/4-datentransformation.md)
-  * [5 Datenintegration](A5_Preprocessing/5-datenintegration.md)
 
-## Part B: Ergänzungen <a href="B" id="B"></a>
+## Part C: Ergänzungen <a href="C" id="V"></a>
 
 * [Lineare Algebra](AZ_sup_grundlagen_lineare_algebra/readme.md)
   * [1 Skalare, Vektoren, Matrizen](AZ_sup_grundlagen_lineare_algebra/1_skalare-vektoren-matrizen.md)
