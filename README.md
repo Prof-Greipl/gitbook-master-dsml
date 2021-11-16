@@ -17,7 +17,7 @@ Die folgende Youtube Playlist entstand im rein digitalen WS 20/21. Es wird wahrs
 ### T6 - 15.11.2021
 
 - A.4 abgeschlossen
-- A.5 - dort weiter ab Outliers und Boxplots
+- A.5 - dort weiter ab Beispiele / Outliers und Boxplots
 - Homework: Dataframes 
 
 ### T5 - 08.11.2021
