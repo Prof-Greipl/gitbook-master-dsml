@@ -4,7 +4,7 @@ description: to be done
 
 # Datentransformation
 
-## Standardisierung (Feature Scaling)
+## Standardisierung (Min-Max-Scaling)
 
 Ziel: Vermeiden extrem unterschiedlicher Wertebereiche verschiedener Features.
 
@@ -54,35 +54,62 @@ print(f"y-min/mean/y_max = {y.min()} / {y.mean()} / {y.max()}")
 
 
 
+## Label-Transformation
+
+![image-20211117175431514](4-datentransformation.assets/image-20211117175431514.png)
+
+### Python-Code
+
+```python
+import numpy as np
+from sklearn.preprocessing import LabelEncoder
+
+le = LabelEncoder()
+le.fit( ["Virginica", "Setosa", "Versicolor", "Virginica"] )
+print( "Classes : ")
+print( le.classes_)
+
+le.transform(["Virginica", "Virginica", "Setosa", "Versicolor", "Versicolor"])
+print( "\nEncoding : ")
+print( le.transform(["Virginica", "Setosa", "Setosa"]) )
+
+print( "\nInverse Encoding : ")
+print( le.inverse_transform([2,0,0]))
+```
+
+Output:
+
+![image-20211117175518233](4-datentransformation.assets/image-20211117175518233.png)
+
 ## One-Hot Encoding
 
 One-Hot-Encoding ist eine Methode, um kategorische Daten als binäre Vektoren darzustellen. Folgende Grafik verdeutlicht die Methode und illustriert den Namen. 
 
-![One Hot Encoding](4-datentransformation.assets/image-20211116193147504.png)
-
 One-Hot-Encoding funktioniert in folgenden beiden Schritten:
 
-1. Extrahiere aus einem Feature die auftretenden Kategorie-Werte
+1. Extrahiere aus einem Feature/Label die auftretenden Kategorie-Werte
 2. Transformiere den/die Kategorie-Wert/e in einen Vektor.
+
+![image-20211117181805616](4-datentransformation.assets/image-20211117181805616.png)
 
 ### Python-Code
 
 Glücklicherweise gibt es einen Funktion in `sklearn`, die das für uns erledigt. Folgender Code sollte einfach zu verstehen sein.
 
 ```python
-import pandas as pd
 from sklearn.preprocessing import OneHotEncoder
 
-x = [['A'], ['B'], ['A'], ['X'],['X'],['Z'],['A']]
-
 enc = OneHotEncoder(sparse=False)
-enc.fit( x )
+enc.fit( [['A','B'], ['B','A'], ['A','Z'], ['X','Z'], ['A','Z']] )
 print("\nKategorien: \n", enc.categories_)
-print("\nOne-Hot-Encoding von A : \n", enc.transform( [['A']] ) )
-print("\nOne-Hot-Encoding von x : \n", enc.transform( x ) )
+
+# Transformieren eines Wertes
+print("\nOne-Hot-Encoding von [A,Z] : \n", enc.transform( [['A','A']] ) )
 ```
 
+Ausgabe:
 
+![image-20211117181828638](4-datentransformation.assets/image-20211117181828638.png)
 
 
 
