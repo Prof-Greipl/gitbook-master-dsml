@@ -1,4 +1,4 @@
-# C3.3 Filterung
+# Filterung
 
 Filterung modifiziert Werte aus unserem Datensatz. Wir betrachten untern den zahlreichen Filteransätzen lediglich die Glättung von Werte durch Moving Average Techniken.
 

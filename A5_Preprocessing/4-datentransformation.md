@@ -4,7 +4,9 @@ description: to be done
 
 # Datentransformation
 
-## Standardisierung (Min-Max-Scaling)
+Die nachfolgenden Transformation (und ihre Varianten) treten häufig in der Vorverarbeitungsphase auf. Es ist aber stets gut zu überlegen, ob sie sinnvoll sind!
+
+## Feature-Standardisierung (Min-Max-Scaling)
 
 Ziel: Vermeiden extrem unterschiedlicher Wertebereiche verschiedener Features.
 
@@ -13,7 +15,7 @@ Beispiel: Nehmen wir an, dass in einem Datensatz mit zwei Features
 - das erste Feature $$x$$ einer Normalverteilung von mit $$\mu=5000,\sigma=2000$$ entspricht
 - das zweite Feature  $$y$$ einer Normalverteilung von mit $$\mu=100,\sigma=20$$ entspricht
 
-Dies kann für numerische Verfahren erhebliche Probeme bereiten. In vielen Fällen macht es Sinn metrische Features wie folgt in den Bereich von [0,1] zu skalieren:
+Dies kann für numerische Verfahren erhebliche Probleme bereiten. In vielen Fällen macht es Sinn metrische Features wie folgt in den Bereich von [0,1] zu skalieren:
 $$
 x_k = \frac{x_k - x_{min}}{x_{max} - x_{min}}
 $$
@@ -54,11 +56,33 @@ print(f"y-min/mean/y_max = {y.min()} / {y.mean()} / {y.max()}")
 
 
 
+## Feature-Binning
+
+Wir teilen metrische Daten in Intervalle ein und erhalten so eine ordinale oder gröbere metrische Darstellung.
+
+```python
+from sklearn.preprocessing import KBinsDiscretizer
+import numpy as np
+
+# X muss eine Spaltenform haben, also shape [n,1] (deshalb reshape!)
+X = np.array([0,1,2,3,4,5,6,7,8,9,10])
+X = X.reshape(-1,1)
+
+est = KBinsDiscretizer(n_bins=4, encode='ordinal', strategy='uniform')
+est.fit(X)
+
+print( est.bin_edges_)
+Xt = est.transform( X )
+print(Xt)
+```
+
+
+
 ## Label-Transformation
 
 ![image-20211117175431514](4-datentransformation.assets/image-20211117175431514.png)
 
-### Python-Code
+### Python-Code (`Label-Encoder`)
 
 ```python
 import numpy as np
@@ -92,7 +116,7 @@ One-Hot-Encoding funktioniert in folgenden beiden Schritten:
 
 ![image-20211117181805616](4-datentransformation.assets/image-20211117181805616.png)
 
-### Python-Code
+### Python-Code (`OneHotEncoder()`)
 
 Glücklicherweise gibt es einen Funktion in `sklearn`, die das für uns erledigt. Folgender Code sollte einfach zu verstehen sein.
 
@@ -110,6 +134,16 @@ print("\nOne-Hot-Encoding von [A,Z] : \n", enc.transform( [['A','A']] ) )
 Ausgabe:
 
 ![image-20211117181828638](4-datentransformation.assets/image-20211117181828638.png)
+
+
+
+### Übung
+
+Versuchen sie obiges Beispiel in eine One-Hot-Encoder für Ziffern zu überführen, also 
+
+0 -> [1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+3 -> [0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
 
 
 
