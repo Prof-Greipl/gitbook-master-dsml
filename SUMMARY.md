@@ -35,6 +35,7 @@
   * [2 Umgang mit Fehlern](A5_Preprocessing/2-umgang-mit-fehlern.md)
   * [3 Filterung](A5_Preprocessing/3-filterung.md)
   * [4 Datentransformation](A5_Preprocessing/4-datentransformation.md)
+* [A.6 Visualisierung (II)](A5_Visualisierung_II/README.md)
 
 ## Part C: Ergänzungen <a href="C" id="V"></a>
 

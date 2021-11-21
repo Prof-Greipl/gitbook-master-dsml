@@ -9,15 +9,18 @@ Filterung modifiziert Werte aus unserem Datensatz. Wir betrachten untern den zah
 ```
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 
 N = 400
+x = np.linspace(-1,1,N)
+e = np.random.normal(size=N)
 y = x*x + 0.2 * e
 fig = plt.figure(figsize=(8,8))
 plt.plot( x, x*x, color="black", linestyle='-')
-plt.plot( x, y, color="red", linestyle='-')
+plt.plot( x, y, color="red", linestyle='-'
 ```
 
-![Noisy Data](<../../.gitbook/assets/image (1).png>)
+![Daten mit Fehlern](3-filterung.assets/image-20211121190017569.png)
 
 Wir glätten nun die Daten mit einem Moving Average Verfahren.
 
@@ -28,4 +31,5 @@ plt.plot( x, y_filtered, color="green", linestyle='-')
 
 Ergebnis:
 
-![Filterung mit Movin Average der Fenstergröße 50.](<../../.gitbook/assets/image (6).png>)
+![Moving Average Filter](3-filterung.assets/image-20211121190100222.png)
+
