@@ -1,8 +1,20 @@
 # Visualisierung
 
-In vielen Fällen hilft uns eine Visualisierung von Daten bei der Analyse und kann uns den Weg für die nächsten Verarbeitungsschritte weisen. Wie nutzen das Paket `seaborn`. 
+In vielen Fällen hilft uns eine Visualisierung von Daten bei der Analyse und kann uns den Weg für die nächsten Verarbeitungsschritte weisen. 
 
-Wir arbeiten in diesem Abschnitt mit dem Iris-Datensatz. Achten Sie bitte darauf, dass er geladen ist. Hier nochmals der Code.
+## Vorbereitungen
+
+##### Seaborn
+
+Wie nutzen das Paket `seaborn`. Hierzu muss einmal das Paket importiert werden:
+
+```python
+import seaborn as sns
+```
+
+##### Iris
+
+Wir arbeiten in diesem Abschnitt mit dem Iris-Datensatz. Achten Sie bitte darauf, dass er in den Dataframe `iris_df` geladen ist. Hier nochmals der Code.
 
 ```python
 import pandas as pd
@@ -48,7 +60,7 @@ sns.relplot(data=iris_df, x="sepal_len", y="sepal_wid", hue = "class", height=8)
 
 #### Python
 
-```
+```python
 sns.set()
 sns.pairplot(iris_df[['sepal_len', 'sepal_wid', 'petal_len', 'petal_wid', 'class']],
              hue="class", diag_kind="kde")
