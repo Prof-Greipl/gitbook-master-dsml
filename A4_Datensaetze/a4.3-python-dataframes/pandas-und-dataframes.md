@@ -300,3 +300,10 @@ drive.mount('/content/drive')
 df = pd.read_csv("/content/drive/My Drive/Colab Notebooks/data/titanic_train.csv")
 ```
 
+## Übung
+
+Beantworten Sie folgende Fragen zum Iris-Datensatz mit Hilfe der obigen Funktionen:
+
+1. Anzahl der labelled-examples mit `petal_len < 2.45`
+2. Wie viele verschiedene *labels (classes)* treten in den unter 1. gefilterten Zeilen auf? 
+
