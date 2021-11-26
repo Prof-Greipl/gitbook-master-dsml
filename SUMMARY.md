@@ -10,6 +10,7 @@
   * [Datentyp "Strings"](A1_Basics_in_Phython/zeichenketten-strings.md)
   * [Datentyp "Boolean"](A1_Basics_in_Phython/wahrheitswerte.md)
   * [Operatoren](A1_Basics_in_Phython/operatoren.md)
+  * [Datentypen in der Übersicht](A1_Basics_in_Phython/zusammenfassung.md)
   * [Datentyp "Arrays" (Listen)](A1_Basics_in_Phython/listen.md)
   * [Datentyp "Tupel" (im WS 21/22 nicht behandelt)](A1_Basics_in_Phython/tupel.md)
   * [Datentypen in der Übersicht](A1_Basics_in_Phython/zusammenfassung.md)
