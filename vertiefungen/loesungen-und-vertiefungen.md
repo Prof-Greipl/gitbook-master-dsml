@@ -58,11 +58,11 @@ def liste_rand(n):
 
 ```python
 import numpy as np
-from matplotlib import pyplot as plt
+import matplotlib.pyplot as plt
 
 n=5000
-x = np.random.rand(n)
-y = np.random.rand(n)
+x = np.random.random(n)
+y = np.random.random(n)
 plt.scatter( x,y)
 plt.axis("equal")
 plt.show()

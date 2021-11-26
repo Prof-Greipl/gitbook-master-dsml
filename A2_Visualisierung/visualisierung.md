@@ -52,15 +52,13 @@ Mit dem nachfolgendem Befehl legen Sie durch die ersten Einträge der Liste den 
 plt.axis([1900, 2020, 0, 20000])
 ```
 
-Obige Ausgabe zeigt, dass die Achsen nicht gleich skaliert sind. Sie erreichen dies mit dem Befehl. Beachten Sie, dass der Skalierungsbefehl immer _vor _der Definition der Achsen kommen muss.
+Obige Ausgabe zeigt, dass die Achsen nicht gleich skaliert sind. Sie erreichen dies mit dem Befehl. Beachten Sie, dass der Skalierungsbefehl immer *vor* der Definition der Achsen kommen muss.
 
 ```python
 plt.axis('scaled')
 ```
 
 
-
-## Balkendiagramme
 
 Balkendiagramme werden wir immer wieder benötigen. Betrachten Sie folgendes Beispiel (aus :
 
@@ -77,9 +75,7 @@ plt.show()
 
 Sie sollten folgendes Ergebnis sehen:
 
-![](<../.gitbook/assets/image (2).png>)
-
-Können Sie in Zeilen 3 und  7 die Listen durch einen range ersetzen?&#x20;
+![](<../.gitbook/assets/image (2).png>)#x20;
 
 ## Scatterplots
 
@@ -110,7 +106,6 @@ In der Übung zu ranges haben sie eine Liste mit 50 gleichverteilen Zufallszahle
 ## Histogramm
 
 ```python
-// Some code
 import matplotlib.pyplot as plt
 x = [1,2,2,3,3,3,4,4,5]
 (n, bins, patches) = plt.hist(x, bins="auto")
@@ -118,87 +113,6 @@ print(f"n   = {n}")
 print(f"bin = {bins}")
 print(f"patches = {patches}")
 ```
-
-## Funktionsgrafen plotten
-
-Häufig wollen wir den Grafen einer Funktion f: R->R plotten. In diesem Fall geben die Paare für eine Auswahl von x aus dem Definitionsbereich die Paare (x,f(x)) eine Menge von Punkten, die wir durch eine Linie verbinden. Wir nehmen als Beispiel die Funktion
-
-$$
-f(x) = x^3 - 2x -1
-$$
-
-auf dem Intervall \[min,max]. Wir wollen an `n` verschiedenen x-Werten plotten.
-
-### Einzelschritte
-
-Wir  erzeugen zuerst die Menge eine Liste mit x-Werten mit der Funktion `x_werte`
-
-```python
-def x_werte (min, max, n):
-  liste = []
-  for i in range(n):
-     liste.extend( [min + i*(max-min)/n] )
-  return liste
-
-print (x_werte(-1,1,11))
-```
-
-Versuchen sie diese Funktion zu verstehen!
-
-Nun brauchen wir die Funktionswerte. Wieder programmieren wir selbst eine Funktion:
-
-```python
-def f( liste ):
-  n = len(liste)
-  y = []
-  for i in range(n):
-    x = liste[i]
-    y.extend( [ x*x*x + 2*x - 1 ] )
-  return y
-```
-
-Schließlich zeigen wir die Funktion an. Insgesamt ergibt das folgendes Programm:
-
-### Gesamtes Programm
-
-```python
-from matplotlib import pyplot as plt
-
-def x_werte (min, max, n):
-  liste = []
-  for i in range(n):
-     liste.extend( [min + i*(max-min)/n] )
-  return liste
-
-def f( liste ):
-  n = len(liste)
-  y = []
-  for i in range(n):
-    x = liste[i]
-    y.extend( [ x*x*x - 2*x - 1 ] )
-  return y
-
-min = -2
-max = 2
-N = 1000
-
-x_values = x_werte(min,max,N)
-y_values = f(x_values)
-plt.plot( x_values, y_values, color='blue', linestyle='solid')
-plt.axis('scaled')                 # Achsen gleich skalieren
-#plt.gca().set_aspect('equal', adjustable='box')
-plt.axis([-2,2,-3,3])
-plt.grid(True)
-plt.show()
-```
-
-Ausgabe:
-
-![](<../.gitbook/assets/image (4).png>)
-
-
-
-
 
 
 
