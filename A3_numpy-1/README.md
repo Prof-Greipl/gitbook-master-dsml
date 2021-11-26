@@ -1,8 +1,8 @@
-# A.3 Numpy (I)
+# Wofür brauchen wir Numpy
 
-Numpy ist eine Sammlung von Funktionen für effiziente Erzeugung, Berechnung und Bearbeitung von Zahlenmengen, zum Beispiel Vektoren oder Matrizen. &#x20;
+Numpy ist eine Sammlung von Funktionen für effiziente Erzeugung, Berechnung und Bearbeitung von Zahlenmengen, zum Beispiel Vektoren oder Matrizen. &#x20;Wir werden Numpy-Arrays nutzen die Datensätze für maschinelles Lernen zu bearbeiten.
 
-Links für diesen Abschnitt
+###### Links für diesen Abschnitt
 
 | Link                                                                                                                                     | Beschreibung                                                                                                  |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
@@ -14,7 +14,7 @@ Links für diesen Abschnitt
 
 `import numpy as np`
 
-Wir werden Numpy-Arrays nutzen um mit Vektoren und Matrizen zu arbeiten.
+
 
 # Vektoren (eindimensional)
 
