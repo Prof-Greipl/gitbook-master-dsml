@@ -3,5 +3,6 @@
 ## Voraussetzungen :&#x20;
 
 * Eigenes Notebook, Browser, Internetzugang
-* Zugang zu einem Colab-Notebook.
+* Google-Konto 
+* Colab-Notebook: [Willkommen bei Colaboratory - Colaboratory (google.com)](https://colab.research.google.com/)
 

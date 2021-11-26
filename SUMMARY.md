@@ -18,8 +18,7 @@
   * [Ablauf: loops](A1_Basics_in_Phython/ablauf-loops.md)
   * [Ablauf: Funktionen](A1_Basics_in_Phython/ablauf-funktionen.md)
   * [Datentyp "Tupel" (optional)](A1_Basics_in_Phython/tupel.md)
-* [A.2 Visualisierung mit matplotlib](A2_Visualisierung/visualisierung.md)
-* [A.3 Numpy (I)](A3_numpy-1/README.md)
+* [A.2 Numpy-Arrays](A3_numpy-1/README.md)
   * [Numpy-Arrays](A3_numpy-1/numpy-arrays.md)
   * [Funktionen mit Arrays](A3_numpy-1/funktionen-mit-arrays.md)
 
