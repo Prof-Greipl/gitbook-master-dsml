@@ -1,6 +1,6 @@
-# Wofür brauchen wir Numpy
+# Wofür brauchen wir Numpy?
 
-Numpy ist eine Sammlung von Funktionen für effiziente Erzeugung, Berechnung und Bearbeitung von Zahlenmengen, zum Beispiel Vektoren oder Matrizen. &#x20;Wir werden Numpy-Arrays nutzen die Datensätze für maschinelles Lernen zu bearbeiten.
+Numpy ist eine Sammlung von Funktionen für effiziente Erzeugung, Berechnung und Bearbeitung von Zahlenmengen, zum Beispiel Vektoren oder Matrizen. &#x20;Wir werden Numpy-Arrays nutzen, um die Datensätze für maschinelles Lernen zu bearbeiten.
 
 ###### Links für diesen Abschnitt
 
@@ -30,7 +30,7 @@ print( x.shape )
 
 In obigem Beispiel entspricht x einem Vektor :
 $$
-v = \begin{bmatrix} 1 \\ 2  \\ 3  \end{bmatrix}
+x = \begin{bmatrix} 1 \\ 2  \\ 3  \end{bmatrix}
 $$
 Beachten Sie, dass es sich um einen Spaltenvektor handelt! 
 
@@ -69,13 +69,13 @@ Wir erzeugen gleichverteilte und normalverteilte Zufallszahlen. Sie helfen uns b
 ```python
 import numpy as np
 
-# Gleichverteilt in [0,1[, 10 Werte
+# Gleichverteilt in [0,1[ 
 u = np.random.random()
 print(u)
 
-# Erwartungswert 0, Standardabweichung 1, 10 Werte
+# Erwartungswert 0, Standardabweichung 1
 n = np.random.normal(0,1)
-print(type(n)
+print(n)
 
 ```
 
@@ -120,7 +120,7 @@ plt.plot(x, np.sin(x), 'r--')
 
 Wir können mit numpy auch Matrizen, also zwei-dimensionale Strukturen erzeugen:
 
-```
+```python
 A = np.array([[1,2,3], [4,5,6]])
 print(A)
 print( A.shape) 
@@ -138,7 +138,7 @@ $$
 $$
 
 
-```
+```python
 A = np.array([[1,2,3], [4,5,6]])
 v = np.array([1,2,3])
 r = A.dot(v)
