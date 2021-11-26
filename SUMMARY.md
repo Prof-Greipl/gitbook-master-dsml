@@ -20,7 +20,7 @@
   * [Datentyp "Tupel" (optional)](A1_Basics_in_Phython/tupel.md)
 * [A.2 Visualisierung (matplotlib)](A2_visualisierung/readme.md)
 * [A.3 Numpy-Arrays](A3_numpy-1/README.md)
-  * [Numpy-Arrays](A3_numpy-1/numpy-arrays.md)
+
 
 ## Part B: Data Analysis<a href="B" id="B"></a>
 
