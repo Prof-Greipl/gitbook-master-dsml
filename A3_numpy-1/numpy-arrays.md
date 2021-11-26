@@ -7,17 +7,18 @@ Wir werden Numpy-Arrays nutzen um mit Vektoren und Matrizen zu arbeiten.
 ```python
 import numpy as np
 
-x = np.array([1,2,3,4])
+x = np.array([1,2,3])
 print(x)
 print( len(x) )
 print( type(x) )
 print( x.shape )
 ```
 
-In obigem Beispiel entspricht x einem Vektor:
+In obigem Beispiel entspricht x einem Vektor :
 $$
-x = (1,2,3,4)
+v = \begin{bmatrix} 1 \\ 2  \\ 3  \end{bmatrix}
 $$
+Beachten Sie, dass es sich um einen Spaltenvektor handelt! 
 
 ## Beispiele:`arange` und  `linspace`
 
@@ -86,17 +87,48 @@ print(na)
 3. Wiederholen sie Aufgabe 1 mit der Normalverteilung statt der Gleichverteilung. Überlegen sie  bitte vorher: welche grafischen Ausgabe erwarten sie?
 4. Erzeugen Sie ein Histogramm für die Erzeugung von 10000 gleichverteilten (normaverteilten) Zufallszahlen
 
-
-
 ## Visualisierungsübung 2
+
+Nachfolgendes Programm visualisiert eine Sinuskurve.
 
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
 
+x = x = np.linspace(0,2*np.pi,20);
 plt.figure()
 plt.plot(x, np.sin(x), 'r--')
 ```
 
 ![](<../../.gitbook/assets/image (200).png>)
 
+# Matrizen
+
+Wir können mit numpy auch Matrizen, also zwei-dimensionale Strukturen erzeugen:
+
+```
+A = np.array([[1,2,3], [4,5,6]])
+print(A)
+print( A.shape) 
+```
+
+![image-20211126190627914](numpy-arrays.assets/image-20211126190627914.png)
+
+Sie kennen das als:
+$$
+A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix}
+$$
+Sie können sich vielleicht noch an die Matrixmultiplikation erinnern?
+$$
+\begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix} \begin{bmatrix} 1 \\ 2  \\ 3  \end{bmatrix} = \begin{bmatrix} 14 \\ 32  \end{bmatrix}
+$$
+
+
+```
+A = np.array([[1,2,3], [4,5,6]])
+v = np.array([1,2,3])
+r = A.dot(v)
+print (r)
+```
+
+![image-20211126191331169](numpy-arrays.assets/image-20211126191331169.png)
