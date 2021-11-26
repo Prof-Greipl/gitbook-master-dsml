@@ -6,7 +6,7 @@ description: 'Listen: Einer der wichtigsten Datentypen. Listen werden häufig Ar
 
 ## Grundlegendes
 
-Listen sind eine geordnete Ansammlung von Elementen. Elemente können dabei z.B. Zahlen oder Zeichenketten sein und doppelt in der Liste auftauchen. Listen sind änderbar. Mit Listen erhalten wir erstmals eine Struktur von Werten oder anderen Elementen.
+Listen sind eine geordnete Ansammlung von Elementen. Elemente können dabei z.B. Zahlen oder Zeichenketten sein und doppelt in der Liste auftauchen. Listen sind änderbar. Mit Listen erhalten wir erstmals eine Struktur von Werten oder anderen Elementen. Sie kennen derartige Strukturen bereits aus der Mathematik (Vektoren) oder aus Excel (Zeilen, Spalten)
 
 ```
 int_list = [1, 2 , 3]

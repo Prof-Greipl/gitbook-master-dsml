@@ -12,11 +12,12 @@
   * [Operatoren](A1_Basics_in_Phython/operatoren.md)
   * [Datentypen in der Übersicht](A1_Basics_in_Phython/zusammenfassung.md)
   * [Datentyp "Arrays" (Listen)](A1_Basics_in_Phython/listen.md)
-  * [Datentyp "Tupel" (im WS 21/22 nicht behandelt)](A1_Basics_in_Phython/tupel.md)
+  * [Datentyp "Tupel" (optional)](A1_Basics_in_Phython/tupel.md)
   * [Datentypen in der Übersicht](A1_Basics_in_Phython/zusammenfassung.md)
   * [Ablauf: if-then-else](A1_Basics_in_Phython/if-then-else.md)
   * [Ablauf: loops](A1_Basics_in_Phython/ablauf-loops.md)
   * [Ablauf: Funktionen](A1_Basics_in_Phython/ablauf-funktionen.md)
+  * [Datentyp "Tupel" (optional)](A1_Basics_in_Phython/tupel.md)
 * [A.2 Visualisierung mit matplotlib](A2_Visualisierung/visualisierung.md)
 * [A.3 Numpy (I)](A3_numpy-1/README.md)
   * [Numpy-Arrays](A3_numpy-1/numpy-arrays.md)
@@ -44,4 +45,3 @@
   * [1 Skalare, Vektoren, Matrizen](AZ_sup_grundlagen_lineare_algebra/1_skalare-vektoren-matrizen.md)
   * [2 Vektoren und Matrizen mit Python](AZ_sup_grundlagen_lineare_algebra/2_skalare-vektoren-matrizen-mit-numpy.md)
   * [3 Case Study: Images](AZ_sup_grundlagen_lineare_algebra/3_case-study-images.md) 
-  
