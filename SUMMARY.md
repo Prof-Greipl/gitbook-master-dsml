@@ -12,8 +12,6 @@
   * [Operatoren](A1_Basics_in_Phython/operatoren.md)
   * [Datentypen in der Übersicht](A1_Basics_in_Phython/zusammenfassung.md)
   * [Datentyp "Arrays" (Listen)](A1_Basics_in_Phython/listen.md)
-  * [Datentyp "Tupel" (optional)](A1_Basics_in_Phython/tupel.md)
-  * [Datentypen in der Übersicht](A1_Basics_in_Phython/zusammenfassung.md)
   * [Ablauf: if-then-else](A1_Basics_in_Phython/if-then-else.md)
   * [Ablauf: loops](A1_Basics_in_Phython/ablauf-loops.md)
   * [Ablauf: Funktionen](A1_Basics_in_Phython/ablauf-funktionen.md)
