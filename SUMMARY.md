@@ -38,7 +38,7 @@
 * [B.3 Visualisierung (II)](A6_Visualisierung_II/README.md)
 
 ## Part C: Maschinelles Lernen <a href="C" id="C"></a>
-* [A.7 Entscheidungsbäume](A7_Decision_Trees/README.md)
+* [C.1 Problemstellung und Grundbegriffe](A7_ML_Grundbegriffe/README.md)
 
 
 ## Part D: Ergänzungen <a href="D" id="D"></a>
