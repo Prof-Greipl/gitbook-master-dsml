@@ -1,5 +1,3 @@
-# Probemstellung, Begriffe, Notationen
-
 
 
 # Problemstellung
