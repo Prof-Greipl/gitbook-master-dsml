@@ -32,13 +32,13 @@ Iris ist ein Beispiel für ein Klassifikationsproblem mit $$k= 3$$.
 
 ## Accuracy
 
-Für **Klassifikation **definieren wir die Qualität des Verfahrens durch den Anteil der korrekt klassifizierten Eingaben, also
+Für **Klassifikation** definieren wir die Qualität des Verfahrens durch den Anteil der korrekt klassifizierten Eingaben, also
 
 $$
 A(M, X,y) = \frac{\text{Anzahl der korrekten Vorhersagen}}{\text{Anzahl der Examples}}=\frac{| \{ x_i, \text {mit }M(x_i) = y_i\}|}{n}
 $$
 
-Beachten Sie, dass wir die Accuracy nicht unbedingt auf der Basis des gesamten Datensatz bestimmen werden. Sinnvoller ist es, die Accuracy anhand von Examples zu bewerten, die das Verfahren noch nie vorher gesehen hat. 
+Beachten Sie, dass wir die Accuracy nicht unbedingt auf der Basis des <u>gesamten</u> Datensatzes $$X$$ bestimmen werden. Sinnvoller ist  die Berechnung anhand von Examples , die das Verfahren noch nie vorher gesehen hat. Dazu später mehr...
 
 
 
@@ -50,7 +50,7 @@ Enthält  $$Y$$ sehr viele mögliche Werte, z.B. $$Y = \mathbb{R}$$, weil die La
 
 
 
-## Loss (Regression)
+## Loss
 
 Um zu bewerten, wie gut (oder schlecht) ein Modell ist, messen wir für einen Datensatz $$(X,y)$$, wie weit die Vorhersagen von den Labels abweichen. Man verwendet zum Beispiel für Regressionsprobleme in der Regel den sogenannten *mean squared error* (MSE):
 
