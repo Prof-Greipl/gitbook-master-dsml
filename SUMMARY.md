@@ -38,7 +38,7 @@
 * [B.3 Visualisierung (II)](A6_Visualisierung_II/README.md)
 
 ## Part C: Maschinelles Lernen <a href="C" id="C"></a>
-* [C.1 Problemstellung und Grundbegriffe](A7_ML_Grundbegriffe/README.md)
+* [C.1 Problemstellung und Grundbegriffe](A7_ML_Grundbegriffe/readme.md)
 
 
 ## Part D: Ergänzungen <a href="D" id="D"></a>
