@@ -1,5 +1,7 @@
 # Probemstellung, Begriffe, Notationen
 
+
+
 # Problemstellung
 
 Wie in vorhergehendem Abschnitt bereits beschrieben, suchen wir ein Programm, das zu einem Feature-Vektor in möglichst hoher Genauigkeit (manchmal sprechen wir auch von  *möglichst kleinem Fehler*) ein korrektes Ergebnis (*Label*) bestimmt .
