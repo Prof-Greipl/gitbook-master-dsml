@@ -90,4 +90,3 @@ p = tree.plot_tree(clf
                    , filled=True
                    )
 ```
-
