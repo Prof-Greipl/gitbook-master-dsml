@@ -39,6 +39,8 @@
 
 ## Part C: Maschinelles Lernen <a href="C" id="C"></a>
 * [C.1 Problemstellung und Grundbegriffe](A7_ML_Grundbegriffe/readme.md)
+* [C.2 Entscheidungsbäume](A8_Decision_Trees/readme.md)
+
 
 
 ## Part D: Ergänzungen <a href="D" id="D"></a>
