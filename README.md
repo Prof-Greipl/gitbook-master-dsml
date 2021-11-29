@@ -14,6 +14,18 @@ Die folgende Youtube Playlist entstand im rein digitalen WS 20/21. Es wird wahrs
 
 ## Stand **nach **den jeweiligen Terminen
 
+### T8 - 29.11.2021
+
+- C1 abgeschlossen
+
+  
+
+### T7 - 22.11.2021
+
+- B2.4 abgeschlossen
+
+   
+
 ### T6 - 15.11.2021
 
 - A.4 abgeschlossen

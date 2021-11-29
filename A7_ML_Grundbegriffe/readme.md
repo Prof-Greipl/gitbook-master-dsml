@@ -18,7 +18,7 @@ $$
 
  Jedes Modell ist grundsätzlich eine Lösung der Aufgabenstellung (wobei es gute und schlechte Lösungen gibt..). Für *Iris* wäre der Ansatz, jedem Feature-Vektor $$x$$ die Blumenart *Versicolor* zuzuordnen, ein Modell - wenn auch kein besonders gutes.
 
-Der Wert $$M(x)$$ heißt auch **Vorhersage **oder **Prediction** des Modells $$M$$ für den Feature-Vektor $$x$$. Ein Modell ist also dann "gut", wenn die Vorhersage  $$M(x)$$ möglichst oft dem erwarteten Ergebnis entspricht oder nahe daran liegt. 
+Der Wert $$M(x)$$ heißt auch **Vorhersage ** oder **Prediction** des Modells $$M$$ für den Feature-Vektor $$x$$. Ein Modell ist also dann "gut", wenn die Vorhersage  $$M(x)$$ möglichst oft dem erwarteten Ergebnis entspricht oder nahe daran liegt. 
 
 # Klassifikation
 
