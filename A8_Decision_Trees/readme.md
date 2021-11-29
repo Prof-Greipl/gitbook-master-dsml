@@ -6,14 +6,14 @@ Zur Vereinfachung wählen wir im nächsten Beispiel nur *versicolor*- und *virig
 
 Ein möglicher Entscheidungsbaum sieht dann so aus:
 
-![Einfacher (und schlechter Entscheidungsbaum)](readme.assets/image-20211129091334434.png)
+![Einfacher (und schlechter) Entscheidungsbaum](readme.assets/image-20211129091334434.png)
 
-Jeder Knoten beschreibt (in Klammern die Werte für den ersten Knoten):
+Jeder Knoten beschreibt (in Klammern die Werte für den obersten Knoten, auch Wurzel/Root genannt):
 
 - die Anzahl der Datensätze, die in den Knoten fließen (#100)
 - die Anzahl der Datensätzen mit den einzelnen Klassen (#50 / #50)
 - die Qualität des Knotens (dazu später mehr)
-- die Prediction, die für Datensätze dieses Block getroffen wird (hier *versicolor*). 
+- die Prediction, die für Datensätze dieses Block getroffen wird (hier *versicolor* - warum??). 
 - das Kriterium für die weitere Aufspaltung.
 
 Sie können die Zahlen mit Excel nachvollziehen oder - schneller - mit folgenden kleinen Programmen berechnen.
