@@ -1,28 +1,36 @@
 # Grundidee
 
-Wir versuchen einen Entscheidungsbaum zu konstruieren, der als Eingabe einen Feature-Vektor nimmt und als Ausgabe die zugeordnete Klasse. 
+Wir versuchen einen als Modell einen Entscheidungsbaum zu konstruieren, der entlang von Werten eines Feature aufgebaut ist.  Der letzte Knoten jedes Pfades gibt die zugeordnete Klasse an. 
 
-Zur Vereinfachung wählen wir im nächsten Beispiel nur *versicolor*- und *viriginica*-Datensätze aus, arbeiten also mit zwei Klassen und 100 Datensätzen.
+## Beispiel
+
+Zur Vereinfachung wählen wir im folgenen Beispiel nur *versicolor*- und *viriginica*-Datensätze aus, arbeiten also mit zwei Klassen und 100 Datensätzen.
 
 Ein möglicher Entscheidungsbaum sieht dann so aus:
 
-![Einfacher (und schlechter) Entscheidungsbaum](readme.assets/image-20211129091334434.png)
+
+
+![Abb 1: Einfacher (und schlechter) Entscheidungsbaum](readme.assets/image-20211129091334434.png)
 
 Jeder Knoten beschreibt (in Klammern die Werte für den obersten Knoten, auch Wurzel/Root genannt):
 
-- die Anzahl der Datensätze, die in den Knoten fließen (#100)
-- die Anzahl der Datensätzen mit den einzelnen Klassen (#50 / #50)
+- die gesamte Anzahl der Datensätze, die in den Knoten fließen (#100)
+- die Aufteilung der Datensätze in einzelne Klassen (#50 / #50)
 - die Qualität des Knotens (dazu später mehr)
-- die Prediction, die für Datensätze dieses Block getroffen wird (hier *versicolor* - warum??). 
-- das Kriterium für die weitere Aufspaltung.
-
-Sie können die Zahlen mit Excel nachvollziehen oder - schneller - mit folgenden kleinen Programmen berechnen.
+- für Blätter: die Prediction, die für Datensätze dieses Block getroffen wird (hier *versicolor* - warum??). 
+- das Kriterium für die weitere Aufspaltung
 
 Bitte beachten:
 
 - In einem Knoten darf nur *ein* *Feature* mit einer Vergleichsoperation abgefragt werden
 - Die Baumhöhe ist definiert durch: Anzahl der Knotenebenen unter dem Wurzelknoten (in obigem Baum 1).
 - Die Modellfamilie ist die Menge aller Bäume einer bestimmten Höhe.
+
+
+
+Sie können die Zahlen aus obigem Entscheidungsbaum mit Excel nachvollziehen oder - schneller - mit folgenden kleinen Programmen berechnen.
+
+
 
 ## Python
 
@@ -60,12 +68,12 @@ print( "Virginica  : ", iris_df[ filter_crit & filter_vir]["class"].count() )
 
 Unsere Modellfamilie ist nun die Menge aller Bäume der Höhe zwei und wir versuchen den besten Baum im Sinne der *Accuracy* zu finden. Dazu hilft uns Python:
 
-![Optimaler Baum der Höhe 1](readme.assets/image-20211129092942002.png)
+![Iris mit 2 Klassen: Optimaler Baum der Höhe 1](readme.assets/image-20211129092942002.png)
 
 ## Übung
 
 1. Berechnen sie die Werte in den Knoten mit dem Phython-Programm aus dem vorhergehenden Abschnitt.
-2. Welche Accuracy hat dieser Baum?
+2. Welche *Accuracy* hat dieser Baum?
 
 
 
@@ -90,3 +98,40 @@ p = tree.plot_tree(clf
                    , filled=True
                    )
 ```
+
+
+
+# Qualität eines Knotens 
+
+Jeder Knoten eines Entscheidungsbaums enthält eine Aufteilung seiner Daten in zwei Gruppen.
+
+
+
+Sie sehen oben zwei mögliche Entscheidungsbäume für Iris mit unterschiedlicher Accuracy. Offensichtlich hängt die Accuracy von der Entscheidung am Wurzelknoten ab. Diese Entscheidung erzeugt zwei Teilmengen  mit 54 Elementen im linken Knoten und 46 Elemente im rechten Knoten. 
+
+
+
+## Gini-Impurity
+
+Nehmen Sie an, dass eine Menge S  in Teilmengen $$S_1, S_2,...S_k$$  zerlegt wird (und damit den Elementen einer Teilmengen jeweils ein Label zugeordnet ist.) Mit  $$p_i$$  bezeichnen wir jeweils das Verhältnis der Elemente  von $$S_i$$ im Vergleich zu $$S$$. Wegen $$\sum p_i = 1$$ definiert$$(p_1, p_2, ... p_n)$$ eine (diskrete) Verteilungsfunktion. 
+
+Wir wählen nun aus Menge $$S$$  zufällig  Elemente aus Für jedes gewählte Element raten wir, zu welcher Teilmenge es gehört. Beim Raten halten wir die obige Verteilungsfunktion ein. Wie hoch ist die Wahrscheinlichkeit - die wir im folgenden GINI nennen - , dass wir falsch raten?
+
+Offensichtlich ist für $$k=2$$:
+$$
+\begin{align}
+\text{GINI} 
+& = p_1 \cdot (1-p_1) + p_2 \cdot (1-p_2) \\
+& = 2 p_1 p_2\\
+& = 1 - p_1^2 - p_2^2
+\end{align}
+$$
+wegen $$1 = (p_1 + p_2)^2 = p_1^2 + 2p_1p_2 + p_2^2$$
+
+## Beispiel
+
+![Zerlegung von 10 Zahlen in blaue und rote Werte](readme.assets/image-20211130172946647.png)
+
+
+
+Besteht eine Menge aus $$n$$​ Klassen jeweils   $$S_L$$ und $$S_R$$  die gemäß der Bedingung jeweils in den linken und rechten Knoten fließen. 
