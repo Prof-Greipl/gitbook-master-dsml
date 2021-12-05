@@ -37,7 +37,7 @@ Ein Entscheidungsbaum erlaubt auf folgende Weise eine *Prediction* für einen Fe
 
 
 
-![image-20211205131600768](readme.assets/image-20211205131600768.png)
+![image-20211205144252174](readme.assets/image-20211205144252174.png)
 
 
 
