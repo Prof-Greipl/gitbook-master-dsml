@@ -1,8 +1,8 @@
 ## Aufteilung in Training-Set und Test-Set
 
-Wir teilen unseren Datensatz in einen Trainings-Teil und einen Test-Teil auf.
+Wir teilen unseren Datensatz in einen Trainings-Teil und einen Test-Teil auf (Wir ignorieren für den Moment den Validation Set.
 
-![](<../../.gitbook/assets/image (107).png>)
+![image-20211205145543262](readme.assets/image-20211205145543262.png)
 
 | Menge       | Beschreibung                                                 |
 | ----------- | ------------------------------------------------------------ |
@@ -49,9 +49,11 @@ print(f'\nShape of Training-Data : {X_train.shape}')
 print(f'\nShape of Test-Data     : {X_test.shape}')
 ```
 
-Modifizieren Sie Zeilen 21 und 22, wenn Sie nicht alle Features für den Lernprozess einsetzen wollen. 
 
-![](<../../.gitbook/assets/image (122) (1).png>)
+
+#### Erläuterung:
+
+![image-20211205145901725](readme.assets/image-20211205145901725.png)
 
 ### Entscheidungsbaum erzeugen
 
@@ -73,7 +75,6 @@ p = tree.plot_tree(clf
                    , class_names=['setosa', 'versicolor', 'virginica']
                    , filled=True
                    )
-
 ```
 
 
@@ -102,9 +103,4 @@ print("Accuracy (manuell) ..: ", c/N)
 ```
 
 
-
-Erläuterung:
-
-* Zeile 3 summiert die Werte im Vektor (True entspricht einer 1)
-* Zeile 4 gibt zum Test den Vergleichsvektor aus.
 
