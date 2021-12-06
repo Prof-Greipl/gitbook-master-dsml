@@ -4,21 +4,21 @@ Wir versuchen einen als Modell einen Entscheidungsbaum zu konstruieren, der entl
 
 Nachfolgende Eigenschaften beschreiben einen binären Entscheidungsbaum:
 
-- Ein binärer Entscheidungsbaum besteht aus mindestens einem Knoten (node). Dieser Knoten heißt Wurzel (root [node]()). 
+- Ein binärer Entscheidungsbaum besteht aus mindestens einem **Knoten** (node). Dieser Knoten heißt **Wurzel** (root). 
 
-- Jeder Knoten hat entweder zwei Nachfolgeknoten (linker und rechter Nachfolgeknoten) oder keinen Nachfolgeknoten. Außer der Wurzel ist jeder Knoten ein Nachfolgeknoten genau eines anderen Knoten.  
+- Jeder Knoten hat entweder zwei **Nachfolgeknoten** (linker und rechter Nachfolgeknoten) oder keinen Nachfolgeknoten. Außer der Wurzel ist jeder Knoten ein Nachfolgeknoten genau eines anderen Knoten.  
 
-- Ein Knoten ist mit einem Nachfolgeknoten über eine Kante verbunden. Die Tiefe eines Knotens gibt an, wie viele Kanten er von der  Wurzel entfernt ist.
+- Ein Knoten ist mit einem Nachfolgeknoten über eine **Kante** verbunden. Die **Tiefe eines Knotens** gibt an, wie viele Kanten er von der  Wurzel entfernt ist.
 
-- Ein Pfad ist eine geordnete Liste von Knoten, die durch Kanten verbunden sind 
+- Ein **Pfad** ist eine geordnete Liste von Knoten, die durch Kanten verbunden sind 
 
-- Ein Knoten ohne Nachfolgeknoten heißt *Blatt*, andernfalls *innerer Knoten*.
+- Ein Knoten ohne Nachfolgeknoten heißt **Blatt**, andernfalls **innerer Knoten**,
 
-- Jeder innere Knoten enthält genau Bedingung (im ML Kontext:  auf Basis *eines* Feature-Wertes.)
+- Jeder innere Knoten enthält genau eine **Bedingung**, also eine Abfrage, die mit *wahr* oder *falsch* zu beantworten ist. (im ML Kontext:  auf Basis *eines* Feature-Wertes.)
 
-- Jedem Blatt ist genau eine Klasse (label) zugeordnet.
+- Jedem Blatt ist genau eine **Klasse** (label) zugeordnet.
 
-- Die Baumhöhe (engl. *tree depth*) ist die maximal auftretende Tiefe eines Knotens. 
+- Die **Baumhöhe** (engl. *tree depth*) ist die maximal auftretende Tiefe eines Knotens. 
 
   
 
@@ -32,7 +32,7 @@ Ein Entscheidungsbaum erlaubt auf folgende Weise eine *Prediction* für einen Fe
 
 - Die Wurzel erhält den Feature-Vektor als Eingabe.  
 
-- Der Feature-Vektor fließt definiert gemäß dem Ergebnis der Abfrage im jeweiligen Knoten (wahr: linker Knoten, falsch: rechter Knoten)  einen Pfad bis zu einem Blatt.
+- Der Feature-Vektor definiert gemäß dem Ergebnis der Abfrage im jeweiligen Knoten (wahr: linker Knoten, falsch: rechter Knoten)  einen Pfad bis zu einem Blatt.
 - Die diesem Blatt zugeordnete Klasse (label) ist die *Prediction* für den Feature-Vektor. 
 
 
@@ -43,24 +43,22 @@ Ein Entscheidungsbaum erlaubt auf folgende Weise eine *Prediction* für einen Fe
 
 # Konstruktion  
 
-Zur Vereinfachung wählen wir im folgenden Beispiel nur *versicolor*- und *viriginica*-Datensätze aus, arbeiten also mit zwei Klassen und 100 Datensätzen. Wir bauen einen möglichen Entscheidungsbaum der Höhe 1. Wir gehen in zwei Schritten vor
+Zur Vereinfachung wählen wir im folgenden Beispiel nur *versicolor*- und *viriginica*-Datensätze aus, arbeiten also mit zwei Klassen und 100 Datensätzen. Wir bauen einen möglichen Entscheidungsbaum der Höhe 1. Wir gehen in zwei Schritten vor:
 
 ##### Schritt 1: Abfragen festlegen 
 
-Wir legen die Abfrage in jedem inneren Knoten fest (das ist für die Höhe 1 einfach, weil wir nur einen inneren Knoten haben): petal_len <=4
+Wir legen die Abfrage in jedem inneren Knoten fest (das ist für die Höhe 1 einfach, weil wir nur einen inneren Knoten haben). In *nachfolgendem* Beispiel:  petal_len <=4
 
 ##### Schritt 2: Predictions festlegen
 
-Dieser Schritt ist etwas anpruchsvoller: Wir lassen alle Datensätze wie oben erläutert durch einen Pfad bis zum Blatt laufen. In jedem Knoten zählen wir, 
+Dieser Schritt ist etwas anpruchsvoller: Wir lassen alle Datensätze - wie oben erläutert - durch einen Pfad bis zu einem Blatt laufen. In jedem Knoten auf dem Pfad zählen wir, 
 
 - wie viele Datensätze durch den Knoten gelaufen sind und
-- welchen label sie jeweils hatten.
+- welche Klasse sie jeweils hatten.
 
-Schließlich legen wir für jedes Blatt Klasse mit dem höchsten Werte als Prediction fest. 
+Schließlich legen wir für jedes Blatt die Klasse mit dem höchsten Zählwert als Prediction fest. 
 
-Nachfolgend finden Sie den Baum, den dieses Verfahren festlegt. Im Wurzelknoten kommen alle 100 Datensätze an, 50 davon mit dem Label *versicolor* und 50 mit dem Label *viriginica*.
-
-Offensichtlich werden im linken Blatt 16 Datensätze, im rechte Blatt 50 Datensätze richtig klassifiziert. Das macht eine Genauigkeit von 66%.
+Nachfolgend finden Sie entsprechenden Baum.  Im Wurzelknoten kommen alle 100 Datensätze an, 50 davon mit dem Label *versicolor* und 50 mit dem Label *viriginica*. Offensichtlich werden im linken Blatt 16 Datensätze, im rechte Blatt 50 Datensätze richtig klassifiziert. Das ergibt eine Genauigkeit von 66%.
 
 
 
@@ -80,7 +78,6 @@ Wir wählten zuerst nur die beiden Klassen *versicolor* und *viriginca* aus. Die
 
 ```python
 import pandas as pd
-from sklearn import datasets
 
 iris = datasets.load_iris()
 iris_df = pd.DataFrame(iris.data)
@@ -105,9 +102,9 @@ print( "Virginica  : ", iris_df[ filter_crit & filter_vir]["class"].count() )
 
 
 
-## Übung
+## Übung 1
 
-Versuchen Sie, einen besseren Baum der Höhe 1 zu finden!
+Versuchen Sie, einen besseren Baum der Höhe 1 zu finden! Erstellen Sie eine (handschriftliche) Grafik, wie in obiger Abbildung.
 
 
 
@@ -117,11 +114,11 @@ Versuchen Sie, einen besseren Baum der Höhe 1 zu finden!
 
 In diesem Abschnitt geht es um die Frage, wie wir den besten Baum finden. Dazu definieren wir zunächst unsere **Modellfamilie**: wir betrachten alle binären Entscheidungsbäume der Höhe 1. Das hört sich zunächst recht übersichtlich an, allerdings gibt bereits mehr als 90 sinnvolle Bäume der Höhe 1. (Und später werden wir die Höhe noch ändern!) 
 
-Als Lernverfahren könnten sie nun alle Entscheidungsbäume aus der Modellfamilie bauen und den besten Baum aussuchen. In der Theorie funktioniert das, in der Praxis nur schlecht! Sie können sich leicht vorstellen, dass die Anzahl der möglichen Bäume mit der Baumhöhe und der Anzahl der Features förmlich explodiert. Es ist also keine gute Idee alle Bäume zu bauen und dann denjenigen mit der besten Genauigkeit auszuwählen.
+Als Lernverfahren könnten sie nun alle Entscheidungsbäume aus der Modellfamilie bauen, die Genauigkeit ausrechnen und dann den besten Baum aussuchen. In der Theorie funktioniert das, in der Praxis nur schlecht! Sie können sich leicht vorstellen, dass die Anzahl der möglichen Bäume mit der Baumhöhe und der Anzahl der Features förmlich explodiert. Es ist also keine gute Idee alle Bäume zu bauen und dann denjenigen mit der besten Genauigkeit auszuwählen.
 
-## Übungen
+## Übung 1
 
-- Was könnte man unter einem *sinnvollen Baum* verstehen?
+- Was könnte man unter einem *sinnvollen Baum* verstehen?(Oder: Was ist ein nicht sinnvoller Baum?)
 
 - Wie würden sie die Anzahl der möglichen sinnvollen Bäume der Höhe 1 berechnen?
 
@@ -133,17 +130,28 @@ Wir berecchnen den besten Baum mit Python. Hier das Ergebnis, unten der Code.
 
   ![Iris mit 2 Klassen: Optimaler Baum der Höhe 1](readme.assets/image-20211129092942002.png)
 
-  ## Übung
+  ## Übung 2
 
-  1. Berechnen sie die Werte in den Knoten mit dem Phython-Programm aus dem vorhergehenden Abschnitt.
-  2. Welche *Accuracy* hat dieser Baum?
-  3. Wie viele verschiedene Bäume der Höhe eins gibt es?
+    1. Berechnen sie die Werte in den Knoten mit dem Phython-Programm aus dem vorhergehenden Abschnitt.
+    2. Welche *Accuracy* hat dieser Baum?
 
   
 
   ## Python
 
   ```python
+  import pandas as pd
+  
+  from sklearn import datasets
+  from sklearn.tree import DecisionTreeClassifier 
+  from sklearn import tree
+  
+  iris = datasets.load_iris()
+  iris_df = pd.DataFrame(iris.data)
+  iris_df['class']=iris.target_names[iris.target ]
+  iris_df.columns=['sepal_len', 'sepal_wid', 'petal_len', 'petal_wid', 'class']
+  iris_df = iris_df[50:]
+  
   X = iris_df.sample(frac=1).reset_index(drop=True)
   y = X['class']
   X = X.drop(['class'], axis=1)

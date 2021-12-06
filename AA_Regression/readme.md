@@ -1,4 +1,4 @@
-Anhand des Zirpens von Grillen kann man mehr oder weniger verlässlich die Lufttemperatur berechnen. Die Körperfunktionen von Grillen verändern sich wie bei anderen Insekten auch durch veränderte Lufttemperatur. Denn wie alle Insekten sind Grillen kaltblütig und nehmen die sie umgebende Temperatur an. Je wärmer, desto häufigeres Zirpen. Ist es wärmer, laufen die Körperfunktionen – wie auch Bewegungen – schneller ab, die Grillen sind aktiver. \[…] Da Grillen also bei erhöhter Temperatur häufiger Zirpen, kann man aus der Häufigkeit des Zirpens die Lufttemperatur ableiten. Die Formel dafür ist sehr simpel. Um die Temperatur in Grad Celsius zu errechnen, zählt man das Zirpen einer einzelnen Grille in einem Intervall von 25 Sekunden.
+Anhand des Zirpens von Grillen kann man mehr oder weniger verlässlich die Lufttemperatur berechnen. Die Körperfunktionen von Grillen verändert sich wie bei anderen Insekten auch durch veränderte Lufttemperatur.  Wie alle Insekten sind Grillen kaltblütig und nehmen die sie umgebende Temperatur an. Je wärmer, desto häufigeres Zirpen, denn: Ist es wärmer, laufen die Körperfunktionen – wie auch Bewegungen – schneller ab, die Grillen sind aktiver. \[…] Da Grillen also bei erhöhter Temperatur häufiger Zirpen, kann man aus der Häufigkeit des Zirpens die Lufttemperatur ableiten. Die Formel dafür ist sehr simpel. Um die Temperatur in Grad Celsius zu errechnen, zählt man das Zirpen einer einzelnen Grille in einem Intervall von 25 Sekunden. ([Quelle](https://www.heute.at/s/so-verraten-ihnen-grillen-die-aktuelle-temperatur-54218483))
 
 # Dataset
 
@@ -6,23 +6,7 @@ Nehmen wir an, dass folgende kleine Menge von labelled examples vorliegt:
 
 ![](<readme.assets/image (136).png>)
 
-Natürlich wollen wir nun - wie üblich - aus dem feature den label vorhersagen. Offensichtlich handelt es sich um ein Regressionsproblem. 
-
-Mit folgendem Code definieren wir unseren Dataset:
-
-```python
-chirps = pd.DataFrame({
-    "Count": [31,16,29,43,27,19,47,9,45,5,39],
-    "Temp": [9.4,10.5,17.1,24.3,14.6,9.9,16.9,6.4,17.7,7.5,14.2]    
-})
-
-fig,ax = plt.figure(figsize=(6, 4))
-fig = sns.scatterplot(x="Count", y="Temp", data=chirps)
-```
-
-
-
-Nachfolgendes Bild zu eine Visualisierung der Daten:
+Natürlich wollen wir nun - wie üblich - aus dem feature den label vorhersagen. Offensichtlich handelt es sich um ein Regressionsproblem. Nachfolgendes Bild visualisiert die Daten:
 
 ![image-20211205172941481](readme.assets/image-20211205172941481.png)
 
@@ -192,6 +176,6 @@ ax.set_ylim(0, 35)
 
 sns.set()
 sns.scatterplot(data = chirps, x = "Count", y="Temp", label="Temp")
-sns.lineplot(x=x_values,y=y_values, color="red", label="best line")
+sns.lineplot(x=x_values,y=y_values, color="red", label="best line xw+b")
 ```
 

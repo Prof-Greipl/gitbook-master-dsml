@@ -1,6 +1,6 @@
 ## Aufteilung in Training-Set und Test-Set
 
-Wir teilen unseren Datensatz in einen Trainings-Teil und einen Test-Teil auf (Wir ignorieren für den Moment den Validation Set.
+Wir teilen unseren Datensatz in einen Trainings-Teil und einen Test-Teil auf (Wir ignorieren für den Moment den Validation Set.)
 
 ![image-20211205145543262](readme.assets/image-20211205145543262.png)
 
@@ -14,17 +14,20 @@ Wir teilen unseren Datensatz in einen Trainings-Teil und einen Test-Teil auf (Wi
 
 
 
-## Decison-Tree mit Iris
+## Iris-Decison-Tree mit Train/Test-Set
 
 ### Aufteilung in Training- und Test-Set
 
 Wir nutzen hier noch keine Validierung. Die Variable TRAIN_SPLIT enthält die Anzahl der Examples aus dem Training-Set.
 
 ```python
-from matplotlib import pyplot as plt
-from sklearn import datasets
-import seaborn as sns
 import pandas as pd
+
+from matplotlib import pyplot as plt
+import seaborn as sns
+
+from sklearn import datasets
+from sklearn.tree import DecisionTreeClassifier 
 from sklearn import tree
 
 iris = datasets.load_iris()
@@ -33,7 +36,6 @@ iris_df['class']=iris.target
 iris_df.columns=['sepal_len', 'sepal_wid', 'petal_len', 'petal_wid', 'class']
 
 X = iris_df.sample(frac=1).reset_index(drop=True)
-print( X.head(5) )
 
 TRAIN_SPLIT = 100
 X_train = X[0:TRAIN_SPLIT]
@@ -47,6 +49,7 @@ X_test = X_test.drop(['class'], axis=1)
 
 print(f'\nShape of Training-Data : {X_train.shape}')
 print(f'\nShape of Test-Data     : {X_test.shape}')
+
 ```
 
 
@@ -57,25 +60,29 @@ print(f'\nShape of Test-Data     : {X_test.shape}')
 
 ### Entscheidungsbaum erzeugen
 
+Ergänzen Sie diesen Code direkt unter den obigen Zeilen.
+
 ```python
-clf = DecisionTreeClassifier(random_state=1234, criterion = 'gini', max_depth=1)
+clf = DecisionTreeClassifier(random_state=1234, criterion = 'gini', max_depth=2)
 model = clf.fit(X_train, y_train)
+
 print("Accuracy-Training : ", clf.score(X_train, y_train))
-
-if len(X_test) > 0:
-  print("Accuracy-Testing: ", clf.score(X_test, y_test))
-
+print("Accuracy-Testing  : ", clf.score(X_test, y_test))
 
 print("Creating Tree ... ")
 fig = plt.figure(figsize=(8,8))
-sns.set_style('dark')
-#plt.style.use('whitegrid')
 p = tree.plot_tree(clf
                    , feature_names=X.columns
                    , class_names=['setosa', 'versicolor', 'virginica']
                    , filled=True
                    )
 ```
+
+
+
+Ergibt folgenden optimalen Baum für TRAIN_SPLIT = 100 den optimalen Baum (der Höhe 1):
+
+![image-20211206121656183](readme.assets/image-20211206121656183.png)
 
 
 
