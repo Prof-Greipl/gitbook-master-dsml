@@ -255,3 +255,4 @@ Ein **Trainingsschritt **(learning-step) ist eine neue Festlegung der Parameter 
 ### Visualisierung des Lernfortschritts
 
 ![](<../../.gitbook/assets/image (141).png>)
+

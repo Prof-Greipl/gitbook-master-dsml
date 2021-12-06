@@ -78,6 +78,7 @@ Wir wählten zuerst nur die beiden Klassen *versicolor* und *viriginca* aus. Die
 
 ```python
 import pandas as pd
+from sklearn import datasets
 
 iris = datasets.load_iris()
 iris_df = pd.DataFrame(iris.data)
@@ -137,10 +138,15 @@ Wir berecchnen den besten Baum mit Python. Hier das Ergebnis, unten der Code.
 
   
 
+
+
   ## Python
 
   ```python
   import pandas as pd
+  
+  from matplotlib import pyplot as plt
+  import seaborn as sns
   
   from sklearn import datasets
   from sklearn.tree import DecisionTreeClassifier 

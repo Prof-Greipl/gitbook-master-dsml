@@ -58,7 +58,7 @@ $$
 \text{MSE}(M,X,y) = \frac{1}{n}\sum_{i=0}^{n-1} (M(x_i) - y_i)^2
 $$
 
-Wir behandeln den Loss für Klassifizierung eventuell später noch. 
+
 
 
 
