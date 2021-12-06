@@ -41,7 +41,7 @@
 * [C.1 Problemstellung und Grundbegriffe](A7_ML_Grundbegriffe/readme.md)
 * [C.2 Entscheidungsbäume](A8_Decision_Trees/readme.md)
 * [C.3 Training, Test und Validation](A9_Train_Test_Val/readme.md)
-
+* [C.4 Regression (und Grillen)](AA_Regression/readme.md)
 
 
 ## Part D: Ergänzungen <a href="D" id="D"></a>
