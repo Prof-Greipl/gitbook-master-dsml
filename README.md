@@ -12,7 +12,7 @@ Die folgende Youtube Playlist entstand im rein digitalen WS 20/21. Es wird wahrs
 
 [Youtube Playlist](https://youtube.com/playlist?list=PLfGN40VwjduJPvtP9QUjC0rjM6-ePT9bg)
 
-## Stand **nach **den jeweiligen Terminen
+## Stand nach den jeweiligen Terminen
 
 ### T9 - 07.12.2021
 
