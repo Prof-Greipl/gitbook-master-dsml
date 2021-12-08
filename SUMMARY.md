@@ -17,7 +17,7 @@
   * [2 Umgang mit Fehlern](0A3_Preprocessing/2-umgang-mit-fehlern.md)
   * [3 Filterung](0A3_Preprocessing/3-filterung.md)
   * [4 Datentransformation](0A3_Preprocessing/4-datentransformation.md)
-* [B.3 Visualisierung (II)](0A4_Visualisierung/README.md)
+* [B.3 Visualisierung (II)](0A4_Visualisierung/readme.md)
 
 
 ## Part A: Python Grundlagen<a href="A" id="A"></a>
