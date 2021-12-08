@@ -1,7 +1,7 @@
 # Table of contents
 
 ## Part A: Einführung<a href="A" id="A"></a>
-[0A.1 Einführung](0A1_Einfuehrung/readme.md)
+* [0A.1 Einführung](0A1_Einfuehrung/readme.md)
   
 
 ## Part B: Data Analysis<a href="B" id="B"></a>
