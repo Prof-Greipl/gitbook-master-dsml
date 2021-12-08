@@ -11,14 +11,13 @@
   * [2 Skalenniveaus](0A2_Datensaetze/a4.2-skalenniveaus.md)
   * [3 Feature Matrix](0A2_Datensaetze/a4.3-feature-matrix.md)
   * [4 Python: Dataframes](0A2_Datensaetze/a4.3-python-dataframes/README.md)
-    * [Diving into Dataframes](0A2_Datensaetze/a4.3-python-dataframes/pandas-und-dataframes.md)
   * [5 Sampling](0A2_Datensaetze/a4.5-sampling.md)
 * [B.2 Preprocessing](0A3_Preprocessing/README.md)
   * [1 Fehlerarten](0A3_Preprocessing/1-fehlerarten.md)
   * [2 Umgang mit Fehlern](0A3_Preprocessing/2-umgang-mit-fehlern.md)
   * [3 Filterung](0A3_Preprocessing/3-filterung.md)
   * [4 Datentransformation](0A3_Preprocessing/4-datentransformation.md)
-* [B.3 Visualisierung (II)](0A4_Visualisierung_II/README.md)
+* [B.3 Visualisierung (II)](0A4_Visualisierung/README.md)
 
 
 ## Part A: Python Grundlagen<a href="A" id="A"></a>
