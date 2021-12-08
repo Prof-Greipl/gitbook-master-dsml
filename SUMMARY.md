@@ -7,11 +7,11 @@
 ## Part B: Data Analysis<a href="B" id="B"></a>
 
 * [B.1 Datensätze](0A2_Datensaetze/README.md)
-  * [1 Case Study: Iris Datensatz](A4_Datensaetze/a4.1-case-study-iris-datensatz.md)
-  * [2 Skalenniveaus](0A2_Datensaetze/a4.2-skalenniveaus.md)
-  * [3 Feature Matrix](0A2_Datensaetze/a4.3-feature-matrix.md)
-  * [4 Python: Dataframes](0A2_Datensaetze/a4.3-python-dataframes/README.md)
-    * [Diving into Dataframes](0A2_Datensaetze/a4.3-python-dataframes/pandas-und-dataframes.md)
+  * [1 Case Study: Iris Datensatz](0A2_Datensaetze/a4.1-case-study-iris-datensatz.md)
+  * [2 Skalenniveaus](0A2_Datensaetze/a4.1-skalenniveaus.md)
+  * [3 Feature Matrix](0A2_Datensaetze/a4.1-feature-matrix.md)
+  * [4 Python: Dataframes](0A2_Datensaetze/a4.1-python-dataframes/README.md)
+    * [Diving into Dataframes](0A2_Datensaetze/a4.1-python-dataframes/pandas-und-dataframes.md)
   * [5 Sampling](0A2_Datensaetze/a4.5-sampling.md)
 * [B.2 Preprocessing](0A3_Preprocessing/README.md)
   * [1 Fehlerarten](0A3_Preprocessing/1-fehlerarten.md)
@@ -20,7 +20,7 @@
   * [4 Datentransformation](0A3_Preprocessing/4-datentransformation.md)
 * [B.3 Visualisierung (II)](0A4_Visualisierung_II/README.md)
 
-  
+
 ## Part A: Python Grundlagen<a href="A" id="A"></a>
 
 * [A.1 Basics in Python](A1_Basics_in_Phython/README.md)
