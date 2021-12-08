@@ -1,8 +1,6 @@
 # Table of contents
 
-* [Überblick WS 21/22](README.md)
-
-## Part A: Einführung<a href="B" id="B"></a>
+## Part A: Einführung<a href="A" id="A"></a>
 [0A.1 Einführung](0A1_Einfuehrung/readme.md)
   
 
