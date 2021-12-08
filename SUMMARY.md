@@ -9,7 +9,7 @@
 * [B.1 Datensätze](0A2_Datensaetze/README.md)
   * [1 Case Study: Iris Datensatz](0A2_Datensaetze/a4.1-case-study-iris-datensatz.md)
   * [2 Skalenniveaus](0A2_Datensaetze/a4.2-skalenniveaus.md)
-  * [3 Feature Matrix](0A2_Datensaetze/a4.3feature-matrix.md)
+  * [3 Feature Matrix](0A2_Datensaetze/a4.3-feature-matrix.md)
   * [4 Python: Dataframes](0A2_Datensaetze/a4.3-python-dataframes/README.md)
     * [Diving into Dataframes](0A2_Datensaetze/a4.3-python-dataframes/pandas-und-dataframes.md)
   * [5 Sampling](0A2_Datensaetze/a4.5-sampling.md)
