@@ -1,24 +1,3 @@
----
-description: Wir starten einfach mit Zahlen.
----
-
-# Datentyp "Zahlen"
-
-## Ganze Zahlen und rationale Zahlen
-
-Zahlen sind recht einfach zu verstehen, wir haben ja oben schon einige Beispiele gesehen. Hier nochmal eine Zusammenfassung wichtiger Beispiele mit rationalen Zahlen:&#x20;
-
-```python
-a = 2
-b = 1/3
-c = 1.1
-# Funktionen
-d = a + b; print(d)
-d = a - b; print(d)
-d = a * b; print(d)
-d = a / b; print(d)
-```
-
 ## Zufallszahlen
 
 Python kann Zufallszahlen erzeugen. Diese Funktion ist allerdings nicht "eingebaut". Dazu muss mit `import Numpy `ein sogenanntes _Modul _importiert werden.
@@ -42,7 +21,8 @@ x = np.random.normal()
 print( x )
 ```
 
+---
 
 
 
-
+## 

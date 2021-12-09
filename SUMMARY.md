@@ -29,18 +29,9 @@
 
 ## Part D: Python Grundlagen<a href="D" id="D"></a>
 
-* [D.1 Variablen und Datentypen](0A9_Basics_in_Phython/readme.md)
-  * [Variablen](0A9_Basics_in_Phython/variablen-datentypen-und-operationen.md)
-  * [Datentyp "Zahlen"](0A9_Basics_in_Phython/zahlen.md)
-  * [Datentyp "Strings"](0A9_Basics_in_Phython/zeichenketten-strings.md)
-  * [Datentyp "Boolean"](0A9_Basics_in_Phython/wahrheitswerte.md)
-  * [Operatoren](0A9_Basics_in_Phython/operatoren.md)
-  * [Datentyp "Arrays"](0A9_Basics_in_Phython/listen.md)
-  * [Datentypen in der Übersicht](0A9_Basics_in_Phython/zusammenfassung.md)
-* [D.2 Variablen und Datentypen](0A9_Basics_in_Phython/README.md)
-  * [Ablauf: if-then-else](0A9_Basics_in_Phython/if-then-else.md)
-  * [Ablauf: loops](0A9_Basics_in_Phython/ablauf-loops.md)
-  * [Ablauf: Funktionen](0A9_Basics_in_Phython/ablauf-funktionen.md)
+* [D.1 Variablen und Datentypen](0A9_Python/variablen-datentypen-und-operationen)
+* [D.2 Kontrollstrukturen]((0A9_Python/control-structures.md)
+* [D.3 Kontrollstrukturen]((0A9_Python/numpy.md)
 * [A.2 Visualisierung mit matplotlib](A2_Visualisierung/visualisierung.md)
 * [A.3 Numpy (I)](A3_numpy-1/README.md)
   * [Numpy-Arrays](A3_numpy-1/numpy-arrays.md)
