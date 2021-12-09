@@ -19,7 +19,12 @@
   * [4 Datentransformation](0A3_Preprocessing/4-datentransformation.md)
 * [B.3 Visualisierung (II)](0A4_Visualisierung/readme.md)
 
-## Part C: Data Analysis<a href="C" id="C"></a>
+
+## Part C: Maschinelles Lernen <a href="C" id="C"></a>
+* [C.1 Problemstellung und Grundbegriffe](0C_ML_Grundbegriffe/readme.md)
+* [C.2 Entscheidungsbäume](0C_Decision_Trees/readme.md)
+* [C.3 Training, Test und Validation](0C_Train_Test_Val/readme.md)
+* [C.4 Regression (und Grillen)](0C_Regression/readme.md)
 
 
 ## Part D: Python Grundlagen<a href="D" id="D"></a>
