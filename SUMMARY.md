@@ -31,7 +31,7 @@
 
 * [D.1 Variablen und Datentypen](0A9_Python/readme.md)
 * [D.2 Variablen und Datentypen](0A9_Python/variablen-datentypen-und-operationen)
-* [D.3 Kontrollstrukturen]((0A9_Python/control-structures.md)
+* [D.3 Kontrollstrukturen](0A9_Python/control-structures.md)
 * [D.4 Kontrollstrukturen]((0A9_Python/numpy.md)
 * [A.2 Visualisierung mit matplotlib](A2_Visualisierung/visualisierung.md)
 * [A.3 Numpy (I)](A3_numpy-1/README.md)
