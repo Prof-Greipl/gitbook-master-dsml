@@ -32,6 +32,8 @@
 * [D.1 Variablen und Datentypen](0A9_Python/readme.md)
 * [D.3 Numpy](0A9_Python/numpy.md)
 * [D.3 Kontrollstrukturen](0A9_Python/control-structures.md)
+* [D.3 Pandas und Dataframes](0A9_Python/pandas-und-dataframes.md)
+
   
 ## Part C: Ergänzungen <a href="E" id="E"></a>
 
