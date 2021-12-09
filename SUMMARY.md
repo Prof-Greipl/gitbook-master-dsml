@@ -32,13 +32,9 @@
 * [D.1 Überblick](0A9_Python/readme.md)
 * [D.2 Variablen und Datentypen](0A9_Python/variablen-datentypen-und-operationen.md)
 * [D.3 Kontrollstrukturen](0A9_Python/control-structures.md)
-* [D.4 Kontrollstrukturen](0A9_Python/numpy.md)
-* [A.2 Visualisierung mit matplotlib](A2_Visualisierung/visualisierung.md)
-* [A.3 Numpy (I)](A3_numpy-1/README.md)
-  * [Numpy-Arrays](A3_numpy-1/numpy-arrays.md)
-  * [Funktionen mit Arrays](A3_numpy-1/funktionen-mit-arrays.md)
+* [D.4 Numpy](0A9_Python/numpy.md)
   
-## Part C: Ergänzungen <a href="C" id="C"></a>
+## Part C: Ergänzungen <a href="E" id="E"></a>
 
 * [Lineare Algebra](AZ_sup_grundlagen_lineare_algebra/readme.md)
   * [1 Skalare, Vektoren, Matrizen](AZ_sup_grundlagen_lineare_algebra/1_skalare-vektoren-matrizen.md)
