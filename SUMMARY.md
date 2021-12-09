@@ -1,7 +1,7 @@
 # Table of contents
 
 ## Part A: Einführung<a href="A" id="A"></a>
-* [A.1 Einführung](0A1_Einfuehrung/readme.md)
+* [1 Einführung](0A1_Einfuehrung/readme.md)
   
 
 ## Part B: Data Analysis<a href="B" id="B"></a>
@@ -19,21 +19,23 @@
   * [4 Datentransformation](0A3_Preprocessing/4-datentransformation.md)
 * [B.3 Visualisierung (II)](0A4_Visualisierung/readme.md)
 
+## Part C: Data Analysis<a href="C" id="C"></a>
 
-## Part A: Python Grundlagen<a href="A" id="A"></a>
 
-* [A.1 Basics in Python](A1_Basics_in_Phython/README.md)
-  * [Variablen](A1_Basics_in_Phython/variablen-datentypen-und-operationen.md)
-  * [Datentyp "Zahlen"](A1_Basics_in_Phython/zahlen.md)
-  * [Datentyp "Strings"](A1_Basics_in_Phython/zeichenketten-strings.md)
-  * [Datentyp "Boolean"](A1_Basics_in_Phython/wahrheitswerte.md)
-  * [Operatoren](A1_Basics_in_Phython/operatoren.md)
-  * [Datentyp "Arrays" (Listen)](A1_Basics_in_Phython/listen.md)
-  * [Datentyp "Tupel" (im WS 21/22 nicht behandelt)](A1_Basics_in_Phython/tupel.md)
-  * [Datentypen in der Übersicht](A1_Basics_in_Phython/zusammenfassung.md)
-  * [Ablauf: if-then-else](A1_Basics_in_Phython/if-then-else.md)
-  * [Ablauf: loops](A1_Basics_in_Phython/ablauf-loops.md)
-  * [Ablauf: Funktionen](A1_Basics_in_Phython/ablauf-funktionen.md)
+## Part D: Python Grundlagen<a href="D" id="D"></a>
+
+* [D.1 Variablen und Datentypen](0A9_Basics_in_Phython/readme.md)
+  * [Variablen](0A9_Basics_in_Phython/variablen-datentypen-und-operationen.md)
+  * [Datentyp "Zahlen"](0A9_Basics_in_Phython/zahlen.md)
+  * [Datentyp "Strings"](0A9_Basics_in_Phython/zeichenketten-strings.md)
+  * [Datentyp "Boolean"](0A9_Basics_in_Phython/wahrheitswerte.md)
+  * [Operatoren](0A9_Basics_in_Phython/operatoren.md)
+  * [Datentyp "Arrays"](0A9_Basics_in_Phython/listen.md)
+  * [Datentypen in der Übersicht](0A9_Basics_in_Phython/zusammenfassung.md)
+* [D.2 Variablen und Datentypen](0A9_Basics_in_Phython/README.md)
+  * [Ablauf: if-then-else](0A9_Basics_in_Phython/if-then-else.md)
+  * [Ablauf: loops](0A9_Basics_in_Phython/ablauf-loops.md)
+  * [Ablauf: Funktionen](0A9_Basics_in_Phython/ablauf-funktionen.md)
 * [A.2 Visualisierung mit matplotlib](A2_Visualisierung/visualisierung.md)
 * [A.3 Numpy (I)](A3_numpy-1/README.md)
   * [Numpy-Arrays](A3_numpy-1/numpy-arrays.md)
