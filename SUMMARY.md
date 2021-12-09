@@ -29,10 +29,10 @@
 
 ## Part D: Python Grundlagen<a href="D" id="D"></a>
 
-* [D.1 Überblick](0A9_Python/readme.md)
+* [D.1 Variablen und Datentypen](0A9_Python/readme.md)
 * [D.2 Variablen und Datentypen](0A9_Python/variablen-datentypen-und-operationen.md)
-* [D.3 Kontrollstrukturen](0A9_Python/control-structures.md)
-* [D.4 Numpy](0A9_Python/numpy.md)
+* [D.3 Numpy](0A9_Python/numpy.md)
+* [D.4 Kontrollstrukturen](0A9_Python/control-structures.md)
   
 ## Part C: Ergänzungen <a href="E" id="E"></a>
 
