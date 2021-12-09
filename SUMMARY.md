@@ -29,7 +29,7 @@
 
 ## Part D: Python Grundlagen<a href="D" id="D"></a>
 
-* [D.1x Variablen und Datentypen](0A9_Python/readme.md)
+* [D.1 Überblick](0A9_Python/readme.md)
 * [D.2 Variablen und Datentypen](0A9_Python/variablen-datentypen-und-operationen.md)
 * [D.3 Kontrollstrukturen](0A9_Python/control-structures.md)
 * [D.4 Kontrollstrukturen](0A9_Python/numpy.md)
@@ -38,7 +38,7 @@
   * [Numpy-Arrays](A3_numpy-1/numpy-arrays.md)
   * [Funktionen mit Arrays](A3_numpy-1/funktionen-mit-arrays.md)
   
-## Part C: Ergänzungen <a href="C" id="V"></a>
+## Part C: Ergänzungen <a href="C" id="C"></a>
 
 * [Lineare Algebra](AZ_sup_grundlagen_lineare_algebra/readme.md)
   * [1 Skalare, Vektoren, Matrizen](AZ_sup_grundlagen_lineare_algebra/1_skalare-vektoren-matrizen.md)
