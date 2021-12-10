@@ -91,7 +91,7 @@ sns.histplot(x = x_werte,
 
 
 
-# Boxplots
+## Boxplots
 
 Link: [https://seaborn.pydata.org/generated/seaborn.boxplot.html](https://seaborn.pydata.org/generated/seaborn.boxplot.html)&#x20;
 
