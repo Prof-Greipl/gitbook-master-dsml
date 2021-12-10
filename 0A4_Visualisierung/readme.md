@@ -31,17 +31,15 @@ import seaborn as sns
 years = [1950, 1960, 1970, 1980, 1990, 2000, 2010]
 gdp = [33.2, 543.3, 1075.9, 2862.5, 5979.6, 10289.7, 14958.3]
 
+sns.set()
 fig,ax = plt.subplots(figsize=(9, 9))
-
 ax.set_title("Title") 
 ax.set_xlabel("x-axis")
 ax.set_ylabel("y-axis")
-
 #ax.set_aspect('equal')
 #ax.set_xlim(0, 50)
 #ax.set_ylim(0, 35)
 
-sns.set()
 sns.scatterplot(x=years, y=gdp, color="red", label="My Label")			
 ```
 
@@ -79,13 +77,17 @@ sns.barplot(x=years, y=gdp, color="red", label="My Label")
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-x_werte =  [1, 2,2, 3,3, 4, 5,6,7,8,9,10]
+x_werte =  [1, 2, 2, 3,3, 4, 5, 6, 7, 8, 9, 10]
 
 sns.set()
 sns.histplot(x = x_werte,
-             binwidth=0.99,
+             #binwidth=1,
+             #bins="auto",
+             bins=[0,2,5,7,10],
              kde = False)
 ```
+
+![image-20211210105040430](readme.assets/image-20211210105040430.png)
 
 
 
@@ -106,16 +108,16 @@ Versuchen sie folgende Kurve zu zeichnen:
 
 1. Sie können mit numpy  eine Liste mit 50 gleichverteilen Zufallszahlen erstellen. Erzeugen Sie zwei dieser Listen (x und y) und zeigen sie die 50 Paare Paare (x\[i], y\[i]) in einem Scatterplot an.  So ähnlich (!) sollte die Ausgabe aussehen:
 
+   
+
    ![image-20211210102949673](readme.assets/image-20211210102949673.png)
 
    
 
 2. Welches Ausgabe erwarten Sie, wenn Sie in 1. statt 50 Zahlen jeweils 2000 Zahlen erzeugen? Beschreiben sie das Ergebnis in 2-3 Sätzen. 
    
-
 3. Wiederholen sie Aufgabe 1 mit der Normalverteilung (Erwartungswert 0, Standardabweichung 1) statt der Gleichverteilung. Verwenden sie 2000 Punkte. Überlegen sie  bitte vorher: welche grafischen Ausgabe erwarten sie?
    
-
 4. Erzeugen Sie ein Histogramm für die Erzeugung von 10000 gleichverteilten (normalverteilten) Zufallszahlen. So ähnlich sollte das Ergebnis aussehen:
 
 ![image-20211210103950590](readme.assets/image-20211210103950590.png)
