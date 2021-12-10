@@ -48,22 +48,34 @@ print(x)
 
 
 
-# Vektoren (eindimensional)
+# Vektoren 
+
+
+
+## Erzeugung  "per Hand"
+
+Folgende Befehle erläutern das Thema Vektoren, elementweise Addition, elementweise Multiplikation und Skalarprodukt für Vektoren. Wichtig für die Erzeugung eines Vektors ist Zeile 3.
 
 ```python
 import numpy as np
 
-x = np.array([1,2,3])
-print(x)
-print(x[0])
-print( len(x) )
-print( type(x) )
+y = np.array([5,6,7,8])     # Definiere Vektor y
+x = np.array([1,2,3,4])     # Definiere Vektor x
+print (f'x    = {x}' )      # Drucke Werte
+print (f'y    = {y}' )      # Drucke y
 ```
 
-In obigem Beispiel entspricht x einem Vektor :
-$$
-x = \begin{bmatrix} 1 \\ 2  \\ 3  \end{bmatrix}
-$$
+
+
+## np.ones() und np.zeros()
+
+`np.ones(n)` erzeugt einen Vektor der Dimension n, der nur aus Einsen besteht. Analog funktioniert `np.zeros`
+
+```python
+v = np.ones(10)
+w = np.zeros(10)
+```
+
 
 
 ## `np.arange`
@@ -94,6 +106,37 @@ print( len(x))
 
 
 
+## Elementweise Operationen
+
+Daneben gibt es noch sinnvolle Befehle, wie die Anwendung einer auf reellen Zahlen operierende Funktion $$f :\mathbb{R} \rightarrow \mathbb{R}$$ auf die einzelnen Elemente eines Vektors (Vertiefung). Nachfolgendes Beispiel zeigt ausgewählte Operationen:
+
+```python
+import numpy as np
+x = np.array([1, 4, 9, 0])
+y = np.array([1, 0, 1, 0])
+
+print(x*0.5)
+print(x+y)
+print (x.dot(y))
+
+print (x+1)
+print(x*y)
+print (np.sqrt(x))
+print (np.sin(x))
+```
+
+### Übung
+
+Berechnen Sie durch Programmbefehle $$v^Tw,$$ $$v+w$$ und $$2 \cdot v$$ für
+
+$$
+v = \begin{bmatrix} 1 \\ -3 \\ 2\\ \end{bmatrix} \quad \text{and} \quad w = \begin{bmatrix} 1 \\ 0 \\ 13\\ \end{bmatrix}
+$$
+
+
+
+
+
 
 
 ## Zufallszahlen
@@ -114,65 +157,102 @@ print(na)
 
 
 
-# Funktionen auf Vektoren
 
-Hier passiert etwas, das sie in der Mathematik nie gesehen haben. Wir können z.B. einen Vektor quadrieren (!) und das Ergebnis ist ein Vektor:
 
+# Matrix
+
+## Basics
+
+Matrizen werden in Numpy als eine Ansammlung von Zeilenvektoren aufgebaut!
+
+```python
+A = np.array([[1,2],[3,4], [5,6], [7,8]])
+print( A )
+print( A[0,0] )
+print( A[0,1] )
 ```
+
+Obiges Programm ergibt die nachfolgende Ausgabe. Die Indizierung der Element funktioniert erwartungsgemäß, allerdings wird mit der Zählung bei Null begonnen!
+
+![](<../../.gitbook/assets/image (5) (1) (1) (1).png>)
+
+
+
+## Shape (Dimension)
+
+Eine Matrix hat eine Anzahl von Zeilen und Spalten, die wir üblicherweise mit n und m bezeichnet haben. Folgende Befehl liefert die Anzahl der Zeilen und Spalten einer Matrix
+
+```python
 import numpy as np
-
-x = np.array([1,2,3])
-print( np.square(x))
+A = np.array([[1,2],[3,4], [5,6], [7,8]])
+print( A.shape )  # Ausgabe: (4,2)
 ```
 
-Ausgabe:
-
-![image-20211210110504333](numpy.assets/image-20211210110504333.png)
-
-Probieren sie das auch mit dem Sinus! Das ist außergewöhnlich hilfreich, wie wir später noch sehen werden.
+Die Ausgabe (4,2) besagt, dass die Matrix vier Zeilen und zwei Spalten besitzt.
 
 
 
-# Matrizen
+## Zeilenvektoren und Spaltenvektoren
 
-Wir können mit numpy auch Matrizen, also zwei-dimensionale Strukturen erzeugen:
+> In NumPy gibt es keine Identifikation von Vektoren mit Spaltenvektoren!
+
+Folgendes Beispiel zeigt, dass Phython Vektoren nicht mit Spaltenvektoren oder gar Zeilenvektoren identifiziert.
 
 ```python
-A = np.array([[1,2,3], [4,5,6]])
-print(A)
+import numpy as np
+x_vektor        = np.array([1,2,3])   
+x_zeilenvektor  = np.array([[1,2,3]]) 
+x_spaltenvektor = np.array([[1], [2], [3]])
+
+print(f'x_vektor        :{x_vektor}')
+print(f'x_zeilenvektor  :{x_zeilenvektor}')
+print(f'x_spaltenvektor :{x_spaltenvektor}')
+
+print(f'Shape x_vektor        :{x_vektor.shape}')
+print(f'Shape x_zeilenvektor  :{x_zeilenvektor.shape}')
+print(f'Shape x_spaltenvektor :{x_spaltenvektor.shape}')
 ```
 
-![image-20211126190627914](numpy-arrays.assets/image-20211126190627914.png)
+Wir müssen uns also stets überlegen, ob wir mit einer Matrix oder einem Vektor operieren wollen.
 
-Sie kennen das als:
-$$
-A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix}
-$$
-Sie können sich vielleicht noch an die Matrixmultiplikation erinnern?
-$$
-\begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix} \begin{bmatrix} 1 \\ 2  \\ 3  \end{bmatrix} = \begin{bmatrix} 14 \\ 32  \end{bmatrix}
-$$
 
+
+## Addition und Multiplikation mit einem Skalar
 
 ```python
-A = np.array([[1,2,3], [4,5,6]])
-v = np.array([1,2,3])
-r = A.dot(v)
-print (r)
+A = np.array([[1,2],[3,4], [5,6], [7,8]])
+B = np.array([[10,20],[30,40], [50,60], [70,80]])
+s = 2;
+print (2*A)     # Mulitplikation mit einem Skalar
+print (A+B)
 ```
 
-![image-20211126191331169](numpy-arrays.assets/image-20211126191331169.png)
 
-## Shape
 
-Der Shape beschreibt die Dimensionen eines np.arrays. Die Matrix $$A$$ aus obigem Beispiel hat shape (2,3), besteht also aus zwei Zeilen und drei Spalten.
+## Transponierung
 
 ```python
-A = np.array([[1,2,3], [4,5,6]])
-print(A.shape)
+A = np.array([[1,2],[3,4], [5,6], [7,8]])
+AT = np.transpose(A)
+print(AT)
 ```
 
-### 
+
+
+## Matrixmultiplikation
+
+Die Matrixmultiplikation erfolgt ebenfalls über den Befehl `np.dot`
+
+```python
+A = np.array([[1,2],[3,4], [5,6], [7,8]])
+B = np.array([[10,20],[30,40], [50,60], [70,80]])
+
+C = np.dot(A, np.transpose(B))   # Addition
+```
+
+
+
+
 
 # Beispiele: Bilder
 
