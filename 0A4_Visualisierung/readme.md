@@ -89,6 +89,43 @@ sns.histplot(x = x_werte,
 
 
 
+# Übungen
+
+
+
+## Visualisierungsübung 1
+
+Versuchen sie folgende Kurve zu zeichnen:
+
+![image-20211210101947217](readme.assets/image-20211210101947217.png)
+
+(Die Lösung finden sie am Ende des Dokumentes)
+
+## Visualisierungsübung 2
+
+
+1. Sie können mit numpy  eine Liste mit 50 gleichverteilen Zufallszahlen erstellen. Erzeugen Sie zwei dieser Listen (x und y) und zeigen sie die 50 Paare Paare (x\[i], y\[i]) in einem Scatterplot an.  So ähnlich (!) sollte die Ausgabe aussehen:
+
+   ![image-20211210102949673](readme.assets/image-20211210102949673.png)
+
+   
+
+2. Welches Ausgabe erwarten Sie, wenn Sie in 1. statt 50 Zahlen jeweils 2000 Zahlen erzeugen? Beschreiben sie das Ergebnis in 2-3 Sätzen. 
+   
+
+3. Wiederholen sie Aufgabe 1 mit der Normalverteilung (Erwartungswert 0, Standardabweichung 1) statt der Gleichverteilung. Verwenden sie 2000 Punkte. Überlegen sie  bitte vorher: welche grafischen Ausgabe erwarten sie?
+   
+
+4. Erzeugen Sie ein Histogramm für die Erzeugung von 10000 gleichverteilten (normalverteilten) Zufallszahlen. So ähnlich sollte das Ergebnis aussehen:
+
+![image-20211210103950590](readme.assets/image-20211210103950590.png)
+
+
+
+
+
+
+
 # Plots für Iris
 
 ## Laden der Daten
@@ -221,5 +258,97 @@ plot_colortable(mcolors.CSS4_COLORS, "CSS Colors")
 # xkcd_fig.savefig("XKCD_Colors.png")
 
 plt.show()
+```
+
+
+
+## Lösungen
+
+### Visualisierung 1
+
+```python
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+
+x = np.linspace(0, 2*np.pi, 40)
+
+fig,ax = plt.subplots(figsize=(9, 9))
+
+ax.set_title("Sinus") 
+ax.set_xlabel("x")
+ax.set_ylabel("sin(x)")
+ax.set_aspect("equal")
+
+sns.set()
+sns.lineplot(x=x, y= np.sin(x), color="blue", label="sin(x)")
+```
+
+
+
+### Visualisierung 2
+
+#### 2.1
+
+```python
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+
+x = np.random.random(50)
+y = np.random.random(50)
+
+fig,ax = plt.subplots(figsize=(9, 9))
+
+sns.set()
+ax.set_title("Random Points") 
+ax.set_xlabel("x")
+ax.set_ylabel("y")
+ax.set_aspect("equal")
+
+sns.scatterplot(x=x, y=y, label="Random Points")
+```
+
+
+
+#### 2.3
+
+```
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+
+x = np.random.normal(0,1,2000)
+y = np.random.normal(0,1,2000)
+
+fig,ax = plt.subplots(figsize=(9, 9))
+
+sns.set()
+ax.set_title("Random Points") 
+ax.set_xlabel("x")
+ax.set_ylabel("y")
+ax.set_aspect("equal")
+
+sns.scatterplot(x=x, y=y, label="Random Points")
+```
+
+#### 2.4
+
+```python
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+
+x = np.random.normal(0,1,20000)
+
+
+fig,ax = plt.subplots(figsize=(6, 6))
+
+sns.set()
+ax.set_title("Histogramm der Normalverteilung") 
+ax.set_xlabel("x")
+ax.set_ylabel("Count")
+
+sns.histplot(x=x)
 ```
 
