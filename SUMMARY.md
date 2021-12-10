@@ -1,8 +1,8 @@
 # Table of contents
 
-## Part A: Vorbemerkungen<a href="A" id="A"></a>
-* [Vorbemerkungen](0A1_Einfuehrung/readme.md)
-  
+[Vorbemerkungen](README.md)
+
+ 
 
 ## Part B: Data Analysis<a href="B" id="B"></a>
 
