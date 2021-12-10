@@ -1,7 +1,7 @@
 ---
 description: >-
-  Der Kurs "Data Science und Analytics" für Studierende der
-  des Masterstudiengangs "Digitale Unternehmensführung" findet im WS 21/22 an der HAW Landshut statt.
+  Der Kurs "Data Science und Analytics" für Studierende
+  des Masterstudiengangs "Digitale Unternehmensführung" wird im WS 21/22 von Prof. Dr. Dieter Greipl (HAW Landshut) gehalten.
 ---
 
 # Überblick WS 21/22
@@ -10,17 +10,17 @@ description: >-
 
 ## Skript
 
-- Die folgende Youtube-Playlist können sie zur Vertiefung einzelner Stoffteile nutzen: [Youtube Playlist](https://youtube.com/playlist?list=PLfGN40VwjduJPvtP9QUjC0rjM6-ePT9bg)
+- Die folgende Youtube-Playlist kann zur Vertiefung einzelner Stoffteile nutzen: [Youtube Playlist](https://youtube.com/playlist?list=PLfGN40VwjduJPvtP9QUjC0rjM6-ePT9bg)
 - Wenige Passagen in diesem Skript sind eventuell in englischer Sprache gehalten.
 - Das Skript 
   - befindet sich in Teilen im Aufbau, leichte Fehler sind also möglich (für Hinweise bin ich dankbar)
-  - geht nach der Prüfung off-line.
+  - geht nach der Prüfung off-line. 
 
 
 
 ## Google Konto
 
-Sie brauchen ein Google-Konto. Bitte melden Sie sich an. Für das Laden von Dateien benötigen wir eventuell Google Drive.
+Sie brauchen ein Google-Konto für die Nutzung von Colab und ggf. für das Laden von Dateien  von  Google Drive. 
 
 
 
@@ -40,6 +40,6 @@ Programmierkenntnisse sind nicht erforderlich. Sie werden das Nötige  im Kurs l
 
 Wir benötigen folgende Grundlagen, die ich aber kurz wiederholen werde:
 
-- Verteilung, Gleichverteilung, Normalverteilung, Erwartungswert, Standardabweichung
+- Verteilung, Gleichverteilung, Normalverteilung, Erwartungswert, Standardabweichung, Modus, Median
 - Vektor, Matrix, Skalarprodukt
-- Lineare Abbildungen
+- Funktionen, speziell lineare Abbildungen
