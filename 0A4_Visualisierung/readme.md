@@ -91,6 +91,34 @@ sns.histplot(x = x_werte,
 
 
 
+# Boxplots
+
+Link: [https://seaborn.pydata.org/generated/seaborn.boxplot.html](https://seaborn.pydata.org/generated/seaborn.boxplot.html)&#x20;
+
+Link: https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51 
+
+![Boxplot (Quelle: https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51)](1-fehlerarten.assets/image-20211114183958284.png)
+
+Vertiefung:
+
+[Outliers, Inliers, and Other Surprises that Fly from your Data | Rocket-Powered Data Science (rocketdatascience.org)](http://rocketdatascience.org/?p=473)
+
+
+
+```
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+x = np.arange(1,100)
+
+print( np.percentile( x, [0,25,50,75,100]))
+
+sns.boxplot(x = x)
+```
+
+
+
+
 # Übungen
 
 
