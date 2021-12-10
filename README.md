@@ -1,13 +1,14 @@
 ---
 description: >-
-  Der Kurs "Data Science und Analytics" für Studierende des Masterstudienganges DUF findet von November 2021 bis Januar 2022 an der HAW Landshut statt.
+  Der Kurs "Data Science und Maschinelles Lernen" für Studierende der
+  Betriebswirtschaft findet im WS 21/22 an der HAW Landshut statt.
 ---
 
-# Hinweise 
+# Überblick WS 21/22
 
+Zur Beachtung:
 
-
-## Dieses Skript
+## Skript
 
 - Die folgende Youtube-Playlist können sie zur Vertiefung einzelner Stoffteile nutzen: [Youtube Playlist](https://youtube.com/playlist?list=PLfGN40VwjduJPvtP9QUjC0rjM6-ePT9bg)
 - Wenige Passagen in diesem Skript sind eventuell in englischer Sprache gehalten.
