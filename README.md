@@ -6,7 +6,7 @@ description: >-
 
 # Überblick WS 21/22
 
-Zur Beachtung:
+
 
 ## Skript
 
@@ -32,7 +32,7 @@ Für unsere praktischen Aktivitäten nutzen wir die [Colab-Notebooks](https://co
 
 ## Programmierkenntnisse
 
-Programmierkenntnisse sind nicht erforderlich. Sie werden das Nötige im Kurs lernen.
+Programmierkenntnisse sind nicht erforderlich. Sie werden das Nötige  im Kurs lernen.
 
 
 
