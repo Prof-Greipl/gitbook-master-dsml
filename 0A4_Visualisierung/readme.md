@@ -180,6 +180,8 @@ Ausgabe:
 
 
 
+
+
 # Beispiele: Bilder
 
 Bilder lassen sich als Numpy-Arrays darstellen und bearbeiten. Unterstützte shapes sind:
