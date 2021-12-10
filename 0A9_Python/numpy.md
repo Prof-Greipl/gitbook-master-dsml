@@ -50,6 +50,8 @@ print(x)
 
 # Vektoren 
 
+Da Feature-Vektoren für uns eine wichtige Rolle spielen, gehen wir näher auf Vektoren in Numpy ein. 
+
 
 
 ## Erzeugung  "per Hand"
@@ -67,7 +69,7 @@ print (f'y    = {y}' )      # Drucke y
 
 
 
-## np.ones() und np.zeros()
+## `np.ones() und np.zeros()`
 
 `np.ones(n)` erzeugt einen Vektor der Dimension n, der nur aus Einsen besteht. Analog funktioniert `np.zeros`
 
@@ -78,7 +80,7 @@ w = np.zeros(10)
 
 
 
-## `np.arange`
+## `np.arange`()
 
 Mit `np.arange` erzeugen wir automatisch Strukturen, die wir häufiger brauchen. Beschäftigen Sie sich mit den Ausgaben und experimentieren sie etwas, dann wird die jeweilige Funktion recht schnell klar.
 
@@ -94,7 +96,7 @@ print ( type(x) )
 
 
 
-##  `np.linspace`
+##  `np.linspace`()
 
 ```python
 import numpy as np
@@ -108,7 +110,7 @@ print( len(x))
 
 ## Elementweise Operationen
 
-Daneben gibt es noch sinnvolle Befehle, wie die Anwendung einer auf reellen Zahlen operierende Funktion $$f :\mathbb{R} \rightarrow \mathbb{R}$$ auf die einzelnen Elemente eines Vektors (Vertiefung). Nachfolgendes Beispiel zeigt ausgewählte Operationen:
+ Nachfolgendes Beispiel zeigt ausgewählte Operationen. Beachten Sie, dass sie die letzten 4Operationen so im Mathe-Unterricht nicht gelernt haben. Sie sind jedoch recht hilfreich!
 
 ```python
 import numpy as np
@@ -124,6 +126,8 @@ print(x*y)
 print (np.sqrt(x))
 print (np.sin(x))
 ```
+
+
 
 ### Übung
 
@@ -161,6 +165,10 @@ print(na)
 
 # Matrix
 
+Sie erinnern sich an die Feature-Matrix? Also, los gehts..
+
+
+
 ## Basics
 
 Matrizen werden in Numpy als eine Ansammlung von Zeilenvektoren aufgebaut!
@@ -180,7 +188,7 @@ Obiges Programm ergibt die nachfolgende Ausgabe. Die Indizierung der Element fun
 
 ## Shape (Dimension)
 
-Eine Matrix hat eine Anzahl von Zeilen und Spalten, die wir üblicherweise mit n und m bezeichnet haben. Folgende Befehl liefert die Anzahl der Zeilen und Spalten einer Matrix
+Eine Matrix hat eine Anzahl von Zeilen und Spalten, die wir üblicherweise mit n und m bezeichnet haben. Folgender Befehl liefert die Anzahl der Zeilen und Spalten einer Matrix:
 
 ```python
 import numpy as np
@@ -190,13 +198,23 @@ print( A.shape )  # Ausgabe: (4,2)
 
 Die Ausgabe (4,2) besagt, dass die Matrix vier Zeilen und zwei Spalten besitzt.
 
+## Addition und Multiplikation mit einem Skalar
+
+```python
+A = np.array([[1,2],[3,4], [5,6], [7,8]])
+B = np.array([[10,20],[30,40], [50,60], [70,80]])
+s = 2;
+print (2*A)     # Mulitplikation mit einem Skalar
+print (A+B)
+```
 
 
-## Zeilenvektoren und Spaltenvektoren
 
-> In NumPy gibt es keine Identifikation von Vektoren mit Spaltenvektoren!
+## Vertiefend
 
-Folgendes Beispiel zeigt, dass Phython Vektoren nicht mit Spaltenvektoren oder gar Zeilenvektoren identifiziert.
+### Zeilenvektoren und Spaltenvektoren
+
+In NumPy gibt es keine Identifikation von Vektoren mit Spaltenvektoren! Folgendes Beispiel zeigt, dass Phython Vektoren nicht mit Spaltenvektoren oder gar Zeilenvektoren identifiziert.
 
 ```python
 import numpy as np
@@ -217,19 +235,7 @@ Wir müssen uns also stets überlegen, ob wir mit einer Matrix oder einem Vektor
 
 
 
-## Addition und Multiplikation mit einem Skalar
-
-```python
-A = np.array([[1,2],[3,4], [5,6], [7,8]])
-B = np.array([[10,20],[30,40], [50,60], [70,80]])
-s = 2;
-print (2*A)     # Mulitplikation mit einem Skalar
-print (A+B)
-```
-
-
-
-## Transponierung
+### Transponierung
 
 ```python
 A = np.array([[1,2],[3,4], [5,6], [7,8]])
@@ -239,7 +245,7 @@ print(AT)
 
 
 
-## Matrixmultiplikation
+### Matrixmultiplikation
 
 Die Matrixmultiplikation erfolgt ebenfalls über den Befehl `np.dot`
 
