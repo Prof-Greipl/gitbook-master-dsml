@@ -97,7 +97,9 @@ Link: [https://seaborn.pydata.org/generated/seaborn.boxplot.html](https://seabor
 
 Link: https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51 
 
-![Boxplot (Quelle: https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51)](1-fehlerarten.assets/image-20211114183958284.png)
+
+
+![image-20211210123539036](readme.assets/image-20211210123539036.png)
 
 Vertiefung:
 
@@ -105,19 +107,28 @@ Vertiefung:
 
 
 
-```
+```python
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-x = np.arange(1,100)
+x = np.arange(1,101)
+x = np.concatenate( (x, [152] ))
 
-print( np.percentile( x, [0,25,50,75,100]))
-
+percentiles = np.percentile( x, [0,25,50,75,100])
+IQR = (percentiles[3] -  percentiles[1])
+print( "Pericentile         : ", percentiles)
+print( "IQR                 : ", IQR)
+print( "Upper Outlier Limit : ", percentiles[3] + 1.5*IQR)
 sns.boxplot(x = x)
 ```
 
 
 
+![image-20211210124842057](readme.assets/image-20211210124842057.png)
+
+
+
+![image-20211210124819306](readme.assets/image-20211210124819306.png)
 
 # Übungen
 
