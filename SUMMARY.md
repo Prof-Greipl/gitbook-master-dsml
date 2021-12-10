@@ -1,8 +1,7 @@
 # Table of contents
 
-[Vorbemerkungen](README.md)
+* [Vorbemerkungen](README.md)
 
- 
 
 ## Part B: Data Analysis<a href="B" id="B"></a>
 
