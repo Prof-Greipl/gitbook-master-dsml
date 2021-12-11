@@ -50,6 +50,8 @@ Wir benötigen folgende Grundlagen, die ich aber kurz wiederholen werde:
 
 Wir springen etwas zwischen den Kapiteln, um die inhaltlichen Kapitel (A,B) nicht mit den Phython-Grundlagen (C) zu vermischen.
 
+Link zu den in der jeweiligen Terminen erzeugten [Colab-Notebooks](https://github.com/Prof-Greipl/dsml-duf)
+
 
 
 ## 11.12.2012, 13:00 - 17:30 Uhr
