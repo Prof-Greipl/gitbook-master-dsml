@@ -93,7 +93,6 @@ le.fit( ["Virginica", "Setosa", "Versicolor", "Virginica"] )
 print( "Classes : ")
 print( le.classes_)
 
-le.transform(["Virginica", "Virginica", "Setosa", "Versicolor", "Versicolor"])
 print( "\nEncoding : ")
 print( le.transform(["Virginica", "Setosa", "Setosa"]) )
 
