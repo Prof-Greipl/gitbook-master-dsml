@@ -28,7 +28,7 @@
 ## Part C: Python Grundlagen<a href="PY" id="PY"></a>
 
 * [C.1 Variablen und Datentypen](0A9_Python/readme.md)
-* [C.3 Numpy](0A9_Python/numpy.md)
+* [C.2 Numpy](0A9_Python/numpy.md)
 * [C.3 Pandas und Dataframes](0A9_Python/pandas-und-dataframes.md)
 * [C.4 Kontrollstrukturen](0A9_Python/control-structures.md)
 

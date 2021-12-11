@@ -56,9 +56,9 @@ Link zu den in der jeweiligen Terminen erzeugten [Colab-Notebooks](https://githu
 
 ## 11.12.2012, 13:00 - 17:30 Uhr
 
-[C.4 Numpy - Matrix](https://the-technology-lab.gitbook.io/dsml-master-duf/S0aldZCOg4S1HudPOP87/py/numpy#matrix) 
+[C2. Elementweise Operationen](https://the-technology-lab.gitbook.io/dsml-master-duf/S0aldZCOg4S1HudPOP87/py/numpy#elementweise-operationen)  und [C.2 Numpy - Matrix](https://the-technology-lab.gitbook.io/dsml-master-duf/S0aldZCOg4S1HudPOP87/py/numpy#matrix) 
 
-[C.4 Pandas und Dataframes](https://the-technology-lab.gitbook.io/dsml-master-duf/S0aldZCOg4S1HudPOP87/py/pandas-und-dataframes)
+[C.3 Pandas und Dataframes](https://the-technology-lab.gitbook.io/dsml-master-duf/S0aldZCOg4S1HudPOP87/py/pandas-und-dataframes)
 
 [A.2 Plots für Iris abschließen](https://the-technology-lab.gitbook.io/dsml-master-duf/S0aldZCOg4S1HudPOP87/da/0a4_visualisierung#plots-fuer-iris)
 

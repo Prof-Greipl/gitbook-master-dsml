@@ -4,13 +4,21 @@ description: >-
   analysieren.
 ---
 
-# Diving into Dataframes
 
-## Diving into Dataframes
 
-Ein Dataframe ist eine Tabellenstruktur von Daten. Bitte beachten Sie zu diesem Abschnitt auch die Videos 11a bis 11f meiner [DSML-Playlist](https://youtube.com/playlist?list=PLfGN40VwjduJPvtP9QUjC0rjM6-ePT9bg)
+# Was ist ein Dataframe?
 
-## Beispiel
+Ein Dataframe ist eine Tabellenstruktur von Daten ähnlich zu Excel mit
+
+- Spaltenüberschriften
+
+- Zeilennummern
+
+Wir können damit einzelne Features (Spalten) direkt über den Namen ansprechen und die - über Numpy hinaus gehenden Analysefunktionen benutzen. Bitte beachten Sie zu diesem Abschnitt auch die Videos 11a bis 11f meiner [DSML-Playlist](https://youtube.com/playlist?list=PLfGN40VwjduJPvtP9QUjC0rjM6-ePT9bg)
+
+
+
+# Beispiel
 
 ```python
 import pandas as pd
@@ -37,7 +45,7 @@ print( "\n -------- Anzahl der Zeilen")
 print( len(df))
 ```
 
-### Information zum Dataframe
+# Information zum Dataframe
 
 ```python
 df.info() 
@@ -59,7 +67,9 @@ df.describe()
 
 ![](<../../../.gitbook/assets/image (12).png>)
 
-## Spalten (Series)
+
+
+# Spalten (Series)
 
 Eine Spalte eines Dataframes heist auch _Series._
 
@@ -74,19 +84,25 @@ print( spalte1.shape )
 print( type( spalte1 ) )
 ```
 
-#### Verschiedene Werte in einer Spalte
+
+
+`unique()` - Anzahl der verschiedenen Werte 
 
 ```python
 print( df["Gender"].unique() )
 ```
 
-#### Anzahl der verschiedenen Werte in einer Spalte
+
+
+## `value_counts()` 
 
 ```python
 print( df["Gender"].value_counts())
 ```
 
-#### Operationen auf Spalten (min, max, sum)
+
+
+## Minimum, Maximum, Summe
 
 ```python
 print("\n\n Summe/Maximum/Minimum über eine numerische Spalte:")
@@ -101,7 +117,7 @@ print( avg_age )
 
 
 
-## Teile aus Dataframes auswählen
+# Teile aus Dataframes auswählen
 
 Wir bearbeiten die gleiche Tabelle, wie oben:
 
@@ -116,7 +132,9 @@ df = pd.DataFrame({
   )
 ```
 
-### Spalten auswählen
+
+
+## Spalten auswählen
 
 Durch Angabe der Überschriften lassen sich  Dataframes auf ausgewählte Spalten (unten gelb) reduzieren und dadurch verkleinern:
 
@@ -143,7 +161,7 @@ Ausgaben:&#x20;
 
 
 
-### Teile nach Zeilennummern und Spaltennummern auswählen
+## Teile nach Zeilennummern und Spaltennummern auswählen
 
 ![](<../../../.gitbook/assets/image (19).png>)
 
@@ -152,7 +170,9 @@ df_1 = df.iloc[1:3, 0]
 print( df_1)
 ```
 
-### Filtern: Kriterien und Treffer
+
+
+## Filtern: Kriterien und Treffer
 
 Beim Filtern erzeugen wir eine künstliche Spalte mit "Treffern". Wenn die Tabelle in der jeweiligen Zeile den Werte `False `enthält, kommt sie nicht durch den Filter. &#x20;
 
@@ -208,11 +228,15 @@ print ( df_xx )
 
 ```
 
+
+
 ## Sortieren nach einer Spalte
 
 ```python
 df.sort_values(by="Age", ascending=False)
 ```
+
+
 
 ## Gruppieren
 
@@ -238,9 +262,13 @@ print("\n\n median:")
 print (grouping.median())
 ```
 
-## Dataframes und Numpy-Arrays
 
-#### Spalte aus numpy-Array erzeugen
+
+# Dataframes und Numpy-Arrays
+
+
+
+## Spalte aus numpy-Array erzeugen
 
 ```python
 w = np.array([70.4, 70.5, 70.6])
@@ -249,7 +277,9 @@ print( weight);
 print( type( weight) )
 ```
 
-### Numpy-Array aus Dataframe erzeugen
+
+
+## Numpy-Array aus Dataframe erzeugen
 
 ```python
 A = df[["Age"]].to_numpy()
@@ -257,7 +287,9 @@ print(A)
 print(A.shape)
 ```
 
-### Dataframe aus Numpy-Array erzeugen
+
+
+## Dataframe aus Numpy-Array erzeugen
 
 ```python
 A = np.array([[1, 2], [3.1, -4.2]])
@@ -265,11 +297,13 @@ df2 = pd.DataFrame(data=A, index=["r1", "r2"], columns=["c1","c2"])
 print( df2 )
 ```
 
+
+
 ## Dataframes aus Excel-Files erzeugen&#x20;
 
-> Für Titanic lesen Sie bitte die Daten aus der csv-Datei ein!
 
-#### Google-Drive vorbereiten
+
+### Google-Drive vorbereiten
 
 Folgenden Code brauchen Sie pro Sitzung nur einmal ausführen. Danach können Sie auf ihr Google-Drive zugreifen.
 
@@ -289,7 +323,9 @@ import pandas as pd
 df = pd.read_excel("/content/drive/My Drive/Colab Notebooks/data/titanic_train.xlsx")
 ```
 
-## Dataframes aus csv-Files erzeugen
+
+
+# Dataframes aus csv-Files erzeugen
 
 ```python
 from google.colab import drive
@@ -300,7 +336,9 @@ drive.mount('/content/drive')
 df = pd.read_csv("/content/drive/My Drive/Colab Notebooks/data/titanic_train.csv")
 ```
 
-## Übung
+
+
+# Übung
 
 Beantworten Sie folgende Fragen zum Iris-Datensatz mit Hilfe der obigen Funktionen:
 
