@@ -48,21 +48,39 @@ Wir benötigen folgende Grundlagen, die ich aber kurz wiederholen werde:
 
 # Teaching-Flow & Agenda
 
-Wir springen etwas zwischen den Kapiteln, um auf eventuelle Kenntnisse im Programmieren Rücksicht zu nehmen.
+Wir springen etwas zwischen den Kapiteln, um die inhaltlichen Kapitel (A,B) nicht mit den Phython-Grundlagen (C) zu vermischen.
 
 
 
-## 10.12.2012
+## 11.12.2012, 13:00 - 17:30 Uhr
+
+[C.4 Numpy - Matrix](https://the-technology-lab.gitbook.io/dsml-master-duf/S0aldZCOg4S1HudPOP87/py/numpy#matrix) 
+
+[C.4 Pandas und Dataframes](https://the-technology-lab.gitbook.io/dsml-master-duf/S0aldZCOg4S1HudPOP87/py/pandas-und-dataframes)
+
+[A.2 Plots für Iris abschließen](https://the-technology-lab.gitbook.io/dsml-master-duf/S0aldZCOg4S1HudPOP87/da/0a4_visualisierung#plots-fuer-iris)
+
+[A.3 Preprocessing](https://the-technology-lab.gitbook.io/dsml-master-duf/S0aldZCOg4S1HudPOP87/da/0a3_preprocessing/4-datentransformation)
+
+[B1. Problemstellung und Grundbegriffe](https://the-technology-lab.gitbook.io/dsml-master-duf/S0aldZCOg4S1HudPOP87/ml/0c_ml_grundbegriffe)
+
+
+
+![image-20211211090727800](README.assets/image-20211211090727800.png)
+
+
+
+
+
+## 10.12.2012, 14:00 -  20:15 Uhr
 
 **A.1 Datensätze**
 
 C.1 Python -  Variablen und Datentypen
 
-C.2 Python - Numpy
+C.2 Python - Numpy (ohne Matrix)
 
-**A.2 Visualisierung**
-
-C.3 Python - Dataframes
+**A.2 Visualisierung** (ohne "Bilder", Plots für Iris noch abschließen)
 
 **A.3 Preprocessing**
 
