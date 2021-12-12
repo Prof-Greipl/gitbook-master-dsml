@@ -43,6 +43,15 @@
 * [C.3 Training, Test und Validation](A9_Train_Test_Val/readme.md)
 * [C.4 Regression (und Grillen)](AA_Regression/readme.md)
 * [C.5 Generalisierung und Overfitting](AB_Overfitting/readme.md)
+* [C.6 Neuronale Netze](AC_Neuronale_Netze/readme.md)
+  * [1 Einfaches Neuron](AC_Neuronale_Netze/neuron.md)
+  * [2 Grillen: Neuronal](AC_Neuronale_Netze/grillen.md)
+  * [3 Layers](AC_Neuronale_Netze/layers.md)
+  * [4 Case Study: MNIST](AC_Neuronale_Netze/mnist.md)
+  
+  
+
+
 
 
 ## Part D: Ergänzungen <a href="D" id="D"></a>
