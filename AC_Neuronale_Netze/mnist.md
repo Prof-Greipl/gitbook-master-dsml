@@ -1,5 +1,3 @@
-# Case Study MNIST
-
 MNIST (Modified National Institute of Standards and Technology database) ist eine Datenbank mit Bildern handgeschriebener Ziffern. Nach folgende Abbildung zeigt ein Beispiel.
 
 ![Bild 2 der MNIST Datenbank](<./assets/image (178).png>)
@@ -18,7 +16,9 @@ Zur MNIST Datenbank:
 2. Jedes Bild besteht aus 28x28, also insgesamt  784 Pixeln. Der Grauwert jedes  Pixels ist mit einer Zahl zwischen 0 (weiß) und 255 (schwarz) kodiert. 
 3. Die Repräsentation eines Bilds ist ein Array mit Shape (28,28) 
 
-## Data Load
+
+
+# Data Load
 
 ```python
 from tensorflow import keras
@@ -34,7 +34,9 @@ print( f'X_test  : {X_test.shape}')
 print( f'y_test  : {y_test.shape}')
 ```
 
-## Inspect Labelled Example
+
+
+# Inspect Labelled Example
 
 ```python
 bild_nummer = 2
@@ -50,7 +52,9 @@ plt.imshow( bild, cmap= plt.get_cmap('Greys') )
 plt.figure()
 ```
 
-## Konzept unseres Netzes
+
+
+# Konzept unseres Netzes
 
 Nach folgende Abbildung zeigt die Struktur unseres Netzes
 
@@ -64,11 +68,13 @@ Nach folgende Abbildung zeigt die Struktur unseres Netzes
 
 Hierzu bereiten wir nun unsere Trainings- und Testdaten vor.
 
-## Datenvorbereitung
+
+
+# Preprocessing
 
 
 
-### Reshaping und Skalierung der Bilder
+## Reshaping und Skalierung der Bilder
 
 Wir wandeln jedes Bild in einen Vektoren der Dimension 784 um. Dabei skalieren wir die Grauwerte in der Bereich von 0 bis 1. 
 
@@ -88,54 +94,9 @@ Ergebnis:
 
 ![](<./assets/image (184).png>)
 
-### One-Hot-Encoding (Erläuterung)
+## One-Hot-Encoding  der Labels
 
-One-Hot-Encoding ist eine Methode, um kategorische Daten als binäre Vektoren darzustellen. Folgende Grafik verdeutlicht die Methode und illustriert den Namen. 
-
-![](<./assets/image (167).png>)
-
-Dies hat den Vorteil, dass wir Kategorien nicht mit Zahlen belegen, so wie wir es für den Decision Tree gemacht haben. Neuronale Netze sind sensitiver für Zahlen als Entscheidungsbäume! 
-
-One-Hot-Encoding funktioniert in folgenden beiden Schritten:
-
-1. Extrahiere aus der Spalte die auftretenden Kategorie-Werte
-2. Transformiere den/die Kategorie-Wert/e in einen Vektor.
-
-Glücklicherweise gibt es einen Funktion in `sklearn`, die das für uns erledigt. Folgender Code sollte einfach zu verstehen sein.
-
-```python
-from numpy import argmax
-from sklearn.preprocessing import OneHotEncoder
-
-embarked = [['C'], 
-            ['Q'],
-            ['Q'],
-            ['S'],
-            ['S'],
-            ['C']]
-
-enc = OneHotEncoder(sparse=False)
-enc.fit( embarked)
-print("\nKategorien: \n", enc.categories_)
-
-# Transformieren eines Wertes
-print("\nOne-Hot-Encoding von Q : \n", enc.transform( [['Q']] ) )
-
-# Transformieren des  Arrays embarked
-print("\nOne-Hot-Encoding von embarked : \n", enc.transform( embarked ) )
-```
-
-Ausgabe: 
-
-![](<./assets/image (170).png>)
-
-### Übung 1
-
-Ist folgende Aussage richtig oder falsch: Man kann aus obiger, gelb markierten Matrix eine beliebige Spalte weglassen, ohne Information zu verlieren. Hinweis: Untersuchen  Sie einer Situation, in der nur zwei Kategorie-Werte auftreten, z.B. `Sex `in Titanic.
-
-### Encoding der MNIST-Labels
-
-Für die MNIST Labels, also die Ziffern von 0 bis 9 ergibt sich folgendes Aufgabe, die wir nun recht einfach bewältigen können:
+Für die MNIST Labels, also die Ziffern von 0 bis 9, zeigt folgende Abbildung das One-Hot-Encoding der Labels:
 
 ![](<./assets/image (182).png>)
 
@@ -174,7 +135,7 @@ Ausgabe:
 
 > Die Labels für unser Netz sind also `y_train_one_hot` und`y_test_one_hot`
 
-### Splitting Data in Training and Validation-Data
+## Splitting Data in Training and Validation-Data
 
 Sie erinnern sich an den Begriff der Validation-Data, den wir in dem [diese Begriffe einführenden Abschnitt ](https://the-technology-lab.gitbook.io/bw-610-dsml/analytics-und-datascience/5-maschinelles-lernen/entscheidugsbaeume#aufteilung-in-training-set-und-test-set)nicht erläutert haben. Sie erinnern sich, dass wir die Test-Daten nicht in den Lernprozess einbeziehen wollten, um unser Modell nicht zu sehr auf den vorliegenden Datensatz anzupassen (siehe [hier](https://the-technology-lab.gitbook.io/bw-610-dsml/analytics-und-datascience/5-maschinelles-lernen/generalisierung-und-overfitting)). Da wir aber auch während des Entwicklungsprozesses unseres Modell eine Kontrollen über die Fähigkeit zur Generalisierung habe wollen, zweigen wir von den Trainingsdaten nochmals einen Teil der Daten für diese Bewertung ab.
 
@@ -213,7 +174,9 @@ print("                 y_test_split.shape   :", y_test_split.shape)
 
 Damit ist unsere Datenvorbereitung zu Ende. Im letzten Teil dieses Abschnitts finden Sie noch den gesamten Code zur Datenvorbereitung am Stück.
 
-### Gesamter Code
+
+
+# Gesamter Code zum Preprocessing
 
 ```python
 from tensorflow import keras
@@ -264,9 +227,13 @@ print("Test Data        X_test_split.shape   :", X_test_split.shape)
 print("                 y_test_split.shape   :", y_test_split.shape)
 ```
 
-## Modell
 
-### Neuronales Netz
+
+# Modell
+
+
+
+## Neuronales Netz
 
 Folgender Code definiert das neuronale Netz, trainiert es und gibt die Genauigkeiten (accuracy) auf den Test- und Validierungsdaten aus.  In dem Netz gibt es folgenden neue Elemente, die wir aber im Anschluss behandeln:
 
@@ -324,7 +291,9 @@ Sie sollten folgende Ausgabe sehen (Achtung, die Werte sollten ähnlich sein, si
 
 Wir sind natürlich auch an der Performance auf den Testdaten interessiert.
 
-### Understanding a prediction
+
+
+## Understanding a prediction
 
 Nachfolgender Code gibt die Predictions und den Label für ein einzelnes Bild aus. Wir sehen, dass Netz zu 100% Prozent überzeugt ist, dass es sich bei Bild 32 aus dem Test-Set um eine Drei handelt.
 
@@ -347,7 +316,9 @@ Ausgabe (ihre Zahlen werden abweichen):
 
 ![](<./assets/image (174).png>)
 
-### Test-Qualität und falsch klassifizierte Bilder 
+
+
+## Test-Qualität und falsch klassifizierte Bilder 
 
 Mit der Vorarbeit von oben können wir nun eine Liste der falsch klassifizierten Bilder aus dem Test-Set erzeugen und damit die Accuracy auf dem Test-Set berechnen.:
 
@@ -382,7 +353,9 @@ Ausgabe:
 
 ![](<./assets/image (185).png>)
 
-### Spannende Fehler
+
+
+## Spannende Fehler
 
 Die obige Ausgabe der fehlerhaft klassifizierten Bilder hat 267 Ausgaben gezeigt. Das ist noch recht viel, um "spannende Fehler" herauszusuchen. Folgendes Programm erlaubt die Eingrenzung der Suche über die Wahrscheinlichkeit, mit der das Netz das Ergebnis festgelegt hat. Es unterscheiden sich nur die Zeilen 8 und 9:
 
@@ -403,7 +376,7 @@ print (f"Accuracy auf Test-Set    : {((N-c)/N)}")
 
  
 
-#### Mit voller Überzeugung daneben...
+## Mit voller Überzeugung daneben...
 
 Durch die Änderung in Zeile 8 erhalten wir alle Ergebnisse, bei denen das Netz mit voller Überzeugung daneben liegt. (Mögliche) Ausgabe: 
 
@@ -419,7 +392,9 @@ Unser Netz ist also recht überzeugt davon, dass es sich um eine 2 handelt, die 
 
 > Sie sehen, wie schwierig die Interpretation von Ausgaben ist. Selbst ein Ergebnis mit einer Wahrscheinlichkeit von 99.9 Prozent kann in unserem Netz falsch sein!
 
-#### Schwierig oder einfach?
+
+
+## Schwierig oder einfach?
 
 Wenn wir das Auswertungsprogramm so  ändern, dass die Confidence z.B. unter 50 Prozent liegt, so erhalten wir offenbar Examples, deren Klassifikation dem Netzwerk schwer gefallen ist. Beispiele:
 
@@ -429,7 +404,9 @@ Das Bild 1709 zeigt eine diese Problematik. Mit hoher Unentschlossenheit wird zw
 
 ![](<./assets/image (196).png>)
 
-### Ziffernbasierte Trefferquoten
+
+
+## Ziffernbasierte Trefferquoten
 
 Abschließend untersuchen wir noch, welche Ziffer besonders häufig falsch  klassifiziert wurde. Am meisten Probleme hatte "mein" Netz mit Ziffer 8. 
 

@@ -35,16 +35,4 @@ Wie sie leicht sehen, strebt die Sigmoid-Funktion für sehr große Werte von x g
 
 ![](./assets/image%20%28159%29.png)
 
-## Netzwerk-Layer \(Input-, Output-Layer\)
-
-Wir wollen nun mehrere Neuronen zu einem Netz verschalten und brauchen dazu eine strukturierte Anordnung der Neuronen. Nachfolgende Grafik zeigt das rechte einfache Konzept eines Layers, in dem wir  drei Neuronen in einer Schicht aufbauen. 
-
-![](./assets/image%20%28148%29.png)
-
-Wichtig:
-
-1. Man bezeichnet die Ebene der Eingabewerte, also der Features, auch als **Input Layer**
-2. Das obige Netz gibt drei Werte aus. Das Layer, das Werte ausgibt, heißt auch **Output-Layer**.
-
-
 
