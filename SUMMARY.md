@@ -42,6 +42,7 @@
 * [C.2 Entscheidungsbäume](A8_Decision_Trees/readme.md)
 * [C.3 Training, Test und Validation](A9_Train_Test_Val/readme.md)
 * [C.4 Regression (und Grillen)](AA_Regression/readme.md)
+* [C.5 Generalisierung und Overfitting](AB_Overfitting/readme.md)
 
 
 ## Part D: Ergänzungen <a href="D" id="D"></a>
@@ -50,4 +51,3 @@
   * [1 Skalare, Vektoren, Matrizen](AZ_sup_grundlagen_lineare_algebra/1_skalare-vektoren-matrizen.md)
   * [2 Vektoren und Matrizen mit Python](AZ_sup_grundlagen_lineare_algebra/2_skalare-vektoren-matrizen-mit-numpy.md)
   * [3 Case Study: Images](AZ_sup_grundlagen_lineare_algebra/3_case-study-images.md) 
-  
