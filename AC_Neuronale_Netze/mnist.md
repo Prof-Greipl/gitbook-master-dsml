@@ -2,15 +2,15 @@
 
 MNIST (Modified National Institute of Standards and Technology database) ist eine Datenbank mit Bildern handgeschriebener Ziffern. Nach folgende Abbildung zeigt ein Beispiel.
 
-![Bild 2 der MNIST Datenbank](<../../.gitbook/assets/image (178).png>)
+![Bild 2 der MNIST Datenbank](<./assets/image (178).png>)
 
 Nicht alle Bilder sind  so klar zu identifizieren, wie obiges Bild. Welch Ziffer zeigt Ihrer Meinung nach folgendes Bild:
 
-![](<../../.gitbook/assets/image (176) (1).png>)
+![](<./assets/image (176) (1).png>)
 
 oder folgendes:
 
-![](<../../.gitbook/assets/image (186).png>)
+![](<./assets/image (186).png>)
 
 Zur MNIST Datenbank:
 
@@ -60,7 +60,7 @@ Nach folgende Abbildung zeigt die Struktur unseres Netzes
   * jeder Wert eines Ausgangs der Wahrscheinlichkeit entspricht, dass das eingebene Bild der zugeordneten Ziffer entspricht.
 * Damit das Netz funktioniert, müssen wir die labels in einen 10-dimensionalen Vektor transformieren (one-hot-encoding).
 
-![](<../../.gitbook/assets/image (177).png>)
+![](<./assets/image (177).png>)
 
 Hierzu bereiten wir nun unsere Trainings- und Testdaten vor.
 
@@ -86,13 +86,13 @@ print( f'Bild 0 (max)  : {X_test[0].max()}')
 
 Ergebnis: 
 
-![](<../../.gitbook/assets/image (184).png>)
+![](<./assets/image (184).png>)
 
 ### One-Hot-Encoding (Erläuterung)
 
 One-Hot-Encoding ist eine Methode, um kategorische Daten als binäre Vektoren darzustellen. Folgende Grafik verdeutlicht die Methode und illustriert den Namen. 
 
-![](<../../.gitbook/assets/image (167).png>)
+![](<./assets/image (167).png>)
 
 Dies hat den Vorteil, dass wir Kategorien nicht mit Zahlen belegen, so wie wir es für den Decision Tree gemacht haben. Neuronale Netze sind sensitiver für Zahlen als Entscheidungsbäume! 
 
@@ -127,7 +127,7 @@ print("\nOne-Hot-Encoding von embarked : \n", enc.transform( embarked ) )
 
 Ausgabe: 
 
-![](<../../.gitbook/assets/image (170).png>)
+![](<./assets/image (170).png>)
 
 ### Übung 1
 
@@ -137,7 +137,7 @@ Ist folgende Aussage richtig oder falsch: Man kann aus obiger, gelb markierten M
 
 Für die MNIST Labels, also die Ziffern von 0 bis 9 ergibt sich folgendes Aufgabe, die wir nun recht einfach bewältigen können:
 
-![](<../../.gitbook/assets/image (182).png>)
+![](<./assets/image (182).png>)
 
 Dazu brauchen wir folgenden Code:
 
@@ -170,7 +170,7 @@ print("Label :", y_train[2], ", Label One Hot :", y_train_one_hot[2], ' (1 at po
 
 Ausgabe:
 
-![](<../../.gitbook/assets/image (162).png>)
+![](<./assets/image (162).png>)
 
 > Die Labels für unser Netz sind also `y_train_one_hot` und`y_test_one_hot`
 
@@ -180,7 +180,7 @@ Sie erinnern sich an den Begriff der Validation-Data, den wir in dem [diese Begr
 
 Nachfolgendes Bild illustriert den Sachverhalt:
 
-![](<../../.gitbook/assets/image (171).png>)
+![](<./assets/image (171).png>)
 
 Hierzu verwenden wir nachfolgenden Code:
 
@@ -209,7 +209,7 @@ print("                 y_test_split.shape   :", y_test_split.shape)
 
  Ausgabe:
 
-![](<../../.gitbook/assets/image (163).png>)
+![](<./assets/image (163).png>)
 
 Damit ist unsere Datenvorbereitung zu Ende. Im letzten Teil dieses Abschnitts finden Sie noch den gesamten Code zur Datenvorbereitung am Stück.
 
@@ -320,7 +320,7 @@ print("Validation Accuracy :", history.history['val_accuracy'][-1] )
 
 Sie sollten folgende Ausgabe sehen (Achtung, die Werte sollten ähnlich sein, sie werden aber nicht identisch sein.)
 
-![](<../../.gitbook/assets/image (181).png>)
+![](<./assets/image (181).png>)
 
 Wir sind natürlich auch an der Performance auf den Testdaten interessiert.
 
@@ -345,7 +345,7 @@ plt.figure()
 
 Ausgabe (ihre Zahlen werden abweichen):
 
-![](<../../.gitbook/assets/image (174).png>)
+![](<./assets/image (174).png>)
 
 ### Test-Qualität und falsch klassifizierte Bilder 
 
@@ -368,7 +368,7 @@ print (f"Accuracy auf Test-Set    : {((N-c)/N)}")
 
 Ausgabe:
 
-![](<../../.gitbook/assets/image (173).png>)
+![](<./assets/image (173).png>)
 
 Übrigens lässt sich die Test-Set Accuracy auch einfacher ermitteln:
 
@@ -380,7 +380,7 @@ print("test loss, test acc:", results)
 
 Ausgabe: 
 
-![](<../../.gitbook/assets/image (185).png>)
+![](<./assets/image (185).png>)
 
 ### Spannende Fehler
 
@@ -407,13 +407,13 @@ print (f"Accuracy auf Test-Set    : {((N-c)/N)}")
 
 Durch die Änderung in Zeile 8 erhalten wir alle Ergebnisse, bei denen das Netz mit voller Überzeugung daneben liegt. (Mögliche) Ausgabe: 
 
-![](<../../.gitbook/assets/image (191).png>)
+![](<./assets/image (191).png>)
 
 
 
 Wir schauen uns nun ein falsch klassifiziertes Bild an, z.B. Bild 247. Hier wurde statt der korrekten 4 eine 2 vorhergesagt. Die Ausgabe aus obigem "Inspektionsprogramm" ergibt: 
 
-![](<../../.gitbook/assets/image (193).png>)
+![](<./assets/image (193).png>)
 
 Unser Netz ist also recht überzeugt davon, dass es sich um eine 2 handelt, die korrekte Antwort 4 bekommt nur eine Wahrscheinlichkeit von 0.00026 Prozent. Mit voller Überzeugung daneben...
 
@@ -423,17 +423,17 @@ Unser Netz ist also recht überzeugt davon, dass es sich um eine 2 handelt, die 
 
 Wenn wir das Auswertungsprogramm so  ändern, dass die Confidence z.B. unter 50 Prozent liegt, so erhalten wir offenbar Examples, deren Klassifikation dem Netzwerk schwer gefallen ist. Beispiele:
 
-![](<../../.gitbook/assets/image (190).png>)
+![](<./assets/image (190).png>)
 
 Das Bild 1709 zeigt eine diese Problematik. Mit hoher Unentschlossenheit wird zwischen der korrekten 9 und der falschen 5 die falsche Entscheidung getroffen. Wäre Ihnen dieser Fehler auch unterlaufen? 
 
-![](<../../.gitbook/assets/image (196).png>)
+![](<./assets/image (196).png>)
 
 ### Ziffernbasierte Trefferquoten
 
 Abschließend untersuchen wir noch, welche Ziffer besonders häufig falsch  klassifiziert wurde. Am meisten Probleme hatte "mein" Netz mit Ziffer 8. 
 
-![](<../../.gitbook/assets/image (192).png>)
+![](<./assets/image (192).png>)
 
 Folgender Code wurde verwendet:
 
@@ -458,7 +458,7 @@ for i in np.arange(0,10):
 
 Zuletzt schauen wir uns die Fehler noch genauer an: Welche falsche Ziffer  wurde statt der korrekten Ziffer gewählt, oder kurz gesagt: "Mit welcher Ziffer die Ziffern wie oft verwechselt?"
 
-![](<../../.gitbook/assets/image (189).png>)
+![](<./assets/image (189).png>)
 
 Der Code hierzu:
 
@@ -501,4 +501,4 @@ Die Softmax-Aktivierung wird in der Regel bei Klassifizierungsaufgaben mit mehr 
 
 Nachfolgende Abbildung erläutert das  mathematische Modell: 
 
-![Eigene Abbildung](<../../.gitbook/assets/image (187).png>)
+![Eigene Abbildung](<./assets/image (187).png>)

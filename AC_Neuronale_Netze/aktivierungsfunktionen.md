@@ -17,7 +17,7 @@ $$
 
  Der Graph von ReLU ist recht einfach:
 
-![](../../.gitbook/assets/image%20%28158%29.png)
+![](./assets/image%20%28158%29.png)
 
 Die Befehle zum Zeichnen dieses Graphen finden Sie hier. 
 
@@ -33,13 +33,13 @@ $$
 
 Wie sie leicht sehen, strebt die Sigmoid-Funktion für sehr große Werte von x gegen Eins und für sehr stark negative Werte von x gegen Null. Hier der Funktionsgraph:
 
-![](../../.gitbook/assets/image%20%28159%29.png)
+![](./assets/image%20%28159%29.png)
 
 ## Netzwerk-Layer \(Input-, Output-Layer\)
 
 Wir wollen nun mehrere Neuronen zu einem Netz verschalten und brauchen dazu eine strukturierte Anordnung der Neuronen. Nachfolgende Grafik zeigt das rechte einfache Konzept eines Layers, in dem wir  drei Neuronen in einer Schicht aufbauen. 
 
-![](../../.gitbook/assets/image%20%28148%29.png)
+![](./assets/image%20%28148%29.png)
 
 Wichtig:
 

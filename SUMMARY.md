@@ -46,13 +46,11 @@
 * [C.6 Neuronale Netze](AC_Neuronale_Netze/readme.md)
   * [1 Einfaches Neuron](AC_Neuronale_Netze/neuron.md)
   * [2 Grillen: Neuronal](AC_Neuronale_Netze/grillen.md)
-  * [3 Layers](AC_Neuronale_Netze/layers.md)
-  * [4 Case Study: MNIST](AC_Neuronale_Netze/mnist.md)
+  * [4 Aktivierungsfunktionen](AC_Neuronale_Netze/aktivierungsfunktionen.md)
+  * [5 Layers](AC_Neuronale_Netze/layers.md)
+  * [6 Case Study: MNIST](AC_Neuronale_Netze/mnist.md)
   
-  
-
-
-
+ 
 
 ## Part D: Ergänzungen <a href="D" id="D"></a>
 

@@ -6,7 +6,7 @@ Wir wollen nun mehrere Neuronen zu einem Netz verschalten und brauchen dazu eine
 
 Wichtig:
 
-![](<../../.gitbook/assets/image (151).png>)
+![](<./assets/image (151).png>)
 
 1. Man bezeichnet die Schicht der Eingabewerte, also der Features, auch als **Input Layer**
 2. Dier erste Schicht von Neuronen wird als Layer 0 bezeichnet.
@@ -19,7 +19,7 @@ Wichtig:
 
 Natürlich können wir nun mehrere Schicht (Layer) anordnen und miteinander verbinden. Folgende Abbildung zeigt eine derartige Struktur
 
-![](<../../.gitbook/assets/image (156).png>)
+![](<./assets/image (156).png>)
 
 Wichtig:
 
@@ -29,7 +29,7 @@ Wichtig:
 
 Lösen Sie für diese Neuronale Netz nachfolgende Aufgaben:
 
-![](<../../.gitbook/assets/image (146).png>)
+![](<./assets/image (146).png>)
 
 a)  Berechnen Sie den Output des folgenden Netzes für x= (1,3,5) und x = (0,1,0).
 
@@ -93,7 +93,7 @@ $$
 
 Achtung: Der Wert in der Klammer ist ein Zeilenvektor! Nachfolgendes Bild verdeutlicht, was in dem Funktionsargument passiert:
 
-![](<../../.gitbook/assets/image (152).png>)
+![](<./assets/image (152).png>)
 
 
 
