@@ -50,7 +50,7 @@
   * [5 Layers](AC_Neuronale_Netze/layers.md)
   * [6 Case Study: MNIST](AC_Neuronale_Netze/mnist.md)
   
- 
+
 
 ## Part D: Ergänzungen <a href="D" id="D"></a>
 
