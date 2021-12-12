@@ -6,6 +6,6 @@ Der Begriff der Generalisierung hängt eng mit dem Begriff des **Overfitting **z
 
 Bei nachfolgendem Regressions-Beispiel sind die x-Koordinaten der Punkte die Features und die y-Koordinaten die Labels. Während die blaue Kurve alle Punkte exakt trifft, ist die schwarze Gerade die bessere Lösung für das Problem. Die Gefahr des Overfittings besteht immer dann, wenn das Modell so komplex wird, dass es zwar alle labels sehr gut vorhersagt, aber die Struktur der Daten (im Bild die der offensichtlich lineare Zusammenhang) dabei verloren geht.
 
-![Quelle: Wikipedia](<../../.gitbook/assets/image (120).png>)
+![Quelle: Wikipedia](<../../.gitbook/assets/image (106).png>)
 
 ****

@@ -1,10 +1,4 @@
-# Einfaches Neuron und Grundbegriffe
 
- Künstliche neuronale Netze haben, ebenso wie künstliche Neuronen, ein biologisches Vorbild. Man stellt sie natürlichen [neuronalen Netzen](https://de.wikipedia.org/wiki/Neuronales_Netz) gegenüber, die eine Vernetzung von [Neuronen](https://de.wikipedia.org/wiki/Nervenzelle) im [Nervensystem](https://de.wikipedia.org/wiki/Nervensystem) eines Lebewesens darstellen. 
-
-![Biologische und Künstliche Neuronen (Quelle: https://www.datacamp.com/)](<../../.gitbook/assets/image (153).png>)
-
-Bei KNNs geht es allerdings mehr um eine Abstraktion ([Modellbildung](https://de.wikipedia.org/wiki/Modell)) von Informationsverarbeitung, weniger um das Nachbilden biologischer neuronaler Netze und Neuronen, was eher Gegenstand der [Computational Neuroscience](https://de.wikipedia.org/wiki/Computational_Neuroscience) ist. (Quelle: Wikipedia)
 
 ## Ein Neuron
 
@@ -13,17 +7,19 @@ Ein Neuron ist der Grundbaustein neuronaler Netzwerke. Ein Neuron hat folgende G
 * die Eingabe eines Neurons ist ein Vektor $$x \in \mathbb{R}^m$$ .
 * die Ausgabe eines Neurons ist eine reelle Zahl und wird auch **Activation **genannt.
 
-Ein Neuron entspricht damit einer Funktion von, die von $$\mathbb{R}^m$$ nach $$\mathbb{R}$$ abbildet.
+Ein Neuron entspricht damit einer Funktion, die von $$\mathbb{R}^m$$ nach $$\mathbb{R}$$ abbildet.
 
  
 
-![](<../../.gitbook/assets/image (129).png>)
+![](<../../.gitbook/assets/image (110).png>)
+
+
 
 ### Gewichtsvektor und Bias
 
 Wir geben nun dieser Funktion einen Struktur. Sie wird wie folgt funktionieren:
 
-![](<../../.gitbook/assets/image (123).png>)
+![](<../../.gitbook/assets/image (112).png>)
 
 In Vektorschreibweise berechnet ein Neuron also
 
@@ -35,19 +31,19 @@ Wir werden für $$\phi$$ meist recht einfache Funktionen werden, z.B. wie in obi
 
 > **Ein Neuron ist also von m+1 Werten (Parametern) abhängig, mit denen man das Verhalten des Neurons einstellen kann.**
 
-![](<../../.gitbook/assets/image (130).png>)
+![](<../../.gitbook/assets/image (114).png>)
 
 ### Beispiel
 
 Nachfolgendes Beispiel erläutert die Rechnung eines Neurons per Hand:
 
-![](<../../.gitbook/assets/image (135).png>)
+![](<../../.gitbook/assets/image (113).png>)
 
 ### Übung
 
 Berechnen Sie die Ausgabe des folgenden Neurons:
 
-![](<../../.gitbook/assets/image (131).png>)
+![](<../../.gitbook/assets/image (115).png>)
 
 ### Neuron mit Python
 
