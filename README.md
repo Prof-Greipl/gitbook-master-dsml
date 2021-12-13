@@ -14,6 +14,14 @@ Die folgende Youtube Playlist entstand im rein digitalen WS 20/21. Es wird wahrs
 
 ## Stand nach den jeweiligen Terminen
 
+### T10 - 13.12.2021
+
+- C6 abgeschlossen
+
+- Bitte Mechanik eines Neurons üben. Wir starten in T11 mit Übungen dazu .
+
+  
+
 ### T9 - 07.12.2021
 
 - C2 und C3 abgeschlossen
