@@ -106,7 +106,7 @@ Wir haben eben gesehen, dass die Fehlerfunktion MSE nur von w und b abhängt. Da
 
 Wir können die optimalen Paramater einfach berechnen lassen. Das Ergebnis ist: 
 
-![image-20211205175741435](readme.assets/image-20211205175741435.png)
+![image-20211213190304625](readme.assets/image-20211213190304625.png)
 
 Übrigens lässt sich das auch analytisch berechnen. Sie können das hier nachlesen.
 
@@ -116,20 +116,40 @@ Wir können die optimalen Paramater einfach berechnen lassen. Das Ergebnis ist:
 
 Wir erzeugen zunächst die recht einfache Feature Matrix $$X \in \mathbb{R}^{11 \times 1}$$ und den Label-Vektor $$y\in \mathbb{R}^{11}$$ 
 
-```
+```python
+import pandas as pd
+import numpy as np
+
+from matplotlib import pyplot as plt
+import seaborn as sns
+
 from sklearn.linear_model import LinearRegression
 
+chirps = pd.DataFrame({
+    "Count": [31,16,29,43,27,19,47,9,45,5,39],
+    "Temp": [9.4,10.5,17.1,24.3,14.6,9.9,16.9,6.4,17.7,7.5,14.2]    
+})
+
+# Ceate (11,1) Feature Matrix
 X = chirps["Count"].to_numpy().reshape(11,-1)
-y = chirps["Temp"].to_numpy().reshape(11,-1)
-print(y)
 
+# Ceate (11,) Label-Vektor
+y = chirps["Temp"].to_numpy() 
+
+# Phase 1. Trainingsphase
 reg = LinearRegression().fit(X, y)
-print("weight vector   w = : ", reg.coef_ )
-print("intercept value b = : ", reg.intercept_)
+print("weight vector   w =  ", reg.coef_ )
+print("intercept value b =  ", reg.intercept_)
 
+#Phase 2: Produktivphase
 y_pred = reg.predict(X)
-print("              MSE = : ", ((y-y_pred)*(y-y_pred)).sum()/11 )
+print("              MSE =  ", ((y-y_pred)*(y-y_pred)).sum()/11 )
+
+#Make a prediction for nbs data
+print( reg.predict( np.array([35,40]).reshape(-1,1)  ))   
 ```
+
+
 
 
 
@@ -144,38 +164,42 @@ Folgende Abbildung zeigt das optimale Modell:
 ## Python
 
 ```python
-from matplotlib import pyplot as plt
-import seaborn as sns
 import pandas as pd
 import numpy as np
+
+from matplotlib import pyplot as plt
+import seaborn as sns
+
+from sklearn.linear_model import LinearRegression
 
 chirps = pd.DataFrame({
     "Count": [31,16,29,43,27,19,47,9,45,5,39],
     "Temp": [9.4,10.5,17.1,24.3,14.6,9.9,16.9,6.4,17.7,7.5,14.2]    
 })
 
+# Ceate (11,1) Feature Matrix
 X = chirps["Count"].to_numpy().reshape(11,-1)
-y = chirps["Temp"].to_numpy().reshape(11,-1)
-print(y)
 
-reg = LinearRegression().fit(X, y)
-w = reg.coef_[0][0] 
-b = reg.intercept_[0]
+# Ceate (11,) Label-Vektor
+y = chirps["Temp"].to_numpy() 
+
+w = reg.coef_[0] 
+b = reg.intercept_
 
 x_values = np.array([0, 50])
 y_values = np.array([b, 50*w + b])
 
+sns.set()
 fig,ax = plt.subplots(figsize=(9, 9))
 ax.set_aspect('equal')
 ax.set_title("Chirps-Data") 
 ax.set_xlabel("Count")
 ax.set_ylabel("Temperature")
-
 ax.set_xlim(0, 50)
 ax.set_ylim(0, 35)
 
-sns.set()
 sns.scatterplot(data = chirps, x = "Count", y="Temp", label="Temp")
+sns.scatterplot( x = X.reshape(-1,), y= reg.predict(X).reshape(-1,), label="Predictions")
 sns.lineplot(x=x_values,y=y_values, color="red", label="best line xw+b")
 ```
 
