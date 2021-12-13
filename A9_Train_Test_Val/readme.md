@@ -82,7 +82,7 @@ p = tree.plot_tree(clf
 
 Ergibt folgenden optimalen Baum für TRAIN_SPLIT = 100 den optimalen Baum (der Höhe 1):
 
-![image-20211206121656183](readme.assets/image-20211206121656183.png)
+![Optimaler Baum für 100 Trainingsdaten](readme.assets/image-20211213110505048.png)
 
 
 

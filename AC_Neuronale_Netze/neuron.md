@@ -1,8 +1,8 @@
 
 
-## Ein Neuron
+# Neuron (Perceptron)
 
-Ein Neuron ist der Grundbaustein neuronaler Netzwerke. Ein Neuron hat folgende Grundeigenschaften
+Ein Neuron (auch Perzeptron genannt) ist der Grundbaustein neuronaler Netzwerke. Ein Neuron hat folgende Grundeigenschaften
 
 * die Eingabe eines Neurons ist ein Vektor $$x \in \mathbb{R}^m$$ .
 * die Ausgabe eines Neurons ist eine reelle Zahl und wird auch **Activation **genannt.
@@ -11,15 +11,17 @@ Ein Neuron entspricht damit einer Funktion, die von $$\mathbb{R}^m$$ nach $$\mat
 
  
 
-![](<./assets/image (110).png>)
+![](<./assets/image (132).png>)
 
 
 
-### Gewichtsvektor und Bias
+
+
+# Gewichtsvektor und Bias
 
 Wir geben nun dieser Funktion einen Struktur. Sie wird wie folgt funktionieren:
 
-![](<./assets/image (112).png>)
+![](<./assets/image (123).png>)
 
 In Vektorschreibweise berechnet ein Neuron also
 
@@ -31,21 +33,29 @@ Wir werden für $$\phi$$ meist recht einfache Funktionen werden, z.B. wie in obi
 
 > **Ein Neuron ist also von m+1 Werten (Parametern) abhängig, mit denen man das Verhalten des Neurons einstellen kann.**
 
-![](<./assets/image (114).png>)
+![](<./assets/image (130).png>)
 
-### Beispiel
+
+
+# Beispiel
 
 Nachfolgendes Beispiel erläutert die Rechnung eines Neurons per Hand:
 
-![](<./assets/image (113).png>)
+![](<./assets/image (135).png>)
 
-### Übung
+
+
+
+
+# Übung
 
 Berechnen Sie die Ausgabe des folgenden Neurons:
 
-![](<./assets/image (115).png>)
+![](<./assets/image (131).png>)
 
-### Neuron mit Python
+
+
+# Neuron mit Python
 
 Nach folgende Zeilen vollziehen die Rechnung on obiger Folie nach.
 
@@ -69,7 +79,9 @@ print( output )
 print( output.shape)
 ```
 
-### Neuron mit Python und Keras
+
+
+# Neuron mit Python und Keras
 
 Nachfolgendes Programmstück definiert ein Neuronales Netz, bereits als Model. Wir trainieren das Modell noch nicht, sondern setzten die Gewichte manuell. Der Trainingsprozess würde die Gewichte so setzten, dass die _Activations _für jeden Input möglichst nahe an den Labels wären.
 
@@ -103,3 +115,6 @@ X = np.array([
 y = model.predict( X );
 print( y );
 ```
+
+
+
