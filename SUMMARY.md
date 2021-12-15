@@ -23,12 +23,12 @@
 * [B.2 Entscheidungsbäume](0C_Decision_Trees/readme.md)
 * [B.3 Training, Test und Validation](0C_Train_Test_Val/readme.md)
 * [B.4 Regression (und Grillen)](0C_Regression/readme.md)
-* [B.5 Neuronale Netze](0C_Neuronale_Netze/readme.md)
-  * [1 Einfaches Neuron](0C_Neuronale_Netze/neuron.md)
-  * [2 Grillen: Neuronal](0C_Neuronale_Netze/grillen.md)
-  * [4 Aktivierungsfunktionen](0C_Neuronale_Netze/aktivierungsfunktionen.md)
-  * [5 Layers](0C_Neuronale_Netze/layers.md)
-  * [6 Case Study: MNIST](0C_Neuronale_Netze/mnist.md)
+* [B.5 Neuronale Netze](0C_Neural_Networks/readme.md)
+  * [1 Einfaches Neuron](0C_Neural_Networks/neuron.md)
+  * [2 Grillen: Neuronal](0C_Neural_Networks/grillen.md)
+  * [4 Aktivierungsfunktionen](0C_Neural_Networks/aktivierungsfunktionen.md)
+  * [5 Layers](0C_Neural_Networks/layers.md)
+  * [6 Case Study: MNIST](0C_Neural_Networks/mnist.md)
 
 
 ## Part C: Python Grundlagen<a href="PY" id="PY"></a>
