@@ -54,7 +54,15 @@ Link zu den in der jeweiligen Terminen erzeugten [Colab-Notebooks](https://githu
 
 
 
-## 11.12.2012, 13:00 - 17:30 Uhr
+## 17.12.2021, 16:00 - 20:15 Uhr
+
+
+
+![image-20211217083343363](README.assets/image-20211217083343363.png)
+
+
+
+## 11.12.2021, 13:00 - 17:30 Uhr
 
 [C2. Elementweise Operationen](https://the-technology-lab.gitbook.io/dsml-master-duf/S0aldZCOg4S1HudPOP87/py/numpy#elementweise-operationen)  und [C.2 Numpy - Matrix](https://the-technology-lab.gitbook.io/dsml-master-duf/S0aldZCOg4S1HudPOP87/py/numpy#matrix) 
 

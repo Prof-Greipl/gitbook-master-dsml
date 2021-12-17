@@ -55,7 +55,8 @@ Wir suchen also $$w$$ und $$b$$  in $$\mathbb{R}$$, so dass unser dadurch defini
 
 ## Übung
 
-Geben sie eine visuelle Abschätzung für Gewicht und Bias
+1. Tragen sie die Funktion (Gerade) $$M_{2,5}$$ in das Koordinatensystem in diesem [Link](https://hawlandshutde-my.sharepoint.com/:p:/g/personal/dgreipl_az_haw-landshut_de/EVP2qxD2yfhFspTxcEiDBA8BSx3up_SbE0lADod7WLM9EQ?e=e5h7mw) in **die erste Folie** ein. 
+2. Tragen sie die aus Ihrer Sicht beste Gerade für obigen Datensatz in das Koordinatensystem in diesem [Link](https://hawlandshutde-my.sharepoint.com/:p:/g/personal/dgreipl_az_haw-landshut_de/EVP2qxD2yfhFspTxcEiDBA8BSx3up_SbE0lADod7WLM9EQ?e=e5h7mw) **in die zweite Folie** ein. Nennen sie eine Abschätzung für Gewicht $$w$$ und Bias $$b$$  dieser Gerade.
 
 
 
@@ -64,14 +65,14 @@ Geben sie eine visuelle Abschätzung für Gewicht und Bias
 Um die Qualität eines gewählten Modells zu verwenden verwenden wir den schon bekannten  MSE:
 
 $$
-MSE(w,b) = \frac{1}{n}\sum_{i=0}^{n-1} (M_{w,b}(x_i) -y_i) ^2
+\text{MSE}(w,b) = \frac{1}{n}\sum_{i=0}^{n-1} (M_{w,b}(x_i) -y_i) ^2
 $$
 
 für alle $$n$$ labelled examples$$(x_i,y_i)$$ aus dem Dataset. Durch Einsetzen der Definition von $$M$$ ergibt sich nun:
 
 $$
 \begin{align*}
-MSE(w,b)
+\text{MSE}(w,b)
     &= \frac{1}{n}\sum_{i=0}^{n-1} ( x_i\cdot w + b - y_i ) ^2
 \end{align*}
 $$
@@ -99,6 +100,35 @@ Wir haben eben gesehen, dass die Fehlerfunktion MSE nur von w und b abhängt. Da
 ![](<readme.assets/image (125).png>)
 
   
+
+
+
+Das Abstiegsverfahren lässt sich etwas besser anhand eines Grafen einer Loss-Funktion $$L: \mathbb{R} \rightarrow \mathbb{R}$$ veranschaulichen. Wir nehmen dabei an, dass wir den Loss (=MSE) nur entlang der w-Achse minimieren wollen, also  angenommen, dass der Loss  nur von $$w$$ abhängt.
+
+
+
+
+
+## Skizzierung des Abstiegsverfahrens
+
+Ist L differenzierbar und  $$L´(w_0) < 0$$ für einen zufällig gewählten Startwert $$w_0$$ , so gilt wegen
+$$
+L^´(w_0) = \lim_{h \rightarrow 0} \frac{L(w_0+h) - L(w_0)}{h}  <0
+$$
+
+für hinreichend kleines $$h_0 > 0$$:
+
+$$
+\frac{L(w_0+h_0) - L(w_0)}{h_0}  <0
+$$
+
+und damit
+
+$$
+L(w_0+h_0) < L(w_0)
+$$
+
+Nun setzt man $$w_1 = w_0 + h_0$$ und fährt weiter fort. 
 
 
 
@@ -179,3 +209,64 @@ sns.scatterplot(data = chirps, x = "Count", y="Temp", label="Temp")
 sns.lineplot(x=x_values,y=y_values, color="red", label="best line xw+b")
 ```
 
+
+
+# Vertiefung : Analytische Berechnung des Optimums&#x20;
+
+
+
+Wir berechnen (Kandidaten für das Optimum der MSE-Verlustfunktion analytisch:
+
+$$
+L(w,b)  = \sum_{i=0}^{n-1} (x_iw +b -y _i)^2
+$$
+
+ist&#x20;
+
+$$
+\begin{align}
+\frac{\partial L}{\partial w} 
+&= 2\sum_{i=0}^{n-1} (x_iw +b -y _i)  x_i  \\
+&= 2\sum_{i=0}^{n-1} (x_i^2 w +x_ib -x_iy _i)  \\
+&= 2w\sum_{i=0}^{n-1} x_i^2 +2b \sum_{i=0}^{n-1} x_i  - 2\sum_{i=0}^{n-1}x_iy_i 
+\end{align}
+$$
+
+und
+
+$$
+\begin{align}
+\frac{\partial L}{\partial b} 
+&= 2\sum_{i=0}^{n-1} (x_i w +b - y_i)   \\
+&= 2 w \sum_{i=0}^{n-1} (x_i) + 2nb - 2 \sum_{i=0}^{n-1}y_i 
+\end{align}
+$$
+
+Setzt man $$\frac{\partial L}{\partial w} =0$$ , $$\frac{\partial L}{\partial b} =0$$ , so erhält man zwei lineare Gleichungen, die es erlauben den optimalen Wert $$w^*$$ und $$b^*$$ zu berechnen.
+
+
+
+Für unsere Werte ergibt sich (gerundet, mit Hilfe von Excel und nach Division durch den Faktor von $$w^*$$):
+$$
+\begin{align}
+0 &= w^* + 0,0285503776017683 \cdot b^* - 0,444114938294345 \\
+0 &= w^* + 0,0354838709677419 \cdot b^* -0,479032258064516 
+\end{align}
+$$
+
+und damit
+
+$$
+\begin{align}
+ w^* &= 0,300334218870512 \\
+b^* &= 5,03603565001285 
+\end{align}
+$$
+
+Schließlich ergibt sich mit dem entsprechenden Modell als minimaler Loss der Wert&#x20;
+
+$$
+8,57336688506454
+$$
+
+Vergleichen Sie die Werte mit dem Ergebnis oben!
