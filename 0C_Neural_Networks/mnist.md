@@ -1,3 +1,21 @@
+# Einschub: Bilder als Vektoren
+
+Bilder sind als Vektoren darstellbar, wenn man die Pixelwerte in eine Reihenfolge bringt und so einen Vektor erzeugt.
+
+![Ein Binärbild als Vektor](mnist.assets/image-20211217153909821.png)
+
+
+
+
+
+
+
+Analog kann man für Grauwertbilder vorgehen:
+
+![image-20211217154042767](mnist.assets/image-20211217154042767.png)
+
+# MNIST
+
 MNIST (Modified National Institute of Standards and Technology database) ist eine Datenbank mit Bildern handgeschriebener Ziffern. Nach folgende Abbildung zeigt ein Beispiel.
 
 ![Bild 2 der MNIST Datenbank](<./assets/image (178).png>)
