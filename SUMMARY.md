@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Vorbemerkungen](README.md)
+* [Vorbemerkungen & Agenda](README.md)
 
 
 ## Part A: Data Analysis<a href="DA" id="DA"></a>

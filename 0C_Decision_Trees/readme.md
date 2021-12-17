@@ -1,6 +1,12 @@
-Wir versuchen einen als Modell einen Entscheidungsbaum zu konstruieren, der entlang von Werten eines Feature aufgebaut ist.  Der letzte Knoten jedes Pfades gibt die zugeordnete Klasse an. 
+Wir versuchen als ML-Modell einen Entscheidungsbaum zu konstruieren, der entlang von Werten Feature-Werten aufgebaut ist.  
 
 # Aufbau
+
+Der Aufbau eines Entscheidungsbaumes ist recht einfach entlang des folgenden Beispiels zu verstehen.
+
+![image-20211205130427796](readme.assets/image-20211205130427796.png)
+
+
 
 Nachfolgende Eigenschaften beschreiben einen binären Entscheidungsbaum:
 
@@ -22,8 +28,6 @@ Nachfolgende Eigenschaften beschreiben einen binären Entscheidungsbaum:
 
   
 
-![image-20211205130427796](readme.assets/image-20211205130427796.png)
-
  
 
 # Prediction
@@ -43,7 +47,7 @@ Ein Entscheidungsbaum erlaubt auf folgende Weise eine *Prediction* für einen Fe
 
 # Konstruktion  
 
-Zur Vereinfachung wählen wir im folgenden Beispiel nur *versicolor*- und *viriginica*-Datensätze aus, arbeiten also mit zwei Klassen und 100 Datensätzen. Wir bauen einen möglichen Entscheidungsbaum der Höhe 1. Wir gehen in zwei Schritten vor:
+Zur Vereinfachung wählen wir im folgenden Beispiel nur *versicolor*- und *viriginica*-Datensätze aus, arbeiten also mit zwei Klassen und 100 Datensätzen. Hierzu bauen wir einen möglichen Entscheidungsbaum der Höhe 1. Wir gehen in zwei Schritten vor:
 
 ##### Schritt 1: Abfragen festlegen 
 
@@ -57,6 +61,10 @@ Dieser Schritt ist etwas anpruchsvoller: Wir lassen alle Datensätze - wie oben 
 - welche Klasse sie jeweils hatten.
 
 Schließlich legen wir für jedes Blatt die Klasse mit dem höchsten Zählwert als Prediction fest. 
+
+
+
+## Beispiel
 
 Nachfolgend finden Sie entsprechenden Baum.  Im Wurzelknoten kommen alle 100 Datensätze an, 50 davon mit dem Label *versicolor* und 50 mit dem Label *viriginica*. Offensichtlich werden im linken Blatt 16 Datensätze, im rechte Blatt 50 Datensätze richtig klassifiziert. Das ergibt eine Genauigkeit von 66%.
 
@@ -109,17 +117,21 @@ Versuchen Sie, einen besseren Baum der Höhe 1 zu finden! Erstellen Sie eine (ha
 
 
 
+
+
 # Modellfamilie und Lernverfahren
 
 ## Modellfamilie
 
 In diesem Abschnitt geht es um die Frage, wie wir den besten Baum finden. Dazu definieren wir zunächst unsere **Modellfamilie**: wir betrachten alle binären Entscheidungsbäume der Höhe 1. Das hört sich zunächst recht übersichtlich an, allerdings gibt bereits mehr als 90 sinnvolle Bäume der Höhe 1. (Und später werden wir die Höhe noch ändern!) 
 
-Als Lernverfahren könnten sie nun alle Entscheidungsbäume aus der Modellfamilie bauen, die Genauigkeit ausrechnen und dann den besten Baum aussuchen. In der Theorie funktioniert das, in der Praxis nur schlecht! Sie können sich leicht vorstellen, dass die Anzahl der möglichen Bäume mit der Baumhöhe und der Anzahl der Features förmlich explodiert. Es ist also keine gute Idee alle Bäume zu bauen und dann denjenigen mit der besten Genauigkeit auszuwählen.
+Als Lernverfahren könnten sie nun alle Entscheidungsbäume aus der Modellfamilie bauen, die Genauigkeit ausrechnen und dann den besten Baum aussuchen. In der Theorie funktioniert das, in der Praxis nur schlecht,  weil die Anzahl der möglichen Bäume mit der Baumhöhe förmlich explodiert. Es ist also keine gute Idee alle Bäume zu bauen und dann denjenigen mit der besten Genauigkeit auszuwählen.
 
-## Übung 1
 
-- Was könnte man unter einem *sinnvollen Baum* verstehen?(Oder: Was ist ein nicht sinnvoller Baum?)
+
+## Übung 2
+
+- Was könnte man unter einem *sinnvollen Baum* verstehen? (Hinweis: Was ist ein *nicht sinnvoller Knoten*? )
 
 - Wie würden sie die Anzahl der möglichen sinnvollen Bäume der Höhe 1 berechnen?
 
@@ -127,20 +139,23 @@ Als Lernverfahren könnten sie nun alle Entscheidungsbäume aus der Modellfamili
 
 ## Optimaler Baum nach Training
 
-Wir berecchnen den besten Baum mit Python. Hier das Ergebnis, unten der Code.
+Wir berechnen den besten Baum mit Python. Hier das Ergebnis, unten der Code.
 
   ![Iris mit 2 Klassen: Optimaler Baum der Höhe 1](readme.assets/image-20211129092942002.png)
 
-  ## Übung 2
 
-    1. Berechnen sie die Werte in den Knoten mit dem Phython-Programm aus dem vorhergehenden Abschnitt.
-    2. Welche *Accuracy* hat dieser Baum?
+
+  ## Übung 3
+
+1. Berechnen sie die Werte in den Knoten mit dem Phython-Programm aus dem vorhergehenden Abschnitt.
+2. Welche *Accuracy* hat dieser Baum?
 
   
 
 
 
-  ## Python
+
+  ## Python (Berechnung des optimalen Baums)
 
   ```python
   import pandas as pd
@@ -178,9 +193,13 @@ Wir berecchnen den besten Baum mit Python. Hier das Ergebnis, unten der Code.
 
 ​    
 
+
+
 # Gute Bäume konstruieren
 
-Wir haben oben beobachtet, dass Blätter dann wenige Fehler produzieren, wenn ihre Klassenverteilung möglichst "rein" ist. Am besten ist, wenn all Features in einer Klasse landen, weil wir dann in diesem Blatt keinen Fehler auf unsere Lerndaten haben. Wir versuchen die Güte eines Blattes anhand der "Reinheit" seiner Klassenaufteilung zu berechnen.
+Wir haben oben beobachtet, dass Blätter dann wenige Fehler produzieren, wenn ihre Klassenverteilung möglichst "rein" ist. Am besten ist, wenn all Features in einer Klasse landen, weil wir dann in diesem Blatt keinen Fehler für unseren Datensatz erzeugen. Wir versuchen also die Güte eines Blattes anhand der "Reinheit" seiner Klassenaufteilung zu berechnen. Hierzu verwendet man die sogenannte *Gini-Impurity*.
+
+
 
 ## Zerlegung
 
@@ -192,7 +211,7 @@ Wie man an obigem Beispiel sieht, lässt sich jedem Knoten eine Zerlegung derjen
 
 ## Gini-Impurity einer Zerlegung
 
-Nehmen Sie an, dass eine Menge S  in Teilmengen $$S_1, S_2,...S_k$$  zerlegt wird (und damit den Elementen einer Teilmengen jeweils ein Label zugeordnet ist.) Mit  $$p_i$$  bezeichnen wir jeweils das Verhältnis der Elemente  von $$S_i$$ im Vergleich zu $$S$$. Wegen $$\sum p_i = 1$$ definiert $$P = (p_1, p_2, ... p_n)$$ eine (diskrete) Verteilungsfunktion. 
+Nehmen Sie an, dass eine Menge S  in Teilmengen $$S_1, S_2,...S_k$$  zerlegt wird (und damit den Elementen einer Teilmengen jeweils ein Label zugeordnet ist.) Mit  $$p_i$$  bezeichnen wir jeweils das Verhältnis der Elemente  von $$S_i$$ im Vergleich zu $$S$$. Wegen $$\sum p_i = 1$$ definiert $$P = (p_1, p_2, ...,p_n)$$ eine (diskrete) Verteilungsfunktion. 
 
 Wir wählen nun aus Menge $$S$$  zufällig  Elemente aus Für jedes gewählte Element raten wir, zu welcher Teilmenge es gehört. Beim Raten halten wir die obige Verteilungsfunktion ein. Wie hoch ist die Wahrscheinlichkeit - die wir im folgenden GINI nennen - , dass wir falsch raten?
 
@@ -222,7 +241,7 @@ $$
 GINI(P) = 1 - 0.36 - 0.16 = 0.48
 $$
 
-## Übung 1
+## Übung 4
 
 Versuchen Sie für die Zerlegungen der Knoten in nachfolgendem Entscheidungsbaum die GINI-Werte manuell zu berechnen:
 
@@ -234,19 +253,19 @@ Versuchen Sie für die Zerlegungen der Knoten in nachfolgendem Entscheidungsbaum
 
 Für $$k=2$$ und $$P = (p_1,p_2)$$ ist wegen $$p_2 = 1-p_1$$  
 $$
-GINI(p_1, p_2) = 2p_1 \cdot (1-p_1)
+\text{GINI}(p_1, p_2) = 2p_1 \cdot (1-p_1)
 $$
 Offensichtlich gilt
 $$
-GINI(0,1) = GINI(1,0) = 0 \quad \text{und} \quad GINI(\frac{1}{2}, \frac{1}{2}) = \frac{1}{2}
+\text{GINI}(0,1) = \text{GINI}(1,0) = 0 \quad\quad \text{und} \quad\quad \text{GINI}(\frac{1}{2}, \frac{1}{2}) = \frac{1}{2}
 $$
 Folgende Abbildung zeigt den Plot von $$p \rightarrow 2p(1-p)$$:
 
 ![GINI in Abhängigkeit von p](readme.assets/image-20211202184126689.png
 
-![image-20211202184254174](readme.assets/image-20211202184254174.png)
+![GINI-Plot für $$k=2$$](readme.assets/image-20211202184254174.png)
 
-> Je größer der GINI Wert ist, desto "unreiner" ist die Menge. Man spricht deshalb auch von GINI-Impurity.
+> Je größer der GINI-Wert ist, desto "unreiner" ist die Zerlegung. Man spricht deshalb auch von GINI-*Impurity*.
 
 
 
@@ -262,6 +281,7 @@ $$
 & = \quad 1 - \sum_{i=1}^k p_i^2
 \end{align}
 $$
+
 
 
 ## Qualität eines Splits
@@ -286,7 +306,7 @@ Der Split reduziert also erwartete die GINI-Impurity  von $$0.5$$ auf $$0.16$$. 
 
 
 
-## Übung 2
+## Übung 5
 
 Berechnen sie die Qualität der folgenden Splits.
 
@@ -298,7 +318,7 @@ Berechnen sie die Qualität der folgenden Splits.
 
 ![image-20211202191346064](readme.assets/image-20211202191346064.png)
 
-## Übung 3
+## Übung 6
 
 Wir haben in diesem Abschnitt zwei Bäume der Höhe 1 kennengelernt. Hierzu finden sie nachfolgend die Graphen nochmals dargestellt. Berechnen sie für beide Bäume die Split-Qualität des Wurzelknotens. Am besten bauen Sie dazu eine kleine Excel-Datei und geben die Werte ein.
 
@@ -316,7 +336,7 @@ Die obige Übung sollte uns auf eine Idee bringen: Wir wählen die Abfrage im Wu
 
 
 
-## Übung 4
+## Übung 7
 
 Versuchen Sie abschließend eine möglichst guten Entscheidungsbaum der Höhe 2 für **alle drei Arten** zu bauen. Skizzieren sie den Baum (Achtung: Nachfolgende Grafik dient der Orientierung. Ihr Baum darf auch eine etwas andere Form haben!)
 

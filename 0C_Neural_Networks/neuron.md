@@ -62,17 +62,15 @@ Nach folgende Zeilen vollziehen die Rechnung on obiger Folie nach.
 ```python
 import numpy as np
 # x is a row vector with shape (1,3)
-x = np.array([[3,2,-0.5]])
+x = np.array([3,2,-0.5])
 print( x.shape)
 
 # w is a col vector with shape (3,1)
-w = np.array([[-4],[1],[2]])
+w = np.array([-4,1,2])
 print( w.shape)
 
-# b is a vector with shape (1,)
-b = np.array([4])
-print( b.shape )
-
+# Bias or Interception
+b=4
 output = np.dot(x,w) + b 
 
 print( output )
