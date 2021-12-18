@@ -23,10 +23,21 @@ Wir geben nun dieser Funktion einen Struktur. Sie wird wie folgt funktionieren:
 
 ![](<./assets/image (123).png>)
 
-In Vektorschreibweise berechnet ein Neuron also
 
+
+# Einschub: Skalarprodukt
+
+Für $$u=(u_1,..., u_m)$$ und  $$v = (v_1,... v_M)$$ aus $$\mathbb{R}^m$$ ist das Skalarprodukt $$u \cdot v$$ definiert durch
 $$
-\phi( \bold{x} \cdot \bold{w} + b), \quad\text{mit} \quad w \in \mathbb{R}^m, b \in \mathbb{R}
+u \cdot v = \sum_{i=1}^{n} u_i \cdot v_i
+$$
+
+
+# Notation
+
+In Vektorschreibweise berechnet ein Neuron also
+$$
+\phi( \bold{x} \cdot \bold{w} + b), \quad\text{mit} \quad x,w \in \mathbb{R}^m, b \in \mathbb{R}
 $$
 
 Wir werden für $$\phi$$ meist recht einfache Funktionen werden, z.B. wie in obiger Folie erläutert  $$\phi(x) = x$$. Die Vektor  $$w$$ heißt **Gewichtsvektor **(_weight vector_ oder kurz _weight)_, die Zahl $$b$$ heißt **Bias. **Häufig wird der Bias ebenfalls als weight betrachtet. Dann sprechen wir _nur_ von Weights. Wir wollen das aber in diesem Modul vermeiden, wenn es geht.
