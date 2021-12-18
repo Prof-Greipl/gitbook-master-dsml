@@ -66,6 +66,8 @@ Link zu den in der jeweiligen Terminen erzeugten [Colab-Notebooks](https://githu
 
 ![image-20211218081837145](README.assets/image-20211218081837145.png)
 
+
+
 ## 17.12.2021, 16:00 - 20:15 Uhr
 
 [B.2 Entscheidungsbäume - DSA Master DUF](https://the-technology-lab.gitbook.io/dsml-master-duf/S0aldZCOg4S1HudPOP87/ml/0c_decision_trees)

@@ -21,7 +21,9 @@ Ein Neuron entspricht damit einer Funktion, die von $$\mathbb{R}^m$$ nach $$\mat
 
 Wir geben nun dieser Funktion einen Struktur. Sie wird wie folgt funktionieren:
 
-![](<./assets/image (123).png>)
+
+
+![image-20211218095040722](neuron.assets/image-20211218095040722.png)
 
 
 
@@ -31,6 +33,20 @@ Das **Skalarprodukt** (auch **inneres Produkt** oder **Punktprodukt**) ist eine 
 $$
 u \cdot v = \sum_{i=1}^{n} u_i \cdot v_i
 $$
+
+## Beispiel
+
+![image-20211218095347844](neuron.assets/image-20211218095347844.png)
+
+## Python (Skalarprodukt)
+
+```python
+import numpy as np
+u = np.array( [1, 2, -1] )
+v = np.array( [0, 1, 3] )
+print(  np.dot(u,v) )
+```
+
 
 
 # Notation
@@ -82,15 +98,15 @@ print( w.shape)
 
 # Bias or Interception
 b=4
-output = np.dot(x,w) + b 
+activation = np.dot(x,w) + b 
 
-print( output )
-print( output.shape)
+print( activation )
+print( activation.shape)
 ```
 
 
 
-# Neuron mit Python und Keras
+# Neuron mit Python und Keras (nicht behandelt)
 
 Nachfolgendes Programmstück definiert ein Neuronales Netz, bereits als Model. Wir trainieren das Modell noch nicht, sondern setzten die Gewichte manuell. Der Trainingsprozess würde die Gewichte so setzten, dass die _Activations _für jeden Input möglichst nahe an den Labels wären.
 
