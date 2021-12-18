@@ -88,9 +88,6 @@ from tensorflow.keras import optimizers
 from keras.utils.vis_utils import plot_model
 import pandas as pd
 
-import seaborn as sns
-
-
 # Acvtivations: linear, relu, sigmoid, tanh, 
 model = Sequential()
 model.add( Dense(1, activation='linear') )
@@ -150,5 +147,66 @@ Ein **Trainingsschritt **(learning-step) ist eine neue Festlegung der Parameter 
 
 
 
+## Python: Anzeige der Lernkurve
 
+```python
+import seaborn as sns
+
+# Lernfortverhalten visualisieren
+fig,ax = plt.subplots( figsize=(8,4) )
+ax.set_title("Lernverlauf (MSE)")
+ax.set_xlabel("Epochen")
+ax.set_ylabel("MSE (Loss)")
+ax.set_ylim(0,40)
+sns.lineplot( x = history.epoch, y = history.history["loss"], label = "Train. Loss")
+```
+
+
+
+## Lösungen im Vergleich
+
+![Lösung nach 10.000 Epochen vs. optimale Lösung](grillen.assets/image-20211218113536441.png)
+
+
+
+## Python: Anzeige der Lösungen
+
+```python
+from matplotlib import pyplot as plt
+import seaborn as sns
+import pandas as pd
+import numpy as np
+
+chirps = pd.DataFrame({
+    "Count": [31,16,29,43,27,19,47,9,45,5,39],
+    "Temp": [9.4,10.5,17.1,24.3,14.6,9.9,16.9,6.4,17.7,7.5,14.2]    
+})
+
+X = chirps["Count"].to_numpy().reshape(11,-1)
+y = chirps["Temp"].to_numpy().reshape(11,-1)
+print(y)
+
+x_values = np.array([0, 50])
+print(bias.shape)
+print(weight.shape)
+
+y_netz = np.array([bias, 50*weight[0] + bias]).flatten()
+y_best = np.array([5.036035, 50*0.3003342 + 5.036035])
+
+fig,ax = plt.subplots(figsize=(9, 9))
+ax.set_aspect('equal')
+ax.set_title("Chirps-Data") 
+ax.set_xlabel("Count")
+ax.set_ylabel("Temperature")
+
+ax.set_xlim(0, 50)
+ax.set_ylim(0, 35)
+
+sns.set()
+sns.scatterplot(data = chirps, x = "Count", y="Temp", label="Temp")
+
+sns.lineplot(x=x_values,y= y_best, color="red", label="best line xw+b")
+sns.lineplot(x=x_values,y= y_netz, color="blue", label="Neuron line")
+
+```
 
