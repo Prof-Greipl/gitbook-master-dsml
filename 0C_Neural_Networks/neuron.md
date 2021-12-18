@@ -27,7 +27,7 @@ Wir geben nun dieser Funktion einen Struktur. Sie wird wie folgt funktionieren:
 
 # Einschub: Skalarprodukt
 
-Für $$u=(u_1,..., u_m)$$ und  $$v = (v_1,... v_M)$$ aus $$\mathbb{R}^m$$ ist das Skalarprodukt $$u \cdot v$$ definiert durch
+Das **Skalarprodukt** (auch **inneres Produkt** oder **Punktprodukt**) ist eine mathematische Verknüpfung, die zwei Vektoren eine Zahl (Skalar) zuordnet (siehe z.B. Wikipedia) .Für $$u=(u_1,..., u_m)$$ und  $$v = (v_1,... v_m)$$ aus $$\mathbb{R}^m$$ ist das Skalarprodukt $$u \cdot v$$ definiert durch
 $$
 u \cdot v = \sum_{i=1}^{n} u_i \cdot v_i
 $$
