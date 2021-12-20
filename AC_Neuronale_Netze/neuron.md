@@ -11,7 +11,7 @@ Ein Neuron entspricht damit einer Funktion, die von $$\mathbb{R}^m$$ nach $$\mat
 
  
 
-![](<./assets/image (132).png>)
+![Konzept eines Neurons](<./assets/image (132).png>)
 
 
 
@@ -43,7 +43,7 @@ Hinweise:
 
 ## Beispiel
 
-![image-20211218095347844](neuron.assets/image-20211218095347844.png)
+![Exemplarische Rechnung](neuron.assets/image-20211218095347844.png)
 
 
 
@@ -75,7 +75,7 @@ Wir werden für $$\phi$$ meist recht einfache Funktionen werden, z.B. wie in obi
 
 Nachfolgendes Beispiel erläutert die Rechnung eines Neurons per Hand:
 
-![image-20211220095927946](neuron.assets/image-20211220095927946.png)
+![Beispiel-Rechnung](neuron.assets/image-20211220095927946.png)
 
 
 
