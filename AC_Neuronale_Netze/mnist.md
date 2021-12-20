@@ -1,3 +1,21 @@
+# Einschub: Bilder als Vektoren
+
+Bilder sind als Vektoren darstellbar, wenn man die Pixelwerte in eine Reihenfolge bringt und so einen Vektor erzeugt.
+
+![Ein Binärbild als Vektor](mnist.assets/image-20211217153909821.png)
+
+
+
+
+
+
+
+Analog kann man für Grauwertbilder vorgehen:
+
+![image-20211217154042767](mnist.assets/image-20211217154042767.png)
+
+# MNIST
+
 MNIST (Modified National Institute of Standards and Technology database) ist eine Datenbank mit Bildern handgeschriebener Ziffern. Nach folgende Abbildung zeigt ein Beispiel.
 
 ![Bild 2 der MNIST Datenbank](<./assets/image (178).png>)
@@ -262,32 +280,30 @@ model.compile(loss='categorical_crossentropy',
 
 
 print('# Fit model on training data')
-history = model.fit(X_train_split, y_train_split,
+result = model.fit(X_train_split, y_train_split,
                     batch_size=64,
                     epochs=20,
                     validation_data=(X_val_split, y_val_split))
 
-print(history.history)
 
-# Plot training & validation loss values
-plt.figure()
-plt.title('Model Accuracy')
-plt.ylabel('Accuracy')
-plt.xlabel('Epoch')
-plt.plot(history.history['accuracy'], label="Train. Acc")
-plt.plot(history.history['val_accuracy'], label="Val. Acc")
+import seaborn as sns
+# Lernfortverhalten visualisieren
+sns.set()
+fig,ax = plt.subplots( figsize=(8,4) )
+ax.set_title("Lernverlauf Accuracy")
+ax.set_xlabel("Epochen")
+ax.set_ylabel("Accuracy")
+ax.set_ylim(0.8,1)
+sns.lineplot( x = result.epoch, y = result.history["accuracy"], label = "Train. Acc.")
+sns.lineplot( x = result.epoch, y = result.history["val_accuracy"], label = "Val. Acc.")
 
-#plt.ylim([0,1])
-plt.legend()
-plt.show()
-
-print("Training   Accuracy :", history.history['accuracy'][-1] )
-print("Validation Accuracy :", history.history['val_accuracy'][-1] )
+print("Accuracy on training data   : ", result.history["accuracy"][-1])
+print("Accuracy on validation data : ", result.history["val_accuracy"][-1])
 ```
 
 Sie sollten folgende Ausgabe sehen (Achtung, die Werte sollten ähnlich sein, sie werden aber nicht identisch sein.)
 
-![](<./assets/image (181).png>)
+![image-20211218141934974](mnist.assets/image-20211218141934974.png)
 
 Wir sind natürlich auch an der Performance auf den Testdaten interessiert.
 
@@ -295,7 +311,7 @@ Wir sind natürlich auch an der Performance auf den Testdaten interessiert.
 
 ## Understanding a prediction
 
-Nachfolgender Code gibt die Predictions und den Label für ein einzelnes Bild aus. Wir sehen, dass Netz zu 100% Prozent überzeugt ist, dass es sich bei Bild 32 aus dem Test-Set um eine Drei handelt.
+Nachfolgender Code gibt die Predictions und den Label für ein einzelnes Bild aus. Wir sehen, dass Modell recht überzeugt ist, dass es sich bei Bild 32 aus dem Test-Set um eine Drei handelt.
 
 ```python
 bild_nr = 32

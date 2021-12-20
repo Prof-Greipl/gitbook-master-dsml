@@ -21,19 +21,50 @@ Ein Neuron entspricht damit einer Funktion, die von $$\mathbb{R}^m$$ nach $$\mat
 
 Wir geben nun dieser Funktion einen Struktur. Sie wird wie folgt funktionieren:
 
-![](<./assets/image (123).png>)
+
+
+![image-20211218095040722](neuron.assets/image-20211218095040722.png)
+
+
+
+# Einschub: Skalarprodukt
+
+Das **Skalarprodukt** (auch **inneres Produkt** oder **Punktprodukt**) ist eine mathematische Verknüpfung, die zwei Vektoren eine Zahl (Skalar) zuordnet (siehe z.B. Wikipedia) .Für $$u=(u_1,..., u_m)$$ und  $$v = (v_1,... v_m)$$ aus $$\mathbb{R}^m$$ ist das Skalarprodukt $$u \cdot v$$ definiert durch
+$$
+u \cdot v = \sum_{i=1}^{n} u_i \cdot v_i
+$$
+
+## Beispiel
+
+![image-20211218095347844](neuron.assets/image-20211218095347844.png)
+
+
+
+## Python (Skalarprodukt)
+
+```python
+import numpy as np
+u = np.array( [1, 2, -1] )
+v = np.array( [0, 1, 3] )
+print(  np.dot(u,v) )
+```
+
+
+
+# Notation
 
 In Vektorschreibweise berechnet ein Neuron also
-
 $$
-\phi( \bold{x} \cdot \bold{w} + b), \quad\text{mit} \quad w \in \mathbb{R}^m, b \in \mathbb{R}
+\phi( \bold{x} \cdot \bold{w} + b), \quad\text{mit} \quad x,w \in \mathbb{R}^m, b \in \mathbb{R}
 $$
 
 Wir werden für $$\phi$$ meist recht einfache Funktionen werden, z.B. wie in obiger Folie erläutert  $$\phi(x) = x$$. Die Vektor  $$w$$ heißt **Gewichtsvektor **(_weight vector_ oder kurz _weight)_, die Zahl $$b$$ heißt **Bias. **Häufig wird der Bias ebenfalls als weight betrachtet. Dann sprechen wir _nur_ von Weights. Wir wollen das aber in diesem Modul vermeiden, wenn es geht.
 
 > **Ein Neuron ist also von m+1 Werten (Parametern) abhängig, mit denen man das Verhalten des Neurons einstellen kann.**
 
-![](<./assets/image (130).png>)
+
+
+
 
 
 
@@ -62,26 +93,24 @@ Nach folgende Zeilen vollziehen die Rechnung on obiger Folie nach.
 ```python
 import numpy as np
 # x is a row vector with shape (1,3)
-x = np.array([[3,2,-0.5]])
+x = np.array([3,2,-0.5])
 print( x.shape)
 
 # w is a col vector with shape (3,1)
-w = np.array([[-4],[1],[2]])
+w = np.array([-4,1,2])
 print( w.shape)
 
-# b is a vector with shape (1,)
-b = np.array([4])
-print( b.shape )
+# Bias or Interception
+b=4
+activation = np.dot(x,w) + b 
 
-output = np.dot(x,w) + b 
-
-print( output )
-print( output.shape)
+print( activation )
+print( activation.shape)
 ```
 
 
 
-# Neuron mit Python und Keras
+# Neuron mit Python und Keras (nicht behandelt)
 
 Nachfolgendes Programmstück definiert ein Neuronales Netz, bereits als Model. Wir trainieren das Modell noch nicht, sondern setzten die Gewichte manuell. Der Trainingsprozess würde die Gewichte so setzten, dass die _Activations _für jeden Input möglichst nahe an den Labels wären.
 

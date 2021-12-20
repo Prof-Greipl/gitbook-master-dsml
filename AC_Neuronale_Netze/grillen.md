@@ -65,13 +65,15 @@ sns.scatterplot(x = X, y = y)
 
 # Das "Grillen-Neuron"
 
-Wenn wir ein Neuron mit _einem _Eingabewert und _linearer Activation_ bauen, so ist die Ausgabe des Neurons
+Wenn wir ein Neuron mit *einem* Eingabewert $$(m=1)$$ und *linearer Activation* bauen, so ist die Ausgabe des Neurons
 
 $$
-y = M(x) = x \cdot w +b
+y = M_{w,b}(x) = x \cdot w +b
 $$
 
-Wir suchen also $$w$$ und $$b$$  in $$\mathbb{R}$$, so dass unser dadurch definiertes Modell unseren Datensatz möglichst gut vorhersagt. Offenbar ist M für fest gewähltes w und b eine lineare Funktion, die wir gut visualisieren können.
+Dies entspricht aber exakt unserem Modell im Fall der Regression!
+
+
 
 
 
@@ -85,9 +87,6 @@ from tensorflow.keras.layers import Dense, Activation
 from tensorflow.keras import optimizers
 from keras.utils.vis_utils import plot_model
 import pandas as pd
-
-import seaborn as sns
-
 
 # Acvtivations: linear, relu, sigmoid, tanh, 
 model = Sequential()
@@ -126,58 +125,7 @@ Folgende Grafik visualisiert das Geschehen bisher:
 
 
 
-## Visualisierung der Fehlerfunktion
 
-Der MSE ist eine reelle Zahl, die von w und b abhängt.  Wir können daher den MSE-Graph als Fläche über der Weight-Bias Eben plotten. 
-
-![](<../.gitbook/assets/image (138).png>)
-
-Am tiefsten Punkt der Fläche haben wir das beste Modell gefunden. Der kleine Punkt in der Grafik markiert in etwa diesen Punkt.
-
-
-
-
-
-## Gradientenabstieg (_gradient descent_)
-
-Wir haben eben gesehen, dass die Fehlerfunktion MSE nur von w und b abhängt. Das Minimum von Funktionen lässt sich unter bestimmten Umständen durch die erste Ableitung berechnen. In der Praxis gelingt das aber nur selten. Erfolgversprechender ist das sukzessive Absteigen  auf der Fläche. Da unserer Fehlerfunktion differenzierbar ist, ist der negative Gradient die beste Abstiegsrichtung.
-
-In folgender Abbildung ist ein willkürlicher "Abstiegspfad" eingezeichnet:
-
-  
-
-![image (125)](grillen.assets/image (125)-16393293673732.png)
-
-
-
-Das Abstiegsverfahren lässt sich etwas besser anhand eines Grafen einer Loss-Funktion $$L: \mathbb{R} \rightarrow \mathbb{R}$$ veranschaulichen. Wir nehmen dabei an, dass wir den Loss (=MSE) nur entlange der w-Achse minimieren wollen, also  angenommen, dass der Loss  nur von $$w$$ abhängt.  
-
-
-
-![image (149)](grillen.assets/image (149).png)
-
-
-
-#### Begründung des Abstiegs
-
-Ist L differenzierbar und  $$L´(x_0) < 0$$ für einen zufällig gewählten Startwert $$x_0$$ , so gilt wegen
-$$
-L^´(w_0) = \lim_{h \rightarrow 0} \frac{L(x_0+h) - L(x_0)}{h}  <0
-$$
-
-für hinreichend kleines $$h_0 > 0$$:
-
-$$
-\frac{L(x_0+h_0) - L(x_0)}{h_0}  <0
-$$
-
-und damit
-
-$$
-L(x_0+h_0) < L(x_0)
-$$
-
-Nun setzt man $$x_1 = x_0 + h_0$$ und fährt weiter fort. 
 
 
 
@@ -189,6 +137,8 @@ Ein **Trainingsschritt **(learning-step) ist eine neue Festlegung der Parameter 
 
 
 
+
+
 ## Visualisierung des Lernfortschritts
 
 ![image-20211213122600715](grillen.assets/image-20211213122600715.png)
@@ -197,72 +147,66 @@ Ein **Trainingsschritt **(learning-step) ist eine neue Festlegung der Parameter 
 
 
 
-# Vertiefung : Analytische Berechnung des Optimums&#x20;
+## Python: Anzeige der Lernkurve
+
+```python
+import seaborn as sns
+
+# Lernfortverhalten visualisieren
+fig,ax = plt.subplots( figsize=(8,4) )
+ax.set_title("Lernverlauf (MSE)")
+ax.set_xlabel("Epochen")
+ax.set_ylabel("MSE (Loss)")
+ax.set_ylim(0,40)
+sns.lineplot( x = history.epoch, y = history.history["loss"], label = "Train. Loss")
+```
 
 
 
-## Herleitung
+## Lösungen im Vergleich
 
-Für die MSE-Verlustfunktion
-
-$$
-L(w,b)  = \sum_{i=0}^{n-1} (x_iw +b -y _i)^2
-$$
-
-ist&#x20;
-
-$$
-\begin{align}
-\frac{\partial L}{\partial w} 
-&= 2\sum_{i=0}^{n-1} (x_iw +b -y _i)  x_i  \\
-&= 2\sum_{i=0}^{n-1} (x_i^2 w +x_ib -x_iy _i)  \\
-&= 2w\sum_{i=0}^{n-1} x_i^2 +2b \sum_{i=0}^{n-1} x_i  - 2\sum_{i=0}^{n-1}x_iy_i 
-\end{align}
-$$
-
-und
-
-$$
-\begin{align}
-\frac{\partial L}{\partial b} 
-&= 2\sum_{i=0}^{n-1} (x_i w +b - y_i)   \\
-&= 2 w \sum_{i=0}^{n-1} (x_i) + 2nb - 2 \sum_{i=0}^{n-1}y_i 
-\end{align}
-$$
-
-Setzt man $$\frac{\partial L}{\partial w} =0$$ , $$\frac{\partial L}{\partial b} =0$$ , so erhält man zwei lineare Gleichungen, die es erlauben den optimalen Wert $$w^*$$ und $$b^*$$ zu berechnen.
+![Lösung nach 10.000 Epochen vs. optimale Lösung](grillen.assets/image-20211218113536441.png)
 
 
 
-## Beispiel
+## Python: Anzeige der Lösungen
 
-Wir verwenden die obigen Werte:
+```python
+from matplotlib import pyplot as plt
+import seaborn as sns
+import pandas as pd
+import numpy as np
 
-![](<grillen.assets/image (136).png>)
+chirps = pd.DataFrame({
+    "Count": [31,16,29,43,27,19,47,9,45,5,39],
+    "Temp": [9.4,10.5,17.1,24.3,14.6,9.9,16.9,6.4,17.7,7.5,14.2]    
+})
 
+X = chirps["Count"].to_numpy().reshape(11,-1)
+y = chirps["Temp"].to_numpy().reshape(11,-1)
+print(y)
 
+x_values = np.array([0, 50])
+print(bias.shape)
+print(weight.shape)
 
-Damit ergibt sich (gerundet, mit Hilfe von Excel und nach Division durch den Faktor von $$w^*$$):
-$$
-\begin{align}
-0 &= w^* + 0,0285503776017683 \cdot b^* - 0,444114938294345 \\
-0 &= w^* + 0,0354838709677419 \cdot b^* -0,479032258064516 
-\end{align}
-$$
+y_netz = np.array([bias, 50*weight[0] + bias]).flatten()
+y_best = np.array([5.036035, 50*0.3003342 + 5.036035])
 
-und damit
+fig,ax = plt.subplots(figsize=(9, 9))
+ax.set_aspect('equal')
+ax.set_title("Chirps-Data") 
+ax.set_xlabel("Count")
+ax.set_ylabel("Temperature")
 
-$$
-\begin{align}
- w^* &= 0,300334218870512 \\
-b^* &= 5,03603565001285 
-\end{align}
-$$
+ax.set_xlim(0, 50)
+ax.set_ylim(0, 35)
 
-Schließlich ergibt sich mit dem entsprechenden Modell als minimaler Loss der Wert&#x20;
+sns.set()
+sns.scatterplot(data = chirps, x = "Count", y="Temp", label="Temp")
 
-$$
-8,57336688506454
-$$
+sns.lineplot(x=x_values,y= y_best, color="red", label="best line xw+b")
+sns.lineplot(x=x_values,y= y_netz, color="blue", label="Neuron line")
 
-Vergleichen Sie die Werte mit dem Ergebnis unseres neuronalen Netzes!
+```
+
