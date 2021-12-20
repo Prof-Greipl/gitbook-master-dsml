@@ -78,7 +78,7 @@ model.add( Dense(1, activation='linear') )
 
 
 
-## Dense Layers in Matrix-Schreibweise
+## Dense Layers in Matrix-Schreibweise (nicht relevant im WS 21/22)
 
 In wenn sich in einem Dense Layer z Neuronen befinden, und jedes dieser Neuronen mit m Eingabewerten versorgt wird,  
 
