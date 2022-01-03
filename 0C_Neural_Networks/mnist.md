@@ -77,11 +77,16 @@ plt.figure()
 Nach folgende Abbildung zeigt die Struktur unseres Netzes
 
 * Das Bild (A) fließt als Vektor der Dimension 784 in des neuronale Netz ( B)
+
 * Unser Netz hat 10 Ausgänge, wobei
   * jedem Ausgang eine Ziffer zugeordnet ist (C)
   * jeder Wert eines Ausgangs der Wahrscheinlichkeit entspricht, dass das eingebene Bild der zugeordneten Ziffer entspricht.
+  
 * Damit das Netz funktioniert, müssen wir die labels in einen 10-dimensionalen Vektor transformieren (one-hot-encoding).
-* ![image (155)](<mnist.assets/image (155)-164062682265911.png>)
+
+  
+
+![image (155)](<mnist.assets/image (155)-164062682265911.png>)
 
 
 
