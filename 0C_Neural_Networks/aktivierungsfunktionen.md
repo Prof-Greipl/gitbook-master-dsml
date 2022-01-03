@@ -17,7 +17,7 @@ $$
 
  Der Graph von ReLU ist recht einfach:
 
-![ReLU-Funktion](aktivierungsfunktionen.assets/image (158).png)
+![ReLU-Funktion](<aktivierungsfunktionen.assets/image (158).png>)
 
 Die Befehle zum Zeichnen dieses Graphen finden Sie hier. 
 
@@ -33,5 +33,5 @@ $$
 
 Wie sie leicht sehen, strebt die Sigmoid-Funktion für sehr große Werte von x gegen Eins und für sehr stark negative Werte von x gegen Null. Hier der Funktionsgraph:
 
-![Sigmoid-Funktion](aktivierungsfunktionen.assets/image (159).png)
+![Sigmoid-Funktion](<aktivierungsfunktionen.assets/image (159).png>)
 
