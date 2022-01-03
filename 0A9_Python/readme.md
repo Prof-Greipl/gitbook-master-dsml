@@ -15,8 +15,6 @@ print(x)
 
 
 
-### 
-
 # Datentyp "Zahlen"
 
 
@@ -93,13 +91,13 @@ Die Bildschirmabzüge dieses Kapitels sind der Webseite [https://www.w3schools.c
 
 ## Vergleichsoperatoren
 
-![](<../../.gitbook/assets/image (187).png>)
+![](readme.assets/image (187).png)
 
 
 
 ## Logische Operatoren
 
-![](<../../.gitbook/assets/image (188).png>)
+![](readme.assets/image (188).png)
 
 
 

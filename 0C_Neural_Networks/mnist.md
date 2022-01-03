@@ -18,15 +18,15 @@ Analog kann man für Grauwertbilder vorgehen:
 
 MNIST (Modified National Institute of Standards and Technology database) ist eine Datenbank mit Bildern handgeschriebener Ziffern. Nach folgende Abbildung zeigt ein Beispiel.
 
-![Bild 2 der MNIST Datenbank](<./assets/image (178).png>)
+![Bild 2 der MNIST Datenbank](<mnist.assets/image (178).png>)
 
 Nicht alle Bilder sind  so klar zu identifizieren, wie obiges Bild. Welch Ziffer zeigt Ihrer Meinung nach folgendes Bild:
 
-![](<./assets/image (176) (1).png>)
+![](<mnist.assets/image (176) (1).png>)
 
 oder folgendes:
 
-![](<./assets/image (186).png>)
+![](<mnist.assets/image (186).png>)
 
 Zur MNIST Datenbank:
 
@@ -81,8 +81,9 @@ Nach folgende Abbildung zeigt die Struktur unseres Netzes
   * jedem Ausgang eine Ziffer zugeordnet ist (C)
   * jeder Wert eines Ausgangs der Wahrscheinlichkeit entspricht, dass das eingebene Bild der zugeordneten Ziffer entspricht.
 * Damit das Netz funktioniert, müssen wir die labels in einen 10-dimensionalen Vektor transformieren (one-hot-encoding).
+* ![image (155)](mnist.assets/image (155)-164062682265911.png)
 
-![](<./assets/image (177).png>)
+
 
 Hierzu bereiten wir nun unsere Trainings- und Testdaten vor.
 
@@ -110,13 +111,17 @@ print( f'Bild 0 (max)  : {X_test[0].max()}')
 
 Ergebnis: 
 
-![](<./assets/image (184).png>)
+![image (153)](mnist.assets/image (153)-164062684512912.png)
+
+
 
 ## One-Hot-Encoding  der Labels
 
 Für die MNIST Labels, also die Ziffern von 0 bis 9, zeigt folgende Abbildung das One-Hot-Encoding der Labels:
 
-![](<./assets/image (182).png>)
+![image (182)](mnist.assets/image (182)-164062667226310.png)
+
+
 
 Dazu brauchen wir folgenden Code:
 
@@ -149,7 +154,9 @@ print("Label :", y_train[2], ", Label One Hot :", y_train_one_hot[2], ' (1 at po
 
 Ausgabe:
 
-![](<./assets/image (162).png>)
+![image (160)](mnist.assets/image (160)-164062688356913.png)
+
+
 
 > Die Labels für unser Netz sind also `y_train_one_hot` und`y_test_one_hot`
 
@@ -159,7 +166,7 @@ Sie erinnern sich an den Begriff der Validation-Data, den wir in dem [diese Begr
 
 Nachfolgendes Bild illustriert den Sachverhalt:
 
-![](<./assets/image (171).png>)
+![image (161)](mnist.assets/image (161)-164062718205317.png)
 
 Hierzu verwenden wir nachfolgenden Code:
 
@@ -188,7 +195,7 @@ print("                 y_test_split.shape   :", y_test_split.shape)
 
  Ausgabe:
 
-![](<./assets/image (163).png>)
+![](<mnist.assets/image (163).png>)
 
 Damit ist unsere Datenvorbereitung zu Ende. Im letzten Teil dieses Abschnitts finden Sie noch den gesamten Code zur Datenvorbereitung am Stück.
 
@@ -280,32 +287,30 @@ model.compile(loss='categorical_crossentropy',
 
 
 print('# Fit model on training data')
-history = model.fit(X_train_split, y_train_split,
+result = model.fit(X_train_split, y_train_split,
                     batch_size=64,
                     epochs=20,
                     validation_data=(X_val_split, y_val_split))
 
-print(history.history)
 
-# Plot training & validation loss values
-plt.figure()
-plt.title('Model Accuracy')
-plt.ylabel('Accuracy')
-plt.xlabel('Epoch')
-plt.plot(history.history['accuracy'], label="Train. Acc")
-plt.plot(history.history['val_accuracy'], label="Val. Acc")
+import seaborn as sns
+# Lernfortverhalten visualisieren
+sns.set()
+fig,ax = plt.subplots( figsize=(8,4) )
+ax.set_title("Lernverlauf Accuracy")
+ax.set_xlabel("Epochen")
+ax.set_ylabel("Accuracy")
+ax.set_ylim(0.8,1)
+sns.lineplot( x = result.epoch, y = result.history["accuracy"], label = "Train. Acc.")
+sns.lineplot( x = result.epoch, y = result.history["val_accuracy"], label = "Val. Acc.")
 
-#plt.ylim([0,1])
-plt.legend()
-plt.show()
-
-print("Training   Accuracy :", history.history['accuracy'][-1] )
-print("Validation Accuracy :", history.history['val_accuracy'][-1] )
+print("Accuracy on training data   : ", result.history["accuracy"][-1])
+print("Accuracy on validation data : ", result.history["val_accuracy"][-1])
 ```
 
 Sie sollten folgende Ausgabe sehen (Achtung, die Werte sollten ähnlich sein, sie werden aber nicht identisch sein.)
 
-![](<./assets/image (181).png>)
+![image-20211218141934974](mnist.assets/image-20211218141934974.png)
 
 Wir sind natürlich auch an der Performance auf den Testdaten interessiert.
 
@@ -313,7 +318,7 @@ Wir sind natürlich auch an der Performance auf den Testdaten interessiert.
 
 ## Understanding a prediction
 
-Nachfolgender Code gibt die Predictions und den Label für ein einzelnes Bild aus. Wir sehen, dass Netz zu 100% Prozent überzeugt ist, dass es sich bei Bild 32 aus dem Test-Set um eine Drei handelt.
+Nachfolgender Code gibt die Predictions und den Label für ein einzelnes Bild aus. Wir sehen, dass Modell recht überzeugt ist, dass es sich bei Bild 32 aus dem Test-Set um eine Drei handelt.
 
 ```python
 bild_nr = 32
@@ -332,7 +337,7 @@ plt.figure()
 
 Ausgabe (ihre Zahlen werden abweichen):
 
-![](<./assets/image (174).png>)
+![image (166)](mnist.assets/image (166)-164062700522715.png)
 
 
 
@@ -357,7 +362,9 @@ print (f"Accuracy auf Test-Set    : {((N-c)/N)}")
 
 Ausgabe:
 
-![](<./assets/image (173).png>)
+![image (168)](mnist.assets/image (168)-164062728276518.png)
+
+
 
 Übrigens lässt sich die Test-Set Accuracy auch einfacher ermitteln:
 
@@ -367,9 +374,11 @@ results = model.evaluate(X_test_split, y_test_split)
 print("test loss, test acc:", results)
 ```
 
-Ausgabe: 
+Ausgabe:
 
-![](<./assets/image (185).png>)
+ ![image (169)](mnist.assets/image (169)-164062705394216.png)
+
+
 
 
 
@@ -398,13 +407,15 @@ print (f"Accuracy auf Test-Set    : {((N-c)/N)}")
 
 Durch die Änderung in Zeile 8 erhalten wir alle Ergebnisse, bei denen das Netz mit voller Überzeugung daneben liegt. (Mögliche) Ausgabe: 
 
-![](<./assets/image (191).png>)
+![image (191)](mnist.assets/image (191)-16406261991943.png)
 
 
 
-Wir schauen uns nun ein falsch klassifiziertes Bild an, z.B. Bild 247. Hier wurde statt der korrekten 4 eine 2 vorhergesagt. Die Ausgabe aus obigem "Inspektionsprogramm" ergibt: 
+Wir schauen uns nun ein falsch klassifiziertes Bild an, z.B. Bild 247. Hier wurde statt der korrekten 4 eine 2 vorhergesagt. Die Ausgabe aus obigem "Inspektionsprogramm" ergibt:
 
-![](<./assets/image (193).png>)
+![image (193)](mnist.assets/image (193)-16406262247284.png)
+
+
 
 Unser Netz ist also recht überzeugt davon, dass es sich um eine 2 handelt, die korrekte Antwort 4 bekommt nur eine Wahrscheinlichkeit von 0.00026 Prozent. Mit voller Überzeugung daneben...
 
@@ -414,21 +425,29 @@ Unser Netz ist also recht überzeugt davon, dass es sich um eine 2 handelt, die 
 
 ## Schwierig oder einfach?
 
-Wenn wir das Auswertungsprogramm so  ändern, dass die Confidence z.B. unter 50 Prozent liegt, so erhalten wir offenbar Examples, deren Klassifikation dem Netzwerk schwer gefallen ist. Beispiele:
+Wenn wir das Auswertungsprogramm so  ändern, dass die Confidence z.B. unter 50 Prozent liegt, so erhalten wir offenbar Examples, deren Klassifikation dem Netzwerk schwer gefallen ist. 
 
-![](<./assets/image (190).png>)
+Beispiele:
 
-Das Bild 1709 zeigt eine diese Problematik. Mit hoher Unentschlossenheit wird zwischen der korrekten 9 und der falschen 5 die falsche Entscheidung getroffen. Wäre Ihnen dieser Fehler auch unterlaufen? 
+![image (190)](mnist.assets/image (190)-16406262515555.png)
 
-![](<./assets/image (196).png>)
+
+
+Das Bild 1709 zeigt diese Problematik. Mit hoher Unentschlossenheit wird zwischen der korrekten 9 und der falschen 5 die falsche Entscheidung getroffen. Wäre Ihnen dieser Fehler auch unterlaufen? 
+
+
+
+![image (196)](mnist.assets/image (196)-16406262734586.png)
 
 
 
 ## Ziffernbasierte Trefferquoten
 
-Abschließend untersuchen wir noch, welche Ziffer besonders häufig falsch  klassifiziert wurde. Am meisten Probleme hatte "mein" Netz mit Ziffer 8. 
+Abschließend untersuchen wir noch, welche Ziffer besonders häufig falsch  klassifiziert wurde. Am meisten Probleme hatte "mein" Netz mit Ziffer 8.
 
-![](<./assets/image (192).png>)
+![image (192)](mnist.assets/image (192)-16406263077247.png)
+
+
 
 Folgender Code wurde verwendet:
 
@@ -453,7 +472,9 @@ for i in np.arange(0,10):
 
 Zuletzt schauen wir uns die Fehler noch genauer an: Welche falsche Ziffer  wurde statt der korrekten Ziffer gewählt, oder kurz gesagt: "Mit welcher Ziffer die Ziffern wie oft verwechselt?"
 
-![](<./assets/image (189).png>)
+![image (189)](mnist.assets/image (189)-16406263218878.png)
+
+
 
 Der Code hierzu:
 
@@ -487,6 +508,8 @@ for i in np.arange(0, len(X_test_split)):
     plt.show()
 ```
 
+
+
 ## Softmax
 
 Die Softmax-Aktivierung wird in der Regel bei Klassifizierungsaufgaben mit mehr als zwei Klassen im Output-Layer angewendet. Sie sorgt dafür, dass
@@ -496,4 +519,5 @@ Die Softmax-Aktivierung wird in der Regel bei Klassifizierungsaufgaben mit mehr 
 
 Nachfolgende Abbildung erläutert das  mathematische Modell: 
 
-![Eigene Abbildung](<./assets/image (187).png>)
+![image (187)](mnist.assets/image (187)-16406264561089.png)
+

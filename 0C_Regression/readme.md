@@ -83,11 +83,7 @@ $$
 
 Der MSE ist eine reelle Zahl, die von w und b abhängt.  Wir können daher den MSE-Graph als Fläche über der Weight-Bias Eben plotten. Der Pfeil zeigt auf den Wert von $$w$$ und $$b$$, an dem wir das Minimum der Fehlerfunktion erwarten.
 
-
-
-![img](https://files.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LqWdSiOJaGrO5i0QMSh%2F-MNsE9JHY2DH7ZQPrs0q%2F-MNsFO8GRoUvM2qa-tKW%2Fimage.png?alt=media&token=be54c530-ffe2-4e83-b66f-2d9288748175)
-
-
+![image (138) (1)](readme.assets/image (138) (1).png)
 
 Am tiefsten Punkt der Fläche haben wir das beste Modell gefunden. Der kleine Punkt in der Grafik markiert in etwa diesen Punkt. Aber wir kommen wir dorthin?
 

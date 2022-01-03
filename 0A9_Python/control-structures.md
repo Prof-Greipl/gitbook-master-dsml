@@ -46,7 +46,7 @@ s = "HAW Landshut"
 
 Ihr Programm soll stets drei Zeilen ausgeben. Die Ausgabe für die obigen Werte von x` `und `s` sollte sein:
 
-![](<../../.gitbook/assets/image (195).png>)
+![](control-structures.assets/image (195).png)
 
 
 

@@ -6,7 +6,7 @@ Anhand des Zirpens von Grillen kann man mehr oder weniger verlässlich die Luftt
 
 Nehmen wir an, dass folgende kleine Menge von labelled examples vorliegt: 
 
-![](<../.gitbook/assets/image (117).png>)
+![](<grillen.assets/image (117).png>)
 
 Natürlich wollen wir nun - wie üblich - aus dem feature den label vorhersagen. Offensichtlich handelt es sich um ein Regressionsproblem. 
 

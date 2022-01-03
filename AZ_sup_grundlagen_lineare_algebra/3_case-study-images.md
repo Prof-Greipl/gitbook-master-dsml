@@ -38,7 +38,7 @@ plt.figure( figsize=(20,15))
 plt.imshow( eule )
 ```
 
-![](<../../.gitbook/assets/image (9).png>)
+![](<3_case-study-images.assets/image (9).png>)
 
 Eine Aufteilung in die einzelnen Farbkanäle finden Sie in dieser Vertiefung. TODO
 
@@ -63,7 +63,7 @@ plt.figure(figsize= (10,10))
 plt.imshow( img  )
 ```
 
-![](<../../.gitbook/assets/image (8) (1).png>)
+![](<3_case-study-images.assets/image (8) (1).png>)
 
 ### Übungen
 

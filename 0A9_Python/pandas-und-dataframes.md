@@ -51,7 +51,7 @@ print( len(df))
 df.info() 
 ```
 
-![](<../../../.gitbook/assets/image (13).png>)
+![](<pandas-und-dataframes.assets/image (13).png>)
 
 Der Aufruf `df.colums.values` liefert die Spaltennamen als Array.
 
@@ -65,7 +65,7 @@ print( df.colums.values )
 df.describe()
 ```
 
-![](<../../../.gitbook/assets/image (12).png>)
+![](<pandas-und-dataframes.assets/image (12).png>)
 
 
 
@@ -73,7 +73,7 @@ df.describe()
 
 Eine Spalte eines Dataframes heist auch _Series._
 
-![](<../../../.gitbook/assets/image (11).png>)
+![](<pandas-und-dataframes.assets/image (11).png>)
 
 ```python
 # Eine Spalte aus dem Dataframe herausnehmen
@@ -138,7 +138,7 @@ df = pd.DataFrame({
 
 Durch Angabe der Überschriften lassen sich  Dataframes auf ausgewählte Spalten (unten gelb) reduzieren und dadurch verkleinern:
 
-![](<../../../.gitbook/assets/image (14).png>)
+![](<pandas-und-dataframes.assets/image (14).png>)
 
 ```python
 df1 = df[["Age","Gender"]]
@@ -157,13 +157,13 @@ print( df )
 
 Ausgaben:&#x20;
 
-![](<../../../.gitbook/assets/image (20).png>)
+![](<pandas-und-dataframes.assets/image (20).png>)
 
 
 
 ## Teile nach Zeilennummern und Spaltennummern auswählen
 
-![](<../../../.gitbook/assets/image (19).png>)
+![](<pandas-und-dataframes.assets/image (19).png>)
 
 ```python
 df_1 = df.iloc[1:3, 0]
@@ -179,7 +179,7 @@ Beim Filtern erzeugen wir eine künstliche Spalte mit "Treffern". Wenn die Tabel
 ```python
 ```
 
-![](<../../../.gitbook/assets/image (18).png>)
+![](<pandas-und-dataframes.assets/image (18).png>)
 
 ```python
 import pandas as pd
@@ -314,7 +314,7 @@ drive.mount('/content/drive')
 
 Erzeugen Sie in Google-Drive ein unter `Colab Notebooks `ein  Verzeichnis `data.`
 
-![](<../../../.gitbook/assets/image (15).png>)
+![](<pandas-und-dataframes.assets/image (15).png>)
 
 Kopieren sie nun die Excel-Dateien auf Moodle in das Verzeichnis `data. `Lesen sie nun die Excel-Datei `titanic_train.xlsx` ein ein Dataframe ein.&#x20;
 

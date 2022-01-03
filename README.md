@@ -54,9 +54,9 @@ Link zu den in der jeweiligen Terminen erzeugten [Colab-Notebooks](https://githu
 
 
 
-## nn.01.2021 Fragen zur Prüfung (90 min)
+## 10.01.2022, 18:30 - max 20:00 Uhr: Fragen zur Prüfung
 
-
+Link: https://haw-landshut-de.zoom.us/j/86239229907?pwd=eFNTUEdCeVhyMGJaaEg2YlhUdzhXdz09
 
 
 

@@ -11,7 +11,7 @@ Ein Neuron entspricht damit einer Funktion, die von $$\mathbb{R}^m$$ nach $$\mat
 
  
 
-![](<./assets/image (132).png>)
+![Konzept eines Neurons](<neuron.assets/image (132).png>)
 
 
 
@@ -23,7 +23,7 @@ Wir geben nun dieser Funktion einen Struktur. Sie wird wie folgt funktionieren:
 
 
 
-![image-20211218095040722](neuron.assets/image-20211218095040722.png)
+![Innenleben eines Neurons](neuron.assets/image-20211220095241737.png)
 
 
 
@@ -34,9 +34,18 @@ $$
 u \cdot v = \sum_{i=1}^{n} u_i \cdot v_i
 $$
 
+Hinweise: 
+
+- Alternativ findet man die Notation: $$\langle u,v \rangle$$
+- Beachten Sie die Anwendung des Skalarproduktes z.B. bei der Multiplikation einer Matrix mit einem Vektor ("*Zeile mal Spalte*").
+
+
+
 ## Beispiel
 
-![image-20211218095347844](neuron.assets/image-20211218095347844.png)
+![Exemplarische Rechnung](neuron.assets/image-20211218095347844.png)
+
+
 
 ## Python (Skalarprodukt)
 
@@ -60,25 +69,35 @@ Wir werden für $$\phi$$ meist recht einfache Funktionen werden, z.B. wie in obi
 
 > **Ein Neuron ist also von m+1 Werten (Parametern) abhängig, mit denen man das Verhalten des Neurons einstellen kann.**
 
-![](<./assets/image (130).png>)
-
 
 
 # Beispiel
 
 Nachfolgendes Beispiel erläutert die Rechnung eines Neurons per Hand:
 
-![](<./assets/image (135).png>)
+![Beispiel-Rechnung](neuron.assets/image-20211220095927946.png)
 
 
 
 
 
-# Übung
+# Übungen
+
+## Übung 1
 
 Berechnen Sie die Ausgabe des folgenden Neurons:
 
-![](<./assets/image (131).png>)
+![Übung 1](neuron.assets/image-20211220100100549.png)
+
+
+
+## Übung 2
+
+Berechnen Sie die Ausgabe des folgenden Neurons:
+
+![Übung 2](neuron.assets/image-20211220100219827.png)
+
+
 
 
 
@@ -106,7 +125,7 @@ print( activation.shape)
 
 
 
-# Neuron mit Python und Keras (nicht behandelt)
+# Neuron mit Python und Keras
 
 Nachfolgendes Programmstück definiert ein Neuronales Netz, bereits als Model. Wir trainieren das Modell noch nicht, sondern setzten die Gewichte manuell. Der Trainingsprozess würde die Gewichte so setzten, dass die _Activations _für jeden Input möglichst nahe an den Labels wären.
 
