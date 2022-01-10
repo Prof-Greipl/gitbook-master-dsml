@@ -35,6 +35,10 @@ a)  Berechnen Sie den Output des folgenden Netzes für x= (1,3,5) und x = (0,1,0
 
 b) Berechnen Sie das Netz für für x = (1,3,5) erneut. Nehmen sie nun aber statt `linear` stets `relu `als Aktivierung an.
 
+Lösung zu a)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/q6POK0QzrrQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Eigenschaften Neuronaler Netze
 
 ### Fully Connected Layer

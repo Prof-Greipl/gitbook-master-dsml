@@ -2,7 +2,7 @@
 
 Bilder sind als Vektoren darstellbar, wenn man die Pixelwerte in eine Reihenfolge bringt und so einen Vektor erzeugt.
 
-![Ein Binärbild als Vektor](mnist.assets/image-20211217153909821.png)
+![image-20220110124654896](mnist.assets/image-20220110124654896.png)
 
 
 
@@ -12,7 +12,7 @@ Bilder sind als Vektoren darstellbar, wenn man die Pixelwerte in eine Reihenfolg
 
 Analog kann man für Grauwertbilder vorgehen:
 
-![image-20211217154042767](mnist.assets/image-20211217154042767.png)
+![image-20220110124721395](mnist.assets/image-20220110124721395.png)
 
 # MNIST
 
