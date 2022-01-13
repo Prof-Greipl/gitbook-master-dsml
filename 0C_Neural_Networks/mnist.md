@@ -4,11 +4,11 @@ Bilder sind als Vektoren darstellbar, wenn man die Pixelwerte in eine Reihenfolg
 
 
 
-![image-20220110124654896](mnist.assets/image-20220110124654896.png)
+![](mnist.assets/image-20220110124654896.png)
 
 Analog kann man für Grauwertbilder vorgehen:
 
-![image-20211217154042767](mnist.assets/image-20211217154042767.png)
+![(mnist.assets/image-20211217154042767.png)
 
 # MNIST
 
@@ -112,7 +112,7 @@ print( f'Bild 0 (max)  : {X_test[0].max()}')
 
 Ergebnis: 
 
-![image (153)](<mnist.assets/image (153)-164062684512912.png>)
+![](<mnist.assets/image (153)-164062684512912.png>)
 
 
 
