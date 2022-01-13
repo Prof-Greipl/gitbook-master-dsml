@@ -2,13 +2,9 @@
 
 Bilder sind als Vektoren darstellbar, wenn man die Pixelwerte in eine Reihenfolge bringt und so einen Vektor erzeugt.
 
-![Ein Binärbild als Vektor](mnist.assets/image-20211217153909821.png)
 
 
-
-
-
-
+![image-20220110124654896](mnist.assets/image-20220110124654896.png)
 
 Analog kann man für Grauwertbilder vorgehen:
 
@@ -86,7 +82,7 @@ Nach folgende Abbildung zeigt die Struktur unseres Netzes
 
   
 
-![image (155)](<mnist.assets/image (155)-164062682265911.png>)
+![Struktur des Netzes](<mnist.assets/image (155)-164062682265911.png>)
 
 
 
@@ -124,7 +120,7 @@ Ergebnis:
 
 Für die MNIST Labels, also die Ziffern von 0 bis 9, zeigt folgende Abbildung das One-Hot-Encoding der Labels:
 
-![image (182)](<mnist.assets/image (182)-164062667226310.png>)
+![One-Hot-Encoding](<mnist.assets/image (182)-164062667226310.png>)
 
 
 
@@ -159,7 +155,7 @@ print("Label :", y_train[2], ", Label One Hot :", y_train_one_hot[2], ' (1 at po
 
 Ausgabe:
 
-![image (160)](<mnist.assets/image (160)-164062688356913.png>)
+![Testausgaben](<mnist.assets/image (160)-164062688356913.png>)
 
 
 
@@ -171,7 +167,7 @@ Sie erinnern sich an den Begriff der Validation-Data, den wir in dem [diese Begr
 
 Nachfolgendes Bild illustriert den Sachverhalt:
 
-![image (161)](<mnist.assets/image (161)-164062718205317.png>)
+![](<mnist.assets/image (161)-164062718205317.png>)
 
 Hierzu verwenden wir nachfolgenden Code:
 
@@ -315,7 +311,7 @@ print("Accuracy on validation data : ", result.history["val_accuracy"][-1])
 
 Sie sollten folgende Ausgabe sehen (Achtung, die Werte sollten ähnlich sein, sie werden aber nicht identisch sein.)
 
-![image-20211218141934974](mnist.assets/image-20211218141934974.png)
+![Training und Validation-Accuracy](mnist.assets/image (181).png){width=100%}
 
 Wir sind natürlich auch an der Performance auf den Testdaten interessiert.
 
@@ -342,7 +338,7 @@ plt.figure()
 
 Ausgabe (ihre Zahlen werden abweichen):
 
-![image (166)](<mnist.assets/image (166)-164062700522715.png>)
+![](<mnist.assets/image (166)-164062700522715.png>)
 
 
 
@@ -367,7 +363,7 @@ print (f"Accuracy auf Test-Set    : {((N-c)/N)}")
 
 Ausgabe:
 
-![image (168)](<mnist.assets/image (168)-164062728276518.png>)
+![](<mnist.assets/image (168)-164062728276518.png>)
 
 
 
@@ -381,7 +377,7 @@ print("test loss, test acc:", results)
 
 Ausgabe:
 
- ![image (169)](<mnist.assets/image (169)-164062705394216.png>)
+ ![](<mnist.assets/image (169)-164062705394216.png>)
 
 
 
@@ -412,13 +408,13 @@ print (f"Accuracy auf Test-Set    : {((N-c)/N)}")
 
 Durch die Änderung in Zeile 8 erhalten wir alle Ergebnisse, bei denen das Netz mit voller Überzeugung daneben liegt. (Mögliche) Ausgabe: 
 
-![image (191)](<mnist.assets/image (191)-16406261991943.png>)
+![](<mnist.assets/image (191)-16406261991943.png>)
 
 
 
 Wir schauen uns nun ein falsch klassifiziertes Bild an, z.B. Bild 247. Hier wurde statt der korrekten 4 eine 2 vorhergesagt. Die Ausgabe aus obigem "Inspektionsprogramm" ergibt:
 
-![image (193)](<mnist.assets/image (193)-16406262247284.png>)
+![](<mnist.assets/image (193)-16406262247284.png>)
 
 
 
@@ -434,7 +430,7 @@ Wenn wir das Auswertungsprogramm so  ändern, dass die Confidence z.B. unter 50 
 
 Beispiele:
 
-![image (190)](<mnist.assets/image (190)-16406262515555.png>)
+![](<mnist.assets/image (190)-16406262515555.png>)
 
 
 
@@ -442,7 +438,7 @@ Das Bild 1709 zeigt diese Problematik. Mit hoher Unentschlossenheit wird zwische
 
 
 
-![image (196)](<mnist.assets/image (196)-16406262734586.png>)
+![](<mnist.assets/image (196)-16406262734586.png>)
 
 
 
@@ -450,7 +446,7 @@ Das Bild 1709 zeigt diese Problematik. Mit hoher Unentschlossenheit wird zwische
 
 Abschließend untersuchen wir noch, welche Ziffer besonders häufig falsch  klassifiziert wurde. Am meisten Probleme hatte "mein" Netz mit Ziffer 8.
 
-![image (192)](<mnist.assets/image (192)-16406263077247.png>)
+![](<mnist.assets/image (192)-16406263077247.png>)
 
 
 
@@ -477,7 +473,7 @@ for i in np.arange(0,10):
 
 Zuletzt schauen wir uns die Fehler noch genauer an: Welche falsche Ziffer  wurde statt der korrekten Ziffer gewählt, oder kurz gesagt: "Mit welcher Ziffer die Ziffern wie oft verwechselt?"
 
-![image (189)](<mnist.assets/image (189)-16406263218878.png>)
+![](<mnist.assets/image (189)-16406263218878.png>)
 
 
 
@@ -524,5 +520,5 @@ Die Softmax-Aktivierung wird in der Regel bei Klassifizierungsaufgaben mit mehr 
 
 Nachfolgende Abbildung erläutert das  mathematische Modell: 
 
-![image (187)](<mnist.assets/image (187)-16406264561089.png>)
+![](<mnist.assets/image (187)-16406264561089.png>)
 
