@@ -8,7 +8,7 @@ Bilder sind als Vektoren darstellbar, wenn man die Pixelwerte in eine Reihenfolg
 
 Analog kann man für Grauwertbilder vorgehen:
 
-![(mnist.assets/image-20211217154042767.png)
+![image-20211217154042767](mnist.assets/image-20211217154042767-16421711595171.png)
 
 # MNIST
 
