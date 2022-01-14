@@ -82,7 +82,7 @@ Nach folgende Abbildung zeigt die Struktur unseres Netzes
 
   
 
-![Struktur des Netzes](<mnist.assets/image (155)-164062682265911.png>)
+![Struktur des Netzes](mnist.assets/image-20220114152930411.png)
 
 
 
