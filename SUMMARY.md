@@ -1,6 +1,8 @@
 # Table of contents
 
 * [Vorbemerkungen & Agenda](README.md)
+* [Kapitel 1](01_C1.md)
+* [Kapitel 2](02_C2.md)
 
 
 ## Part A: Data Analysis<a href="DA" id="DA"></a>
