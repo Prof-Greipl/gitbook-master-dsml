@@ -4,7 +4,7 @@ description: >-
   des Masterstudiengangs "Digitale Unternehmensführung" wird im WS 21/22 von Prof. Dr. Dieter Greipl (HAW Landshut) gehalten.
 ---
 
-# An der Startlinie  
+# An der Startlinie
 
 
 
